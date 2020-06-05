@@ -1,4 +1,7 @@
 try:
-    from . import recognition
+    import recognition
 except:
-    from .. import recognition
+    try:
+        from handwritten_text_recognition import recognition
+    except:
+        from recognition.handwritten_text_recognition import recognition

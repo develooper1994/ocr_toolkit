@@ -1,7 +1,7 @@
 try:
-    import recognition.recognizer
+    from recognition import recognizer
 except:
     try:
-        import tesseract_text_recognition.recognition.recognizer
+        from tesseract_text_recognition.recognition import recognizer
     except:
-        import recognition.tesseract_text_recognition.recognition.recognizer
+        from recognition.tesseract_text_recognition.recognition import recognizer

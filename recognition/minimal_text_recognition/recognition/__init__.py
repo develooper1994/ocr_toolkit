@@ -2,6 +2,6 @@ try:
     import recognition.recognizer
 except:
     try:
-        import minimal_text_recognition.recognition.recognizer
+        from minimal_text_recognition.recognition import recognizer
     except:
-        import recognition.minimal_text_recognition.recognition.recognizer
+        from recognition.minimal_text_recognition.recognition import recognizer

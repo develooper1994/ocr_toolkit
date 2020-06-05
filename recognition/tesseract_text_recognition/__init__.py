@@ -2,6 +2,6 @@ try:
     import recognition
 except:
     try:
-        import tesseract_text_recognition.recognition
+        from tesseract_text_recognition import recognition
     except:
-        import recognition.tesseract_text_recognition.recognition
+        from recognition.tesseract_text_recognition import recognition

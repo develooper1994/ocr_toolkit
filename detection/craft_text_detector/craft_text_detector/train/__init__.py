@@ -13,26 +13,52 @@ try:
     import watershed
 except:
     try:
-        from craft_text_detector.craft_text_detector.train import coordinates
-        from craft_text_detector.craft_text_detector.train import data_loader
-        from craft_text_detector.craft_text_detector.train import evaluation
-        from craft_text_detector.craft_text_detector.train import gaussian
-        from craft_text_detector.craft_text_detector.train import mep
-        from craft_text_detector.craft_text_detector.train import mseloss
-        from craft_text_detector.craft_text_detector.train import torchutil
-        from craft_text_detector.craft_text_detector.train import trainSyndata
-        from craft_text_detector.craft_text_detector.train import train_MLT_data
-        from craft_text_detector.craft_text_detector.train import trainic15data
-        from craft_text_detector.craft_text_detector.train import watershed
+        from train import coordinates
+        from train import data_loader
+        from train import evaluation
+        from train import gaussian
+        from train import mep
+        from train import mseloss
+        from train import torchutil
+        from train import trainSyndata
+        from train import train_MLT_data
+        from train import trainic15data
+        from train import watershed
     except:
-        from detection.craft_text_detector.craft_text_detector.train import coordinates
-        from detection.craft_text_detector.craft_text_detector.train import data_loader
-        from detection.craft_text_detector.craft_text_detector.train import evaluation
-        from detection.craft_text_detector.craft_text_detector.train import gaussian
-        from detection.craft_text_detector.craft_text_detector.train import mep
-        from detection.craft_text_detector.craft_text_detector.train import mseloss
-        from detection.craft_text_detector.craft_text_detector.train import torchutil
-        from detection.craft_text_detector.craft_text_detector.train import trainSyndata
-        from detection.craft_text_detector.craft_text_detector.train import train_MLT_data
-        from detection.craft_text_detector.craft_text_detector.train import trainic15data
-        from detection.craft_text_detector.craft_text_detector.train import watershed
+        try:
+            from craft_text_detector.train import coordinates
+            from craft_text_detector.train import data_loader
+            from craft_text_detector.train import evaluation
+            from craft_text_detector.train import gaussian
+            from craft_text_detector.train import mep
+            from craft_text_detector.train import mseloss
+            from craft_text_detector.train import torchutil
+            from craft_text_detector.train import trainSyndata
+            from craft_text_detector.train import train_MLT_data
+            from craft_text_detector.train import trainic15data
+            from craft_text_detector.train import watershed
+        except:
+            try:
+                from craft_text_detector.craft_text_detector.train import coordinates
+                from craft_text_detector.craft_text_detector.train import data_loader
+                from craft_text_detector.craft_text_detector.train import evaluation
+                from craft_text_detector.craft_text_detector.train import gaussian
+                from craft_text_detector.craft_text_detector.train import mep
+                from craft_text_detector.craft_text_detector.train import mseloss
+                from craft_text_detector.craft_text_detector.train import torchutil
+                from craft_text_detector.craft_text_detector.train import trainSyndata
+                from craft_text_detector.craft_text_detector.train import train_MLT_data
+                from craft_text_detector.craft_text_detector.train import trainic15data
+                from craft_text_detector.craft_text_detector.train import watershed
+            except:
+                from detection.craft_text_detector.craft_text_detector.train import coordinates
+                from detection.craft_text_detector.craft_text_detector.train import data_loader
+                from detection.craft_text_detector.craft_text_detector.train import evaluation
+                from detection.craft_text_detector.craft_text_detector.train import gaussian
+                from detection.craft_text_detector.craft_text_detector.train import mep
+                from detection.craft_text_detector.craft_text_detector.train import mseloss
+                from detection.craft_text_detector.craft_text_detector.train import torchutil
+                from detection.craft_text_detector.craft_text_detector.train import trainSyndata
+                from detection.craft_text_detector.craft_text_detector.train import train_MLT_data
+                from detection.craft_text_detector.craft_text_detector.train import trainic15data
+                from detection.craft_text_detector.craft_text_detector.train import watershed
