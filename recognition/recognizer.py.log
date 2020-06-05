@@ -1,0 +1,36 @@
+2020-06-02 19:27:48,549 - root - DEBUG - Word segmentation model loading recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 19:27:48,549 - root - DEBUG - Word segmentation model loading recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 19:27:49,313 - root - DEBUG - Word segmentation model loading completed recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 19:27:49,313 - root - DEBUG - Word segmentation model loading completed recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 19:27:49,314 - root - DEBUG - Denoiser model loading recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 19:27:49,314 - root - DEBUG - Denoiser model loading recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 19:27:49,390 - root - DEBUG - Denoiser model loading completed recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 19:27:49,390 - root - DEBUG - Denoiser model loading completed recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 19:27:49,391 - root - DEBUG - Handwriting line segmentation model loading recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 19:27:49,391 - root - DEBUG - Handwriting line segmentation model loading recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 19:27:50,285 - root - DEBUG - Handwriting line segmentation model loading completed recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 19:27:50,285 - root - DEBUG - Handwriting line segmentation model loading completed recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 19:27:50,285 - root - DEBUG - Paragraph segmentation model loading recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 19:27:50,285 - root - DEBUG - Paragraph segmentation model loading recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 19:27:50,752 - root - DEBUG - Paragraph segmentation model loading completed recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 19:27:50,752 - root - DEBUG - Paragraph segmentation model loading completed recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 19:28:04,196 - root - DEBUG - Beam sampler created recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 19:28:04,196 - root - DEBUG - Beam sampler created recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 19:28:04,198 - root - DEBUG - Sequence generator created recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 19:28:04,198 - root - DEBUG - Sequence generator created recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 19:53:50,269 - root - DEBUG - Paragraph segmentation model loading recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 19:53:50,269 - root - DEBUG - Paragraph segmentation model loading recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 19:53:50,593 - root - DEBUG - Paragraph segmentation model loading completed recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 19:53:50,593 - root - DEBUG - Paragraph segmentation model loading completed recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 19:53:50,594 - root - DEBUG - Word segmentation model loading recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 19:53:50,594 - root - DEBUG - Word segmentation model loading recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 19:53:51,360 - root - DEBUG - Word segmentation model loading completed recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 19:53:51,360 - root - DEBUG - Word segmentation model loading completed recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 19:53:51,361 - root - DEBUG - Handwriting line segmentation model loading recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 19:53:51,361 - root - DEBUG - Handwriting line segmentation model loading recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 19:53:52,026 - root - DEBUG - Handwriting line segmentation model loading completed recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 19:53:52,026 - root - DEBUG - Handwriting line segmentation model loading completed recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 19:53:52,026 - root - DEBUG - Denoiser model loading recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 19:53:52,026 - root - DEBUG - Denoiser model loading recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 19:53:52,128 - root - DEBUG - Denoiser model loading completed recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 19:53:52,128 - root - DEBUG - Denoiser model loading completed recognition.handwritten_text_recognition.recognition.recognizer

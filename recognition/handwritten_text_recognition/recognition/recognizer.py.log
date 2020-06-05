@@ -1,0 +1,668 @@
+2020-05-27 18:40:37,759 - root - DEBUG - Paragraph segmentation model loading __main__
+2020-05-27 18:40:37,759 - root - DEBUG - Paragraph segmentation model loading __main__
+2020-05-27 18:40:38,138 - root - DEBUG - Paragraph segmentation model loading completed __main__
+2020-05-27 18:40:38,138 - root - DEBUG - Paragraph segmentation model loading completed __main__
+2020-05-27 18:40:38,139 - root - DEBUG - Denoiser model loading __main__
+2020-05-27 18:40:38,139 - root - DEBUG - Denoiser model loading __main__
+2020-05-27 18:40:38,187 - root - DEBUG - Denoiser model loading completed __main__
+2020-05-27 18:40:38,187 - root - DEBUG - Denoiser model loading completed __main__
+2020-05-27 18:40:38,188 - root - DEBUG - Handwriting line segmentation model loading __main__
+2020-05-27 18:40:38,188 - root - DEBUG - Handwriting line segmentation model loading __main__
+2020-05-27 18:40:38,869 - root - DEBUG - Handwriting line segmentation model loading completed __main__
+2020-05-27 18:40:38,869 - root - DEBUG - Handwriting line segmentation model loading completed __main__
+2020-05-27 18:40:38,870 - root - DEBUG - Word segmentation model loading __main__
+2020-05-27 18:40:38,870 - root - DEBUG - Word segmentation model loading __main__
+2020-05-27 18:40:39,441 - root - DEBUG - Word segmentation model loading completed __main__
+2020-05-27 18:40:39,441 - root - DEBUG - Word segmentation model loading completed __main__
+2020-05-27 18:40:50,954 - root - DEBUG - Beam sampler created __main__
+2020-05-27 18:40:50,954 - root - DEBUG - Beam sampler created __main__
+2020-05-27 18:40:50,954 - root - DEBUG - Sequence generator created __main__
+2020-05-27 18:40:50,954 - root - DEBUG - Sequence generator created __main__
+2020-05-27 18:43:26,631 - root - DEBUG - Paragraph segmentation model loading __main__
+2020-05-27 18:43:26,631 - root - DEBUG - Paragraph segmentation model loading __main__
+2020-05-27 18:43:26,966 - root - DEBUG - Paragraph segmentation model loading completed __main__
+2020-05-27 18:43:26,966 - root - DEBUG - Paragraph segmentation model loading completed __main__
+2020-05-27 18:43:26,966 - root - DEBUG - Denoiser model loading __main__
+2020-05-27 18:43:26,966 - root - DEBUG - Denoiser model loading __main__
+2020-05-27 18:43:27,057 - root - DEBUG - Denoiser model loading completed __main__
+2020-05-27 18:43:27,057 - root - DEBUG - Denoiser model loading completed __main__
+2020-05-27 18:43:27,058 - root - DEBUG - Handwriting line segmentation model loading __main__
+2020-05-27 18:43:27,058 - root - DEBUG - Handwriting line segmentation model loading __main__
+2020-05-27 18:43:27,768 - root - DEBUG - Handwriting line segmentation model loading completed __main__
+2020-05-27 18:43:27,768 - root - DEBUG - Handwriting line segmentation model loading completed __main__
+2020-05-27 18:43:27,769 - root - DEBUG - Word segmentation model loading __main__
+2020-05-27 18:43:27,769 - root - DEBUG - Word segmentation model loading __main__
+2020-05-27 18:43:28,352 - root - DEBUG - Word segmentation model loading completed __main__
+2020-05-27 18:43:28,352 - root - DEBUG - Word segmentation model loading completed __main__
+2020-05-27 18:43:39,739 - root - DEBUG - Beam sampler created __main__
+2020-05-27 18:43:39,739 - root - DEBUG - Beam sampler created __main__
+2020-05-27 18:43:39,739 - root - DEBUG - Sequence generator created __main__
+2020-05-27 18:43:39,739 - root - DEBUG - Sequence generator created __main__
+2020-05-27 18:46:08,537 - root - DEBUG - Paragraph segmentation model loading __main__
+2020-05-27 18:46:08,537 - root - DEBUG - Paragraph segmentation model loading __main__
+2020-05-27 18:46:08,900 - root - DEBUG - Paragraph segmentation model loading completed __main__
+2020-05-27 18:46:08,900 - root - DEBUG - Paragraph segmentation model loading completed __main__
+2020-05-27 18:46:08,901 - root - DEBUG - Denoiser model loading __main__
+2020-05-27 18:46:08,901 - root - DEBUG - Denoiser model loading __main__
+2020-05-27 18:46:08,953 - root - DEBUG - Denoiser model loading completed __main__
+2020-05-27 18:46:08,953 - root - DEBUG - Denoiser model loading completed __main__
+2020-05-27 18:46:08,954 - root - DEBUG - Handwriting line segmentation model loading __main__
+2020-05-27 18:46:08,954 - root - DEBUG - Handwriting line segmentation model loading __main__
+2020-05-27 18:46:09,762 - root - DEBUG - Handwriting line segmentation model loading completed __main__
+2020-05-27 18:46:09,762 - root - DEBUG - Handwriting line segmentation model loading completed __main__
+2020-05-27 18:46:09,762 - root - DEBUG - Word segmentation model loading __main__
+2020-05-27 18:46:09,762 - root - DEBUG - Word segmentation model loading __main__
+2020-05-27 18:46:10,415 - root - DEBUG - Word segmentation model loading completed __main__
+2020-05-27 18:46:10,415 - root - DEBUG - Word segmentation model loading completed __main__
+2020-05-27 18:46:22,034 - root - DEBUG - Beam sampler created __main__
+2020-05-27 18:46:22,034 - root - DEBUG - Beam sampler created __main__
+2020-05-27 18:46:22,035 - root - DEBUG - Sequence generator created __main__
+2020-05-27 18:46:22,035 - root - DEBUG - Sequence generator created __main__
+2020-05-27 18:46:47,239 - root - DEBUG - Paragraph segmentation model loading __main__
+2020-05-27 18:46:47,239 - root - DEBUG - Paragraph segmentation model loading __main__
+2020-05-27 18:46:47,626 - root - DEBUG - Paragraph segmentation model loading completed __main__
+2020-05-27 18:46:47,626 - root - DEBUG - Paragraph segmentation model loading completed __main__
+2020-05-27 18:46:47,627 - root - DEBUG - Denoiser model loading __main__
+2020-05-27 18:46:47,627 - root - DEBUG - Denoiser model loading __main__
+2020-05-27 18:46:47,692 - root - DEBUG - Denoiser model loading completed __main__
+2020-05-27 18:46:47,692 - root - DEBUG - Denoiser model loading completed __main__
+2020-05-27 18:46:47,692 - root - DEBUG - Handwriting line segmentation model loading __main__
+2020-05-27 18:46:47,692 - root - DEBUG - Handwriting line segmentation model loading __main__
+2020-05-27 18:46:48,638 - root - DEBUG - Handwriting line segmentation model loading completed __main__
+2020-05-27 18:46:48,638 - root - DEBUG - Handwriting line segmentation model loading completed __main__
+2020-05-27 18:46:48,639 - root - DEBUG - Word segmentation model loading __main__
+2020-05-27 18:46:48,639 - root - DEBUG - Word segmentation model loading __main__
+2020-05-27 18:46:49,388 - root - DEBUG - Word segmentation model loading completed __main__
+2020-05-27 18:46:49,388 - root - DEBUG - Word segmentation model loading completed __main__
+2020-05-27 18:47:02,259 - root - DEBUG - Beam sampler created __main__
+2020-05-27 18:47:02,259 - root - DEBUG - Beam sampler created __main__
+2020-05-27 18:47:02,261 - root - DEBUG - Sequence generator created __main__
+2020-05-27 18:47:02,261 - root - DEBUG - Sequence generator created __main__
+2020-05-27 18:47:15,724 - root - DEBUG - Paragraph segmentation model loading __main__
+2020-05-27 18:47:15,724 - root - DEBUG - Paragraph segmentation model loading __main__
+2020-05-27 18:47:16,092 - root - DEBUG - Paragraph segmentation model loading completed __main__
+2020-05-27 18:47:16,092 - root - DEBUG - Paragraph segmentation model loading completed __main__
+2020-05-27 18:47:16,092 - root - DEBUG - Denoiser model loading __main__
+2020-05-27 18:47:16,092 - root - DEBUG - Denoiser model loading __main__
+2020-05-27 18:47:16,150 - root - DEBUG - Denoiser model loading completed __main__
+2020-05-27 18:47:16,150 - root - DEBUG - Denoiser model loading completed __main__
+2020-05-27 18:47:16,150 - root - DEBUG - Handwriting line segmentation model loading __main__
+2020-05-27 18:47:16,150 - root - DEBUG - Handwriting line segmentation model loading __main__
+2020-05-27 18:47:16,990 - root - DEBUG - Handwriting line segmentation model loading completed __main__
+2020-05-27 18:47:16,990 - root - DEBUG - Handwriting line segmentation model loading completed __main__
+2020-05-27 18:47:16,991 - root - DEBUG - Word segmentation model loading __main__
+2020-05-27 18:47:16,991 - root - DEBUG - Word segmentation model loading __main__
+2020-05-27 18:47:17,692 - root - DEBUG - Word segmentation model loading completed __main__
+2020-05-27 18:47:17,692 - root - DEBUG - Word segmentation model loading completed __main__
+2020-05-27 18:47:29,259 - root - DEBUG - Beam sampler created __main__
+2020-05-27 18:47:29,259 - root - DEBUG - Beam sampler created __main__
+2020-05-27 18:47:29,260 - root - DEBUG - Sequence generator created __main__
+2020-05-27 18:47:29,260 - root - DEBUG - Sequence generator created __main__
+2020-05-27 18:53:26,675 - root - DEBUG - Paragraph segmentation model loading __main__
+2020-05-27 18:53:26,675 - root - DEBUG - Paragraph segmentation model loading __main__
+2020-05-27 18:53:27,017 - root - DEBUG - Paragraph segmentation model loading completed __main__
+2020-05-27 18:53:27,017 - root - DEBUG - Paragraph segmentation model loading completed __main__
+2020-05-27 18:53:27,017 - root - DEBUG - Denoiser model loading __main__
+2020-05-27 18:53:27,017 - root - DEBUG - Denoiser model loading __main__
+2020-05-27 18:53:27,072 - root - DEBUG - Denoiser model loading completed __main__
+2020-05-27 18:53:27,072 - root - DEBUG - Denoiser model loading completed __main__
+2020-05-27 18:53:27,072 - root - DEBUG - Handwriting line segmentation model loading __main__
+2020-05-27 18:53:27,072 - root - DEBUG - Handwriting line segmentation model loading __main__
+2020-05-27 18:53:27,840 - root - DEBUG - Handwriting line segmentation model loading completed __main__
+2020-05-27 18:53:27,840 - root - DEBUG - Handwriting line segmentation model loading completed __main__
+2020-05-27 18:53:27,840 - root - DEBUG - Word segmentation model loading __main__
+2020-05-27 18:53:27,840 - root - DEBUG - Word segmentation model loading __main__
+2020-05-27 18:53:28,461 - root - DEBUG - Word segmentation model loading completed __main__
+2020-05-27 18:53:28,461 - root - DEBUG - Word segmentation model loading completed __main__
+2020-05-27 18:53:40,130 - root - DEBUG - Beam sampler created __main__
+2020-05-27 18:53:40,130 - root - DEBUG - Beam sampler created __main__
+2020-05-27 18:53:40,131 - root - DEBUG - Sequence generator created __main__
+2020-05-27 18:53:40,131 - root - DEBUG - Sequence generator created __main__
+2020-05-27 18:55:22,431 - root - DEBUG - Paragraph segmentation model loading __main__
+2020-05-27 18:55:22,431 - root - DEBUG - Paragraph segmentation model loading __main__
+2020-05-27 18:55:22,768 - root - DEBUG - Paragraph segmentation model loading completed __main__
+2020-05-27 18:55:22,768 - root - DEBUG - Paragraph segmentation model loading completed __main__
+2020-05-27 18:55:22,769 - root - DEBUG - Denoiser model loading __main__
+2020-05-27 18:55:22,769 - root - DEBUG - Denoiser model loading __main__
+2020-05-27 18:55:22,818 - root - DEBUG - Denoiser model loading completed __main__
+2020-05-27 18:55:22,818 - root - DEBUG - Denoiser model loading completed __main__
+2020-05-27 18:55:22,819 - root - DEBUG - Handwriting line segmentation model loading __main__
+2020-05-27 18:55:22,819 - root - DEBUG - Handwriting line segmentation model loading __main__
+2020-05-27 18:55:23,592 - root - DEBUG - Handwriting line segmentation model loading completed __main__
+2020-05-27 18:55:23,592 - root - DEBUG - Handwriting line segmentation model loading completed __main__
+2020-05-27 18:55:23,593 - root - DEBUG - Word segmentation model loading __main__
+2020-05-27 18:55:23,593 - root - DEBUG - Word segmentation model loading __main__
+2020-05-27 18:55:24,336 - root - DEBUG - Word segmentation model loading completed __main__
+2020-05-27 18:55:24,336 - root - DEBUG - Word segmentation model loading completed __main__
+2020-05-27 18:55:36,311 - root - DEBUG - Beam sampler created __main__
+2020-05-27 18:55:36,311 - root - DEBUG - Beam sampler created __main__
+2020-05-27 18:55:36,312 - root - DEBUG - Sequence generator created __main__
+2020-05-27 18:55:36,312 - root - DEBUG - Sequence generator created __main__
+2020-05-27 18:55:39,773 - root - DEBUG - [AM] Dalgalayan blarn agysdan sugy b __main__
+2020-05-27 18:55:39,773 - root - DEBUG - [AM] Dalgalayan blarn agysdan sugy b __main__
+2020-05-27 18:55:42,728 - root - DEBUG - [D] D a l g a   l a y   o n   b l o w __main__
+2020-05-27 18:55:42,728 - root - DEBUG - [D] D a l g a   l a y   o n   b l o w __main__
+2020-05-27 18:55:42,729 - root - DEBUG - [AM] beggy belbell garpsmagyla Bendn sapor raglty __main__
+2020-05-27 18:55:42,729 - root - DEBUG - [AM] beggy belbell garpsmagyla Bendn sapor raglty __main__
+2020-05-27 18:55:46,122 - root - DEBUG - [D] b e g g y   t o   t e l l   y o u r   s m a g __main__
+2020-05-27 18:55:46,122 - root - DEBUG - [D] b e g g y   t o   t e l l   y o u r   s m a g __main__
+2020-05-27 18:55:46,123 - root - DEBUG - [AM] Wha hognadtando"Tatioa"anga,aly  __main__
+2020-05-27 18:55:46,123 - root - DEBUG - [AM] Wha hognadtando"Tatioa"anga,aly  __main__
+2020-05-27 18:55:49,784 - root - DEBUG - [D] W h o   b e g a n   a t t e n d e __main__
+2020-05-27 18:55:49,784 - root - DEBUG - [D] W h o   b e g a n   a t t e n d e __main__
+2020-05-27 18:55:49,785 - root - DEBUG - [AM] aiigigligsddalin sinars __main__
+2020-05-27 18:55:49,785 - root - DEBUG - [AM] aiigigligsddalin sinars __main__
+2020-05-27 18:55:51,648 - root - DEBUG - [D] b r i n g i n g   l i g h __main__
+2020-05-27 18:55:51,648 - root - DEBUG - [D] b r i n g i n g   l i g h __main__
+2020-05-28 07:50:00,443 - root - DEBUG - Paragraph segmentation model loading __main__
+2020-05-28 07:50:00,443 - root - DEBUG - Paragraph segmentation model loading __main__
+2020-05-28 07:50:00,939 - root - DEBUG - Paragraph segmentation model loading completed __main__
+2020-05-28 07:50:00,939 - root - DEBUG - Paragraph segmentation model loading completed __main__
+2020-05-28 07:50:00,940 - root - DEBUG - Denoiser model loading __main__
+2020-05-28 07:50:00,940 - root - DEBUG - Denoiser model loading __main__
+2020-05-28 07:50:01,043 - root - DEBUG - Denoiser model loading completed __main__
+2020-05-28 07:50:01,043 - root - DEBUG - Denoiser model loading completed __main__
+2020-05-28 07:50:01,044 - root - DEBUG - Handwriting line segmentation model loading __main__
+2020-05-28 07:50:01,044 - root - DEBUG - Handwriting line segmentation model loading __main__
+2020-05-28 07:50:01,889 - root - DEBUG - Handwriting line segmentation model loading completed __main__
+2020-05-28 07:50:01,889 - root - DEBUG - Handwriting line segmentation model loading completed __main__
+2020-05-28 07:50:01,890 - root - DEBUG - Word segmentation model loading __main__
+2020-05-28 07:50:01,890 - root - DEBUG - Word segmentation model loading __main__
+2020-05-28 07:50:02,566 - root - DEBUG - Word segmentation model loading completed __main__
+2020-05-28 07:50:02,566 - root - DEBUG - Word segmentation model loading completed __main__
+2020-05-28 07:50:16,520 - root - DEBUG - Beam sampler created __main__
+2020-05-28 07:50:16,520 - root - DEBUG - Beam sampler created __main__
+2020-05-28 07:50:16,520 - root - DEBUG - Sequence generator created __main__
+2020-05-28 07:50:16,520 - root - DEBUG - Sequence generator created __main__
+2020-05-28 07:50:20,281 - root - DEBUG - [AM] Dalgalayan blarn agysdan sugy b __main__
+2020-05-28 07:50:20,281 - root - DEBUG - [AM] Dalgalayan blarn agysdan sugy b __main__
+2020-05-28 07:50:23,307 - root - DEBUG - [D] D a l g a   l a y   o n   b l o w __main__
+2020-05-28 07:50:23,307 - root - DEBUG - [D] D a l g a   l a y   o n   b l o w __main__
+2020-05-28 07:50:23,309 - root - DEBUG - [AM] beggy belbell garpsmagyla Bendn sapor raglty __main__
+2020-05-28 07:50:23,309 - root - DEBUG - [AM] beggy belbell garpsmagyla Bendn sapor raglty __main__
+2020-05-28 07:50:26,653 - root - DEBUG - [D] b e g g y   t o   t e l l   y o u r   s m a g __main__
+2020-05-28 07:50:26,653 - root - DEBUG - [D] b e g g y   t o   t e l l   y o u r   s m a g __main__
+2020-05-28 07:50:26,656 - root - DEBUG - [AM] Wha hognadtando"Tatioa"anga,aly  __main__
+2020-05-28 07:50:26,656 - root - DEBUG - [AM] Wha hognadtando"Tatioa"anga,aly  __main__
+2020-05-28 07:50:30,408 - root - DEBUG - [D] W h o   b e g a n   a t t e n d e __main__
+2020-05-28 07:50:30,408 - root - DEBUG - [D] W h o   b e g a n   a t t e n d e __main__
+2020-05-28 07:50:30,410 - root - DEBUG - [AM] aiigigligsddalin sinars __main__
+2020-05-28 07:50:30,410 - root - DEBUG - [AM] aiigigligsddalin sinars __main__
+2020-05-28 07:50:32,261 - root - DEBUG - [D] b r i n g i n g   l i g h __main__
+2020-05-28 07:50:32,261 - root - DEBUG - [D] b r i n g i n g   l i g h __main__
+2020-05-28 11:02:57,790 - root - DEBUG - Word segmentation model loading __main__
+2020-05-28 11:02:57,790 - root - DEBUG - Word segmentation model loading __main__
+2020-05-28 11:02:58,548 - root - DEBUG - Word segmentation model loading completed __main__
+2020-05-28 11:02:58,548 - root - DEBUG - Word segmentation model loading completed __main__
+2020-05-28 11:02:58,548 - root - DEBUG - Handwriting line segmentation model loading __main__
+2020-05-28 11:02:58,548 - root - DEBUG - Handwriting line segmentation model loading __main__
+2020-05-28 11:02:59,156 - root - DEBUG - Handwriting line segmentation model loading completed __main__
+2020-05-28 11:02:59,156 - root - DEBUG - Handwriting line segmentation model loading completed __main__
+2020-05-28 11:02:59,156 - root - DEBUG - Paragraph segmentation model loading __main__
+2020-05-28 11:02:59,156 - root - DEBUG - Paragraph segmentation model loading __main__
+2020-05-28 11:02:59,490 - root - DEBUG - Paragraph segmentation model loading completed __main__
+2020-05-28 11:02:59,490 - root - DEBUG - Paragraph segmentation model loading completed __main__
+2020-05-28 11:02:59,490 - root - DEBUG - Denoiser model loading __main__
+2020-05-28 11:02:59,490 - root - DEBUG - Denoiser model loading __main__
+2020-05-28 11:02:59,580 - root - DEBUG - Denoiser model loading completed __main__
+2020-05-28 11:02:59,580 - root - DEBUG - Denoiser model loading completed __main__
+2020-05-28 11:03:11,159 - root - DEBUG - Beam sampler created __main__
+2020-05-28 11:03:11,159 - root - DEBUG - Beam sampler created __main__
+2020-05-28 11:03:11,160 - root - DEBUG - Sequence generator created __main__
+2020-05-28 11:03:11,160 - root - DEBUG - Sequence generator created __main__
+2020-05-28 11:03:14,869 - root - DEBUG - [AM] Dalgalayan blarn agysdan sugy b __main__
+2020-05-28 11:03:14,869 - root - DEBUG - [AM] Dalgalayan blarn agysdan sugy b __main__
+2020-05-28 11:03:17,649 - root - DEBUG - [D] D a l g a   l a y   o n   b l o w __main__
+2020-05-28 11:03:17,649 - root - DEBUG - [D] D a l g a   l a y   o n   b l o w __main__
+2020-05-28 11:03:17,650 - root - DEBUG - [AM] beggy belbell garpsmagyla Bendn sapor raglty __main__
+2020-05-28 11:03:17,650 - root - DEBUG - [AM] beggy belbell garpsmagyla Bendn sapor raglty __main__
+2020-05-28 11:03:21,087 - root - DEBUG - [D] b e g g y   t o   t e l l   y o u r   s m a g __main__
+2020-05-28 11:03:21,087 - root - DEBUG - [D] b e g g y   t o   t e l l   y o u r   s m a g __main__
+2020-05-28 11:03:21,089 - root - DEBUG - [AM] Wha hognadtando"Tatioa"anga,aly  __main__
+2020-05-28 11:03:21,089 - root - DEBUG - [AM] Wha hognadtando"Tatioa"anga,aly  __main__
+2020-05-28 11:03:24,768 - root - DEBUG - [D] W h o   b e g a n   a t t e n d e __main__
+2020-05-28 11:03:24,768 - root - DEBUG - [D] W h o   b e g a n   a t t e n d e __main__
+2020-05-28 11:03:24,771 - root - DEBUG - [AM] aiigigligsddalin sinars __main__
+2020-05-28 11:03:24,771 - root - DEBUG - [AM] aiigigligsddalin sinars __main__
+2020-05-28 11:03:26,595 - root - DEBUG - [D] b r i n g i n g   l i g h __main__
+2020-05-28 11:03:26,595 - root - DEBUG - [D] b r i n g i n g   l i g h __main__
+2020-05-28 20:32:07,765 - root - DEBUG - Denoiser model loading __main__
+2020-05-28 20:32:07,765 - root - DEBUG - Denoiser model loading __main__
+2020-05-28 20:32:07,862 - root - DEBUG - Denoiser model loading completed __main__
+2020-05-28 20:32:07,862 - root - DEBUG - Denoiser model loading completed __main__
+2020-05-28 20:32:07,863 - root - DEBUG - Paragraph segmentation model loading __main__
+2020-05-28 20:32:07,863 - root - DEBUG - Paragraph segmentation model loading __main__
+2020-05-28 20:32:08,340 - root - DEBUG - Paragraph segmentation model loading completed __main__
+2020-05-28 20:32:08,340 - root - DEBUG - Paragraph segmentation model loading completed __main__
+2020-05-28 20:32:08,340 - root - DEBUG - Word segmentation model loading __main__
+2020-05-28 20:32:08,340 - root - DEBUG - Word segmentation model loading __main__
+2020-05-28 20:32:09,133 - root - DEBUG - Word segmentation model loading completed __main__
+2020-05-28 20:32:09,133 - root - DEBUG - Word segmentation model loading completed __main__
+2020-05-28 20:32:09,133 - root - DEBUG - Handwriting line segmentation model loading __main__
+2020-05-28 20:32:09,133 - root - DEBUG - Handwriting line segmentation model loading __main__
+2020-05-28 20:32:09,947 - root - DEBUG - Handwriting line segmentation model loading completed __main__
+2020-05-28 20:32:09,947 - root - DEBUG - Handwriting line segmentation model loading completed __main__
+2020-05-28 20:32:21,569 - root - DEBUG - Beam sampler created __main__
+2020-05-28 20:32:21,569 - root - DEBUG - Beam sampler created __main__
+2020-05-28 20:32:21,570 - root - DEBUG - Sequence generator created __main__
+2020-05-28 20:32:21,570 - root - DEBUG - Sequence generator created __main__
+2020-05-28 20:32:25,064 - root - DEBUG - [AM] Dalgalayan blarn agysdan sugy b __main__
+2020-05-28 20:32:25,064 - root - DEBUG - [AM] Dalgalayan blarn agysdan sugy b __main__
+2020-05-28 20:32:28,040 - root - DEBUG - [D] D a l g a   l a y   o n   b l o w __main__
+2020-05-28 20:32:28,040 - root - DEBUG - [D] D a l g a   l a y   o n   b l o w __main__
+2020-05-28 20:32:28,041 - root - DEBUG - [AM] beggy belbell garpsmagyla Bendn sapor raglty __main__
+2020-05-28 20:32:28,041 - root - DEBUG - [AM] beggy belbell garpsmagyla Bendn sapor raglty __main__
+2020-05-28 20:32:31,831 - root - DEBUG - [D] b e g g y   t o   t e l l   y o u r   s m a g __main__
+2020-05-28 20:32:31,831 - root - DEBUG - [D] b e g g y   t o   t e l l   y o u r   s m a g __main__
+2020-05-28 20:32:31,832 - root - DEBUG - [AM] Wha hognadtando"Tatioa"anga,aly  __main__
+2020-05-28 20:32:31,832 - root - DEBUG - [AM] Wha hognadtando"Tatioa"anga,aly  __main__
+2020-05-28 20:32:35,916 - root - DEBUG - [D] W h o   b e g a n   a t t e n d e __main__
+2020-05-28 20:32:35,916 - root - DEBUG - [D] W h o   b e g a n   a t t e n d e __main__
+2020-05-28 20:32:35,917 - root - DEBUG - [AM] aiigigligsddalin sinars __main__
+2020-05-28 20:32:35,917 - root - DEBUG - [AM] aiigigligsddalin sinars __main__
+2020-05-28 20:32:37,954 - root - DEBUG - [D] b r i n g i n g   l i g h __main__
+2020-05-28 20:32:37,954 - root - DEBUG - [D] b r i n g i n g   l i g h __main__
+2020-05-28 21:29:59,417 - root - DEBUG - Paragraph segmentation model loading __main__
+2020-05-28 21:29:59,417 - root - DEBUG - Paragraph segmentation model loading __main__
+2020-05-28 21:29:59,760 - root - DEBUG - Paragraph segmentation model loading completed __main__
+2020-05-28 21:29:59,760 - root - DEBUG - Paragraph segmentation model loading completed __main__
+2020-05-28 21:29:59,761 - root - DEBUG - Word segmentation model loading __main__
+2020-05-28 21:29:59,761 - root - DEBUG - Word segmentation model loading __main__
+2020-05-28 21:30:00,453 - root - DEBUG - Word segmentation model loading completed __main__
+2020-05-28 21:30:00,453 - root - DEBUG - Word segmentation model loading completed __main__
+2020-05-28 21:30:00,454 - root - DEBUG - Denoiser model loading __main__
+2020-05-28 21:30:00,454 - root - DEBUG - Denoiser model loading __main__
+2020-05-28 21:30:00,508 - root - DEBUG - Denoiser model loading completed __main__
+2020-05-28 21:30:00,508 - root - DEBUG - Denoiser model loading completed __main__
+2020-05-28 21:30:00,509 - root - DEBUG - Handwriting line segmentation model loading __main__
+2020-05-28 21:30:00,509 - root - DEBUG - Handwriting line segmentation model loading __main__
+2020-05-28 21:30:01,196 - root - DEBUG - Handwriting line segmentation model loading completed __main__
+2020-05-28 21:30:01,196 - root - DEBUG - Handwriting line segmentation model loading completed __main__
+2020-05-28 21:30:13,303 - root - DEBUG - Beam sampler created __main__
+2020-05-28 21:30:13,303 - root - DEBUG - Beam sampler created __main__
+2020-05-28 21:30:13,303 - root - DEBUG - Sequence generator created __main__
+2020-05-28 21:30:13,303 - root - DEBUG - Sequence generator created __main__
+2020-05-28 21:30:16,916 - root - DEBUG - [AM] Dalgalayan blarn agysdan sugy b __main__
+2020-05-28 21:30:16,916 - root - DEBUG - [AM] Dalgalayan blarn agysdan sugy b __main__
+2020-05-28 21:30:20,135 - root - DEBUG - [D] D a l g a   l a y   o n   b l o w __main__
+2020-05-28 21:30:20,135 - root - DEBUG - [D] D a l g a   l a y   o n   b l o w __main__
+2020-05-28 21:30:20,136 - root - DEBUG - [AM] beggy belbell garpsmagyla Bendn sapor raglty __main__
+2020-05-28 21:30:20,136 - root - DEBUG - [AM] beggy belbell garpsmagyla Bendn sapor raglty __main__
+2020-05-28 21:30:24,013 - root - DEBUG - [D] b e g g y   t o   t e l l   y o u r   s m a g __main__
+2020-05-28 21:30:24,013 - root - DEBUG - [D] b e g g y   t o   t e l l   y o u r   s m a g __main__
+2020-05-28 21:30:24,015 - root - DEBUG - [AM] Wha hognadtando"Tatioa"anga,aly  __main__
+2020-05-28 21:30:24,015 - root - DEBUG - [AM] Wha hognadtando"Tatioa"anga,aly  __main__
+2020-05-28 21:30:28,161 - root - DEBUG - [D] W h o   b e g a n   a t t e n d e __main__
+2020-05-28 21:30:28,161 - root - DEBUG - [D] W h o   b e g a n   a t t e n d e __main__
+2020-05-28 21:30:28,162 - root - DEBUG - [AM] aiigigligsddalin sinars __main__
+2020-05-28 21:30:28,162 - root - DEBUG - [AM] aiigigligsddalin sinars __main__
+2020-05-28 21:30:30,281 - root - DEBUG - [D] b r i n g i n g   l i g h __main__
+2020-05-28 21:30:30,281 - root - DEBUG - [D] b r i n g i n g   l i g h __main__
+2020-05-28 21:33:03,295 - root - DEBUG - Handwriting line segmentation model loading __main__
+2020-05-28 21:33:03,295 - root - DEBUG - Handwriting line segmentation model loading __main__
+2020-05-28 21:33:04,029 - root - DEBUG - Handwriting line segmentation model loading completed __main__
+2020-05-28 21:33:04,029 - root - DEBUG - Handwriting line segmentation model loading completed __main__
+2020-05-28 21:33:04,029 - root - DEBUG - Denoiser model loading __main__
+2020-05-28 21:33:04,029 - root - DEBUG - Denoiser model loading __main__
+2020-05-28 21:33:04,172 - root - DEBUG - Denoiser model loading completed __main__
+2020-05-28 21:33:04,172 - root - DEBUG - Denoiser model loading completed __main__
+2020-05-28 21:33:04,173 - root - DEBUG - Word segmentation model loading __main__
+2020-05-28 21:33:04,173 - root - DEBUG - Word segmentation model loading __main__
+2020-05-28 21:33:04,791 - root - DEBUG - Word segmentation model loading completed __main__
+2020-05-28 21:33:04,791 - root - DEBUG - Word segmentation model loading completed __main__
+2020-05-28 21:33:04,791 - root - DEBUG - Paragraph segmentation model loading __main__
+2020-05-28 21:33:04,791 - root - DEBUG - Paragraph segmentation model loading __main__
+2020-05-28 21:33:05,119 - root - DEBUG - Paragraph segmentation model loading completed __main__
+2020-05-28 21:33:05,119 - root - DEBUG - Paragraph segmentation model loading completed __main__
+2020-05-28 21:33:16,860 - root - DEBUG - Beam sampler created __main__
+2020-05-28 21:33:16,860 - root - DEBUG - Beam sampler created __main__
+2020-05-28 21:33:16,861 - root - DEBUG - Sequence generator created __main__
+2020-05-28 21:33:16,861 - root - DEBUG - Sequence generator created __main__
+2020-05-28 21:33:20,365 - root - DEBUG - [AM] Dalgalayan blarn agysdan sugy b __main__
+2020-05-28 21:33:20,365 - root - DEBUG - [AM] Dalgalayan blarn agysdan sugy b __main__
+2020-05-28 21:33:23,497 - root - DEBUG - [D] D a l g a   l a y   o n   b l o w __main__
+2020-05-28 21:33:23,497 - root - DEBUG - [D] D a l g a   l a y   o n   b l o w __main__
+2020-05-28 21:33:23,499 - root - DEBUG - [AM] beggy belbell garpsmagyla Bendn sapor raglty __main__
+2020-05-28 21:33:23,499 - root - DEBUG - [AM] beggy belbell garpsmagyla Bendn sapor raglty __main__
+2020-05-28 21:33:27,238 - root - DEBUG - [D] b e g g y   t o   t e l l   y o u r   s m a g __main__
+2020-05-28 21:33:27,238 - root - DEBUG - [D] b e g g y   t o   t e l l   y o u r   s m a g __main__
+2020-05-28 21:33:27,239 - root - DEBUG - [AM] Wha hognadtando"Tatioa"anga,aly  __main__
+2020-05-28 21:33:27,239 - root - DEBUG - [AM] Wha hognadtando"Tatioa"anga,aly  __main__
+2020-05-28 21:33:30,897 - root - DEBUG - [D] W h o   b e g a n   a t t e n d e __main__
+2020-05-28 21:33:30,897 - root - DEBUG - [D] W h o   b e g a n   a t t e n d e __main__
+2020-05-28 21:33:30,899 - root - DEBUG - [AM] aiigigligsddalin sinars __main__
+2020-05-28 21:33:30,899 - root - DEBUG - [AM] aiigigligsddalin sinars __main__
+2020-05-28 21:33:32,774 - root - DEBUG - [D] b r i n g i n g   l i g h __main__
+2020-05-28 21:33:32,774 - root - DEBUG - [D] b r i n g i n g   l i g h __main__
+2020-05-30 11:54:45,210 - root - DEBUG - Denoiser model loading __main__
+2020-05-30 11:54:45,210 - root - DEBUG - Denoiser model loading __main__
+2020-05-30 11:54:45,329 - root - DEBUG - Denoiser model loading completed __main__
+2020-05-30 11:54:45,329 - root - DEBUG - Denoiser model loading completed __main__
+2020-05-30 11:54:45,329 - root - DEBUG - Paragraph segmentation model loading __main__
+2020-05-30 11:54:45,329 - root - DEBUG - Paragraph segmentation model loading __main__
+2020-05-30 11:54:45,683 - root - DEBUG - Paragraph segmentation model loading completed __main__
+2020-05-30 11:54:45,683 - root - DEBUG - Paragraph segmentation model loading completed __main__
+2020-05-30 11:54:45,684 - root - DEBUG - Word segmentation model loading __main__
+2020-05-30 11:54:45,684 - root - DEBUG - Word segmentation model loading __main__
+2020-05-30 11:54:46,376 - root - DEBUG - Word segmentation model loading completed __main__
+2020-05-30 11:54:46,376 - root - DEBUG - Word segmentation model loading completed __main__
+2020-05-30 11:54:46,376 - root - DEBUG - Handwriting line segmentation model loading __main__
+2020-05-30 11:54:46,376 - root - DEBUG - Handwriting line segmentation model loading __main__
+2020-05-30 11:54:47,152 - root - DEBUG - Handwriting line segmentation model loading completed __main__
+2020-05-30 11:54:47,152 - root - DEBUG - Handwriting line segmentation model loading completed __main__
+2020-05-30 11:55:03,223 - root - DEBUG - Beam sampler created __main__
+2020-05-30 11:55:03,223 - root - DEBUG - Beam sampler created __main__
+2020-05-30 11:55:03,223 - root - DEBUG - Sequence generator created __main__
+2020-05-30 11:55:03,223 - root - DEBUG - Sequence generator created __main__
+2020-05-30 12:58:24,829 - root - DEBUG - Paragraph segmentation model loading __main__
+2020-05-30 12:58:24,829 - root - DEBUG - Paragraph segmentation model loading __main__
+2020-05-30 12:58:25,210 - root - DEBUG - Paragraph segmentation model loading completed __main__
+2020-05-30 12:58:25,210 - root - DEBUG - Paragraph segmentation model loading completed __main__
+2020-05-30 12:58:25,211 - root - DEBUG - Denoiser model loading __main__
+2020-05-30 12:58:25,211 - root - DEBUG - Denoiser model loading __main__
+2020-05-30 12:58:25,270 - root - DEBUG - Denoiser model loading completed __main__
+2020-05-30 12:58:25,270 - root - DEBUG - Denoiser model loading completed __main__
+2020-05-30 12:58:25,271 - root - DEBUG - Handwriting line segmentation model loading __main__
+2020-05-30 12:58:25,271 - root - DEBUG - Handwriting line segmentation model loading __main__
+2020-05-30 12:58:26,033 - root - DEBUG - Handwriting line segmentation model loading completed __main__
+2020-05-30 12:58:26,033 - root - DEBUG - Handwriting line segmentation model loading completed __main__
+2020-05-30 12:58:26,033 - root - DEBUG - Word segmentation model loading __main__
+2020-05-30 12:58:26,033 - root - DEBUG - Word segmentation model loading __main__
+2020-05-30 12:58:26,657 - root - DEBUG - Word segmentation model loading completed __main__
+2020-05-30 12:58:26,657 - root - DEBUG - Word segmentation model loading completed __main__
+2020-05-30 12:58:38,531 - root - DEBUG - Beam sampler created __main__
+2020-05-30 12:58:38,531 - root - DEBUG - Beam sampler created __main__
+2020-05-30 12:58:38,532 - root - DEBUG - Sequence generator created __main__
+2020-05-30 12:58:38,532 - root - DEBUG - Sequence generator created __main__
+2020-05-30 12:58:42,389 - root - DEBUG - [AM] Dalgalayan blarn agysdan sugy b __main__
+2020-05-30 12:58:42,389 - root - DEBUG - [AM] Dalgalayan blarn agysdan sugy b __main__
+2020-05-30 12:58:45,192 - root - DEBUG - [D] D a l g a   l a y   o n   b l o w __main__
+2020-05-30 12:58:45,192 - root - DEBUG - [D] D a l g a   l a y   o n   b l o w __main__
+2020-05-30 12:58:45,194 - root - DEBUG - [AM] beggy belbell garpsmagyla Bendn sapor raglty __main__
+2020-05-30 12:58:45,194 - root - DEBUG - [AM] beggy belbell garpsmagyla Bendn sapor raglty __main__
+2020-05-30 12:58:48,355 - root - DEBUG - [D] b e g g y   t o   t e l l   y o u r   s m a g __main__
+2020-05-30 12:58:48,355 - root - DEBUG - [D] b e g g y   t o   t e l l   y o u r   s m a g __main__
+2020-05-30 12:58:48,358 - root - DEBUG - [AM] Wha hognadtando"Tatioa"anga,aly  __main__
+2020-05-30 12:58:48,358 - root - DEBUG - [AM] Wha hognadtando"Tatioa"anga,aly  __main__
+2020-05-30 12:58:52,143 - root - DEBUG - [D] W h o   b e g a n   a t t e n d e __main__
+2020-05-30 12:58:52,143 - root - DEBUG - [D] W h o   b e g a n   a t t e n d e __main__
+2020-05-30 12:58:52,146 - root - DEBUG - [AM] aiigigligsddalin sinars __main__
+2020-05-30 12:58:52,146 - root - DEBUG - [AM] aiigigligsddalin sinars __main__
+2020-05-30 12:58:53,975 - root - DEBUG - [D] b r i n g i n g   l i g h __main__
+2020-05-30 12:58:53,975 - root - DEBUG - [D] b r i n g i n g   l i g h __main__
+2020-05-31 00:08:24,730 - root - DEBUG - Paragraph segmentation model loading __main__
+2020-05-31 00:08:24,730 - root - DEBUG - Paragraph segmentation model loading __main__
+2020-05-31 00:08:25,099 - root - DEBUG - Paragraph segmentation model loading completed __main__
+2020-05-31 00:08:25,099 - root - DEBUG - Paragraph segmentation model loading completed __main__
+2020-05-31 00:08:25,099 - root - DEBUG - Denoiser model loading __main__
+2020-05-31 00:08:25,099 - root - DEBUG - Denoiser model loading __main__
+2020-05-31 00:08:25,175 - root - DEBUG - Denoiser model loading completed __main__
+2020-05-31 00:08:25,175 - root - DEBUG - Denoiser model loading completed __main__
+2020-05-31 00:08:25,176 - root - DEBUG - Handwriting line segmentation model loading __main__
+2020-05-31 00:08:25,176 - root - DEBUG - Handwriting line segmentation model loading __main__
+2020-05-31 00:08:25,907 - root - DEBUG - Handwriting line segmentation model loading completed __main__
+2020-05-31 00:08:25,907 - root - DEBUG - Handwriting line segmentation model loading completed __main__
+2020-05-31 00:08:25,908 - root - DEBUG - Word segmentation model loading __main__
+2020-05-31 00:08:25,908 - root - DEBUG - Word segmentation model loading __main__
+2020-05-31 00:08:26,731 - root - DEBUG - Word segmentation model loading completed __main__
+2020-05-31 00:08:26,731 - root - DEBUG - Word segmentation model loading completed __main__
+2020-05-31 00:08:43,162 - root - DEBUG - Beam sampler created __main__
+2020-05-31 00:08:43,162 - root - DEBUG - Beam sampler created __main__
+2020-05-31 00:08:43,163 - root - DEBUG - Sequence generator created __main__
+2020-05-31 00:08:43,163 - root - DEBUG - Sequence generator created __main__
+2020-05-31 00:12:29,737 - root - DEBUG - [AM] Dalgalayan blarn agysdan sugy b __main__
+2020-05-31 00:12:29,737 - root - DEBUG - [AM] Dalgalayan blarn agysdan sugy b __main__
+2020-05-31 00:12:33,724 - root - DEBUG - [D] D a l g a   l a y   o n   b l o w __main__
+2020-05-31 00:12:33,724 - root - DEBUG - [D] D a l g a   l a y   o n   b l o w __main__
+2020-05-31 00:12:33,726 - root - DEBUG - [AM] beggy belbell garpsmagyla Bendn sapor raglty __main__
+2020-05-31 00:12:33,726 - root - DEBUG - [AM] beggy belbell garpsmagyla Bendn sapor raglty __main__
+2020-05-31 00:12:37,799 - root - DEBUG - [D] b e g g y   t o   t e l l   y o u r   s m a g __main__
+2020-05-31 00:12:37,799 - root - DEBUG - [D] b e g g y   t o   t e l l   y o u r   s m a g __main__
+2020-05-31 00:12:37,803 - root - DEBUG - [AM] Wha hognadtando"Tatioa"anga,aly  __main__
+2020-05-31 00:12:37,803 - root - DEBUG - [AM] Wha hognadtando"Tatioa"anga,aly  __main__
+2020-05-31 00:12:42,153 - root - DEBUG - [D] W h o   b e g a n   a t t e n d e __main__
+2020-05-31 00:12:42,153 - root - DEBUG - [D] W h o   b e g a n   a t t e n d e __main__
+2020-05-31 00:12:42,156 - root - DEBUG - [AM] aiigigligsddalin sinars __main__
+2020-05-31 00:12:42,156 - root - DEBUG - [AM] aiigigligsddalin sinars __main__
+2020-05-31 00:12:44,579 - root - DEBUG - [D] b r i n g i n g   l i g h __main__
+2020-05-31 00:12:44,579 - root - DEBUG - [D] b r i n g i n g   l i g h __main__
+2020-05-31 00:13:57,238 - root - DEBUG - Paragraph segmentation model loading __main__
+2020-05-31 00:13:57,238 - root - DEBUG - Paragraph segmentation model loading __main__
+2020-05-31 00:13:57,598 - root - DEBUG - Paragraph segmentation model loading completed __main__
+2020-05-31 00:13:57,598 - root - DEBUG - Paragraph segmentation model loading completed __main__
+2020-05-31 00:13:57,598 - root - DEBUG - Word segmentation model loading __main__
+2020-05-31 00:13:57,598 - root - DEBUG - Word segmentation model loading __main__
+2020-05-31 00:13:58,327 - root - DEBUG - Word segmentation model loading completed __main__
+2020-05-31 00:13:58,327 - root - DEBUG - Word segmentation model loading completed __main__
+2020-05-31 00:13:58,327 - root - DEBUG - Denoiser model loading __main__
+2020-05-31 00:13:58,327 - root - DEBUG - Denoiser model loading __main__
+2020-05-31 00:13:58,389 - root - DEBUG - Denoiser model loading completed __main__
+2020-05-31 00:13:58,389 - root - DEBUG - Denoiser model loading completed __main__
+2020-05-31 00:13:58,389 - root - DEBUG - Handwriting line segmentation model loading __main__
+2020-05-31 00:13:58,389 - root - DEBUG - Handwriting line segmentation model loading __main__
+2020-05-31 00:13:59,028 - root - DEBUG - Handwriting line segmentation model loading completed __main__
+2020-05-31 00:13:59,028 - root - DEBUG - Handwriting line segmentation model loading completed __main__
+2020-05-31 00:14:10,655 - root - DEBUG - Beam sampler created __main__
+2020-05-31 00:14:10,655 - root - DEBUG - Beam sampler created __main__
+2020-05-31 00:14:10,655 - root - DEBUG - Sequence generator created __main__
+2020-05-31 00:14:10,655 - root - DEBUG - Sequence generator created __main__
+2020-05-31 00:14:14,243 - root - DEBUG - [AM] Dalgalayan blarn agysdan sugy b __main__
+2020-05-31 00:14:14,243 - root - DEBUG - [AM] Dalgalayan blarn agysdan sugy b __main__
+2020-05-31 00:14:17,304 - root - DEBUG - [D] D a l g a   l a y   o n   b l o w __main__
+2020-05-31 00:14:17,304 - root - DEBUG - [D] D a l g a   l a y   o n   b l o w __main__
+2020-05-31 00:14:17,306 - root - DEBUG - [AM] beggy belbell garpsmagyla Bendn sapor raglty __main__
+2020-05-31 00:14:17,306 - root - DEBUG - [AM] beggy belbell garpsmagyla Bendn sapor raglty __main__
+2020-05-31 00:14:21,360 - root - DEBUG - [D] b e g g y   t o   t e l l   y o u r   s m a g __main__
+2020-05-31 00:14:21,360 - root - DEBUG - [D] b e g g y   t o   t e l l   y o u r   s m a g __main__
+2020-05-31 00:14:21,362 - root - DEBUG - [AM] Wha hognadtando"Tatioa"anga,aly  __main__
+2020-05-31 00:14:21,362 - root - DEBUG - [AM] Wha hognadtando"Tatioa"anga,aly  __main__
+2020-05-31 00:14:25,803 - root - DEBUG - [D] W h o   b e g a n   a t t e n d e __main__
+2020-05-31 00:14:25,803 - root - DEBUG - [D] W h o   b e g a n   a t t e n d e __main__
+2020-05-31 00:14:25,805 - root - DEBUG - [AM] aiigigligsddalin sinars __main__
+2020-05-31 00:14:25,805 - root - DEBUG - [AM] aiigigligsddalin sinars __main__
+2020-05-31 00:14:28,345 - root - DEBUG - [D] b r i n g i n g   l i g h __main__
+2020-05-31 00:14:28,345 - root - DEBUG - [D] b r i n g i n g   l i g h __main__
+2020-05-31 00:14:39,460 - root - DEBUG - Paragraph segmentation model loading __main__
+2020-05-31 00:14:39,460 - root - DEBUG - Paragraph segmentation model loading __main__
+2020-05-31 00:14:39,873 - root - DEBUG - Paragraph segmentation model loading completed __main__
+2020-05-31 00:14:39,873 - root - DEBUG - Paragraph segmentation model loading completed __main__
+2020-05-31 00:14:39,873 - root - DEBUG - Word segmentation model loading __main__
+2020-05-31 00:14:39,873 - root - DEBUG - Word segmentation model loading __main__
+2020-05-31 00:14:40,546 - root - DEBUG - Word segmentation model loading completed __main__
+2020-05-31 00:14:40,546 - root - DEBUG - Word segmentation model loading completed __main__
+2020-05-31 00:14:40,546 - root - DEBUG - Denoiser model loading __main__
+2020-05-31 00:14:40,546 - root - DEBUG - Denoiser model loading __main__
+2020-05-31 00:14:40,588 - root - DEBUG - Denoiser model loading completed __main__
+2020-05-31 00:14:40,588 - root - DEBUG - Denoiser model loading completed __main__
+2020-05-31 00:14:40,588 - root - DEBUG - Handwriting line segmentation model loading __main__
+2020-05-31 00:14:40,588 - root - DEBUG - Handwriting line segmentation model loading __main__
+2020-05-31 00:14:41,268 - root - DEBUG - Handwriting line segmentation model loading completed __main__
+2020-05-31 00:14:41,268 - root - DEBUG - Handwriting line segmentation model loading completed __main__
+2020-05-31 00:14:52,898 - root - DEBUG - Beam sampler created __main__
+2020-05-31 00:14:52,898 - root - DEBUG - Beam sampler created __main__
+2020-05-31 00:14:52,898 - root - DEBUG - Sequence generator created __main__
+2020-05-31 00:14:52,898 - root - DEBUG - Sequence generator created __main__
+2020-05-31 00:14:58,389 - root - DEBUG - [AM] Sontence DatabasOa0zOT2  __main__
+2020-05-31 00:14:58,389 - root - DEBUG - [AM] Sontence DatabasOa0zOT2  __main__
+2020-05-31 00:15:00,924 - root - DEBUG - [D] S e n t e n c e   D a t a __main__
+2020-05-31 00:15:00,924 - root - DEBUG - [D] S e n t e n c e   D a t a __main__
+2020-05-31 00:15:00,925 - root - DEBUG - [AM] TigiogisilngTingigniatiaigtitgittiTtan.Titinim"TTioTiianin __main__
+2020-05-31 00:15:00,925 - root - DEBUG - [AM] TigiogisilngTingigniatiaigtitgittiTtan.Titinim"TTioTiianin __main__
+2020-05-31 00:15:07,422 - root - DEBUG - [D] T i g i n g i n g   s i n g i n g   i g n o r a t i n g   l __main__
+2020-05-31 00:15:07,422 - root - DEBUG - [D] T i g i n g i n g   s i n g i n g   i g n o r a t i n g   l __main__
+2020-05-31 00:15:07,425 - root - DEBUG - [AM] inionilinionicicinioinicivivioiaioinvio __main__
+2020-05-31 00:15:07,425 - root - DEBUG - [AM] inionilinionicicinioinicivivioiaioinvio __main__
+2020-05-31 00:15:10,985 - root - DEBUG - [D] o p i n i o n   i l l i n i o n i c i c __main__
+2020-05-31 00:15:10,985 - root - DEBUG - [D] o p i n i o n   i l l i n i o n i c i c __main__
+2020-05-31 00:15:10,987 - root - DEBUG - [AM] There suppost costs are a bing thain on Americain __main__
+2020-05-31 00:15:10,987 - root - DEBUG - [AM] There suppost costs are a bing thain on Americain __main__
+2020-05-31 00:15:14,817 - root - DEBUG - [D] T h e r e   s u p p o r t   c o s t s   a r e   a __main__
+2020-05-31 00:15:14,817 - root - DEBUG - [D] T h e r e   s u p p o r t   c o s t s   a r e   a __main__
+2020-05-31 00:15:14,820 - root - DEBUG - [AM] doller reserves. Dr. Adenauer's anoer in the __main__
+2020-05-31 00:15:14,820 - root - DEBUG - [AM] doller reserves. Dr. Adenauer's anoer in the __main__
+2020-05-31 00:15:18,477 - root - DEBUG - [D] d o l l a r   r e s e r v e s .   D r .   A r __main__
+2020-05-31 00:15:18,477 - root - DEBUG - [D] d o l l a r   r e s e r v e s .   D r .   A r __main__
+2020-05-31 00:15:18,480 - root - DEBUG - [AM] over-and-fpor-all coasth offr of ss7uilion. Preicded __main__
+2020-05-31 00:15:18,480 - root - DEBUG - [AM] over-and-fpor-all coasth offr of ss7uilion. Preicded __main__
+2020-05-31 00:15:23,452 - root - DEBUG - [D] o v e r - a n d - f o r - a l l   c o a s t s   o f f __main__
+2020-05-31 00:15:23,452 - root - DEBUG - [D] o v e r - a n d - f o r - a l l   c o a s t s   o f f __main__
+2020-05-31 00:15:23,454 - root - DEBUG - [AM] Menoncdy's rejiction of it in a paingeod Whew to the __main__
+2020-05-31 00:15:23,454 - root - DEBUG - [AM] Menoncdy's rejiction of it in a paingeod Whew to the __main__
+2020-05-31 00:15:27,361 - root - DEBUG - [D] M e n a r c h y ' s   r e j e c t i o n   o f   i t __main__
+2020-05-31 00:15:27,361 - root - DEBUG - [D] M e n a r c h y ' s   r e j e c t i o n   o f   i t __main__
+2020-05-31 00:15:27,364 - root - DEBUG - [AM] Wnt Ceman Coovermenty, Ut wll now have to pay __main__
+2020-05-31 00:15:27,364 - root - DEBUG - [AM] Wnt Ceman Coovermenty, Ut wll now have to pay __main__
+2020-05-31 00:15:30,838 - root - DEBUG - [D] B u t   G e r m a n   G o v e r n m e n t y , __main__
+2020-05-31 00:15:30,838 - root - DEBUG - [D] B u t   G e r m a n   G o v e r n m e n t y , __main__
+2020-05-31 00:15:30,839 - root - DEBUG - [AM] mere - and inceare barctions to do s - or __main__
+2020-05-31 00:15:30,839 - root - DEBUG - [AM] mere - and inceare barctions to do s - or __main__
+2020-05-31 00:15:34,206 - root - DEBUG - [D] m o r e -   a n d   i n c r e a s e   s a n __main__
+2020-05-31 00:15:34,206 - root - DEBUG - [D] m o r e -   a n d   i n c r e a s e   s a n __main__
+2020-05-31 00:15:34,208 - root - DEBUG - [AM] sun the dvious risths in upretling the new __main__
+2020-05-31 00:15:34,208 - root - DEBUG - [AM] sun the dvious risths in upretling the new __main__
+2020-05-31 00:15:37,168 - root - DEBUG - [D] s u n   t h e   d e v i o u s   r i s k s __main__
+2020-05-31 00:15:37,168 - root - DEBUG - [D] s u n   t h e   d e v i o u s   r i s k s __main__
+2020-05-31 00:15:37,170 - root - DEBUG - [AM] American administration. __main__
+2020-05-31 00:15:37,170 - root - DEBUG - [AM] American administration. __main__
+2020-05-31 00:15:38,655 - root - DEBUG - [D] American administration. __main__
+2020-05-31 00:15:38,655 - root - DEBUG - [D] American administration. __main__
+2020-05-31 00:15:38,657 - root - DEBUG - [AM] IFazae __main__
+2020-05-31 00:15:38,657 - root - DEBUG - [AM] IFazae __main__
+2020-05-31 00:15:39,536 - root - DEBUG - [D] I   F a z a r e __main__
+2020-05-31 00:15:39,536 - root - DEBUG - [D] I   F a z a r e __main__
+2020-05-31 00:25:39,191 - root - DEBUG - Denoiser model loading __main__
+2020-05-31 00:25:39,191 - root - DEBUG - Denoiser model loading __main__
+2020-05-31 00:25:39,252 - root - DEBUG - Denoiser model loading completed __main__
+2020-05-31 00:25:39,252 - root - DEBUG - Denoiser model loading completed __main__
+2020-05-31 00:25:39,252 - root - DEBUG - Paragraph segmentation model loading __main__
+2020-05-31 00:25:39,252 - root - DEBUG - Paragraph segmentation model loading __main__
+2020-05-31 00:25:39,560 - root - DEBUG - Paragraph segmentation model loading completed __main__
+2020-05-31 00:25:39,560 - root - DEBUG - Paragraph segmentation model loading completed __main__
+2020-05-31 00:25:39,560 - root - DEBUG - Word segmentation model loading __main__
+2020-05-31 00:25:39,560 - root - DEBUG - Word segmentation model loading __main__
+2020-05-31 00:25:40,225 - root - DEBUG - Word segmentation model loading completed __main__
+2020-05-31 00:25:40,225 - root - DEBUG - Word segmentation model loading completed __main__
+2020-05-31 00:25:40,225 - root - DEBUG - Handwriting line segmentation model loading __main__
+2020-05-31 00:25:40,225 - root - DEBUG - Handwriting line segmentation model loading __main__
+2020-05-31 00:25:40,829 - root - DEBUG - Handwriting line segmentation model loading completed __main__
+2020-05-31 00:25:40,829 - root - DEBUG - Handwriting line segmentation model loading completed __main__
+2020-05-31 00:25:52,118 - root - DEBUG - Beam sampler created __main__
+2020-05-31 00:25:52,118 - root - DEBUG - Beam sampler created __main__
+2020-05-31 00:25:52,118 - root - DEBUG - Sequence generator created __main__
+2020-05-31 00:25:52,118 - root - DEBUG - Sequence generator created __main__
+2020-05-31 00:25:56,852 - root - DEBUG - [AM] Sontence DatabasOa0zOT2  __main__
+2020-05-31 00:25:56,852 - root - DEBUG - [AM] Sontence DatabasOa0zOT2  __main__
+2020-05-31 00:25:59,000 - root - DEBUG - [D] S e n t e n c e   D a t a __main__
+2020-05-31 00:25:59,000 - root - DEBUG - [D] S e n t e n c e   D a t a __main__
+2020-05-31 00:25:59,003 - root - DEBUG - [AM] TigiogisilngTingigniatiaigtitgittiTtan.Titinim"TTioTiianin __main__
+2020-05-31 00:25:59,003 - root - DEBUG - [AM] TigiogisilngTingigniatiaigtitgittiTtan.Titinim"TTioTiianin __main__
+2020-05-31 00:26:04,414 - root - DEBUG - [D] T i g i n g i n g   s i n g i n g   i g n o r a t i n g   l __main__
+2020-05-31 00:26:04,414 - root - DEBUG - [D] T i g i n g i n g   s i n g i n g   i g n o r a t i n g   l __main__
+2020-05-31 00:26:04,417 - root - DEBUG - [AM] inionilinionicicinioinicivivioiaioinvio __main__
+2020-05-31 00:26:04,417 - root - DEBUG - [AM] inionilinionicicinioinicivivioiaioinvio __main__
+2020-05-31 00:26:07,457 - root - DEBUG - [D] o p i n i o n   i l l i n i o n i c i c __main__
+2020-05-31 00:26:07,457 - root - DEBUG - [D] o p i n i o n   i l l i n i o n i c i c __main__
+2020-05-31 00:26:07,460 - root - DEBUG - [AM] There suppost costs are a bing thain on Americain __main__
+2020-05-31 00:26:07,460 - root - DEBUG - [AM] There suppost costs are a bing thain on Americain __main__
+2020-05-31 00:26:10,781 - root - DEBUG - [D] T h e r e   s u p p o r t   c o s t s   a r e   a __main__
+2020-05-31 00:26:10,781 - root - DEBUG - [D] T h e r e   s u p p o r t   c o s t s   a r e   a __main__
+2020-05-31 00:26:10,783 - root - DEBUG - [AM] doller reserves. Dr. Adenauer's anoer in the __main__
+2020-05-31 00:26:10,783 - root - DEBUG - [AM] doller reserves. Dr. Adenauer's anoer in the __main__
+2020-05-31 00:26:14,719 - root - DEBUG - [D] d o l l a r   r e s e r v e s .   D r .   A r __main__
+2020-05-31 00:26:14,719 - root - DEBUG - [D] d o l l a r   r e s e r v e s .   D r .   A r __main__
+2020-05-31 00:26:14,722 - root - DEBUG - [AM] over-and-fpor-all coasth offr of ss7uilion. Preicded __main__
+2020-05-31 00:26:14,722 - root - DEBUG - [AM] over-and-fpor-all coasth offr of ss7uilion. Preicded __main__
+2020-05-31 00:26:20,670 - root - DEBUG - [D] o v e r - a n d - f o r - a l l   c o a s t s   o f f __main__
+2020-05-31 00:26:20,670 - root - DEBUG - [D] o v e r - a n d - f o r - a l l   c o a s t s   o f f __main__
+2020-05-31 00:26:20,673 - root - DEBUG - [AM] Menoncdy's rejiction of it in a paingeod Whew to the __main__
+2020-05-31 00:26:20,673 - root - DEBUG - [AM] Menoncdy's rejiction of it in a paingeod Whew to the __main__
+2020-05-31 00:26:25,062 - root - DEBUG - [D] M e n a r c h y ' s   r e j e c t i o n   o f   i t __main__
+2020-05-31 00:26:25,062 - root - DEBUG - [D] M e n a r c h y ' s   r e j e c t i o n   o f   i t __main__
+2020-05-31 00:26:25,065 - root - DEBUG - [AM] Wnt Ceman Coovermenty, Ut wll now have to pay __main__
+2020-05-31 00:26:25,065 - root - DEBUG - [AM] Wnt Ceman Coovermenty, Ut wll now have to pay __main__
+2020-05-31 00:26:28,385 - root - DEBUG - [D] B u t   G e r m a n   G o v e r n m e n t y , __main__
+2020-05-31 00:26:28,385 - root - DEBUG - [D] B u t   G e r m a n   G o v e r n m e n t y , __main__
+2020-05-31 00:26:28,387 - root - DEBUG - [AM] mere - and inceare barctions to do s - or __main__
+2020-05-31 00:26:28,387 - root - DEBUG - [AM] mere - and inceare barctions to do s - or __main__
+2020-05-31 00:26:31,567 - root - DEBUG - [D] m o r e -   a n d   i n c r e a s e   s a n __main__
+2020-05-31 00:26:31,567 - root - DEBUG - [D] m o r e -   a n d   i n c r e a s e   s a n __main__
+2020-05-31 00:26:31,570 - root - DEBUG - [AM] sun the dvious risths in upretling the new __main__
+2020-05-31 00:26:31,570 - root - DEBUG - [AM] sun the dvious risths in upretling the new __main__
+2020-05-31 00:26:34,502 - root - DEBUG - [D] s u n   t h e   d e v i o u s   r i s k s __main__
+2020-05-31 00:26:34,502 - root - DEBUG - [D] s u n   t h e   d e v i o u s   r i s k s __main__
+2020-05-31 00:26:34,505 - root - DEBUG - [AM] American administration. __main__
+2020-05-31 00:26:34,505 - root - DEBUG - [AM] American administration. __main__
+2020-05-31 00:26:35,909 - root - DEBUG - [D] American administration. __main__
+2020-05-31 00:26:35,909 - root - DEBUG - [D] American administration. __main__
+2020-05-31 00:26:35,911 - root - DEBUG - [AM] IFazae __main__
+2020-05-31 00:26:35,911 - root - DEBUG - [AM] IFazae __main__
+2020-05-31 00:26:36,705 - root - DEBUG - [D] I   F a z a r e __main__
+2020-05-31 00:26:36,705 - root - DEBUG - [D] I   F a z a r e __main__
+2020-05-31 00:50:55,144 - root - DEBUG - Denoiser model loading __main__
+2020-05-31 00:50:55,144 - root - DEBUG - Denoiser model loading __main__
+2020-05-31 00:50:55,205 - root - DEBUG - Denoiser model loading completed __main__
+2020-05-31 00:50:55,205 - root - DEBUG - Denoiser model loading completed __main__
+2020-05-31 00:50:55,205 - root - DEBUG - Paragraph segmentation model loading __main__
+2020-05-31 00:50:55,205 - root - DEBUG - Paragraph segmentation model loading __main__
+2020-05-31 00:50:55,569 - root - DEBUG - Paragraph segmentation model loading completed __main__
+2020-05-31 00:50:55,569 - root - DEBUG - Paragraph segmentation model loading completed __main__
+2020-05-31 00:50:55,570 - root - DEBUG - Word segmentation model loading __main__
+2020-05-31 00:50:55,570 - root - DEBUG - Word segmentation model loading __main__
+2020-05-31 00:50:56,296 - root - DEBUG - Word segmentation model loading completed __main__
+2020-05-31 00:50:56,296 - root - DEBUG - Word segmentation model loading completed __main__
+2020-05-31 00:50:56,296 - root - DEBUG - Handwriting line segmentation model loading __main__
+2020-05-31 00:50:56,296 - root - DEBUG - Handwriting line segmentation model loading __main__
+2020-05-31 00:50:56,880 - root - DEBUG - Handwriting line segmentation model loading completed __main__
+2020-05-31 00:50:56,880 - root - DEBUG - Handwriting line segmentation model loading completed __main__
+2020-05-31 00:51:08,089 - root - DEBUG - Beam sampler created __main__
+2020-05-31 00:51:08,089 - root - DEBUG - Beam sampler created __main__
+2020-05-31 00:51:08,089 - root - DEBUG - Sequence generator created __main__
+2020-05-31 00:51:08,089 - root - DEBUG - Sequence generator created __main__
+2020-05-31 00:51:12,657 - root - DEBUG - [AM] Sontence DatabasOa0zOT2  __main__
+2020-05-31 00:51:12,657 - root - DEBUG - [AM] Sontence DatabasOa0zOT2  __main__
+2020-05-31 00:51:14,877 - root - DEBUG - [D] S e n t e n c e   D a t a __main__
+2020-05-31 00:51:14,877 - root - DEBUG - [D] S e n t e n c e   D a t a __main__
+2020-05-31 00:51:14,879 - root - DEBUG - [AM] TigiogisilngTingigniatiaigtitgittiTtan.Titinim"TTioTiianin __main__
+2020-05-31 00:51:14,879 - root - DEBUG - [AM] TigiogisilngTingigniatiaigtitgittiTtan.Titinim"TTioTiianin __main__
+2020-05-31 00:51:20,075 - root - DEBUG - [D] T i g i n g i n g   s i n g i n g   i g n o r a t i n g   l __main__
+2020-05-31 00:51:20,075 - root - DEBUG - [D] T i g i n g i n g   s i n g i n g   i g n o r a t i n g   l __main__
+2020-05-31 00:51:20,078 - root - DEBUG - [AM] inionilinionicicinioinicivivioiaioinvio __main__
+2020-05-31 00:51:20,078 - root - DEBUG - [AM] inionilinionicicinioinicivivioiaioinvio __main__
+2020-05-31 00:51:23,075 - root - DEBUG - [D] o p i n i o n   i l l i n i o n i c i c __main__
+2020-05-31 00:51:23,075 - root - DEBUG - [D] o p i n i o n   i l l i n i o n i c i c __main__
+2020-05-31 00:51:23,077 - root - DEBUG - [AM] There suppost costs are a bing thain on Americain __main__
+2020-05-31 00:51:23,077 - root - DEBUG - [AM] There suppost costs are a bing thain on Americain __main__
+2020-05-31 00:51:26,539 - root - DEBUG - [D] T h e r e   s u p p o r t   c o s t s   a r e   a __main__
+2020-05-31 00:51:26,539 - root - DEBUG - [D] T h e r e   s u p p o r t   c o s t s   a r e   a __main__
+2020-05-31 00:51:26,542 - root - DEBUG - [AM] doller reserves. Dr. Adenauer's anoer in the __main__
+2020-05-31 00:51:26,542 - root - DEBUG - [AM] doller reserves. Dr. Adenauer's anoer in the __main__
+2020-05-31 00:51:30,321 - root - DEBUG - [D] d o l l a r   r e s e r v e s .   D r .   A r __main__
+2020-05-31 00:51:30,321 - root - DEBUG - [D] d o l l a r   r e s e r v e s .   D r .   A r __main__
+2020-05-31 00:51:30,322 - root - DEBUG - [AM] over-and-fpor-all coasth offr of ss7uilion. Preicded __main__
+2020-05-31 00:51:30,322 - root - DEBUG - [AM] over-and-fpor-all coasth offr of ss7uilion. Preicded __main__
+2020-05-31 00:51:34,641 - root - DEBUG - [D] o v e r - a n d - f o r - a l l   c o a s t s   o f f __main__
+2020-05-31 00:51:34,641 - root - DEBUG - [D] o v e r - a n d - f o r - a l l   c o a s t s   o f f __main__
+2020-05-31 00:51:34,644 - root - DEBUG - [AM] Menoncdy's rejiction of it in a paingeod Whew to the __main__
+2020-05-31 00:51:34,644 - root - DEBUG - [AM] Menoncdy's rejiction of it in a paingeod Whew to the __main__
+2020-05-31 00:51:38,166 - root - DEBUG - [D] M e n a r c h y ' s   r e j e c t i o n   o f   i t __main__
+2020-05-31 00:51:38,166 - root - DEBUG - [D] M e n a r c h y ' s   r e j e c t i o n   o f   i t __main__
+2020-05-31 00:51:38,169 - root - DEBUG - [AM] Wnt Ceman Coovermenty, Ut wll now have to pay __main__
+2020-05-31 00:51:38,169 - root - DEBUG - [AM] Wnt Ceman Coovermenty, Ut wll now have to pay __main__
+2020-05-31 00:51:41,189 - root - DEBUG - [D] B u t   G e r m a n   G o v e r n m e n t y , __main__
+2020-05-31 00:51:41,189 - root - DEBUG - [D] B u t   G e r m a n   G o v e r n m e n t y , __main__
+2020-05-31 00:51:41,192 - root - DEBUG - [AM] mere - and inceare barctions to do s - or __main__
+2020-05-31 00:51:41,192 - root - DEBUG - [AM] mere - and inceare barctions to do s - or __main__
+2020-05-31 00:51:44,128 - root - DEBUG - [D] m o r e -   a n d   i n c r e a s e   s a n __main__
+2020-05-31 00:51:44,128 - root - DEBUG - [D] m o r e -   a n d   i n c r e a s e   s a n __main__
+2020-05-31 00:51:44,131 - root - DEBUG - [AM] sun the dvious risths in upretling the new __main__
+2020-05-31 00:51:44,131 - root - DEBUG - [AM] sun the dvious risths in upretling the new __main__
+2020-05-31 00:51:47,094 - root - DEBUG - [D] s u n   t h e   d e v i o u s   r i s k s __main__
+2020-05-31 00:51:47,094 - root - DEBUG - [D] s u n   t h e   d e v i o u s   r i s k s __main__
+2020-05-31 00:51:47,096 - root - DEBUG - [AM] American administration. __main__
+2020-05-31 00:51:47,096 - root - DEBUG - [AM] American administration. __main__
+2020-05-31 00:51:48,447 - root - DEBUG - [D] American administration. __main__
+2020-05-31 00:51:48,447 - root - DEBUG - [D] American administration. __main__
+2020-05-31 00:51:48,449 - root - DEBUG - [AM] IFazae __main__
+2020-05-31 00:51:48,449 - root - DEBUG - [AM] IFazae __main__
+2020-05-31 00:51:49,316 - root - DEBUG - [D] I   F a z a r e __main__
+2020-05-31 00:51:49,316 - root - DEBUG - [D] I   F a z a r e __main__

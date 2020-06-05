@@ -1,0 +1,248 @@
+2020-06-02 20:00:21,446 - root - DEBUG - Paragraph segmentation model loading recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 20:00:21,813 - root - DEBUG - Paragraph segmentation model loading completed recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 20:00:21,813 - root - DEBUG - Handwriting line segmentation model loading recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 20:00:22,641 - root - DEBUG - Handwriting line segmentation model loading completed recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 20:00:22,642 - root - DEBUG - Word segmentation model loading recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 20:00:23,477 - root - DEBUG - Word segmentation model loading completed recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 20:00:23,477 - root - DEBUG - Denoiser model loading recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 20:00:23,558 - root - DEBUG - Denoiser model loading completed recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 20:00:53,003 - root - DEBUG - Paragraph segmentation model loading recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 20:00:53,421 - root - DEBUG - Paragraph segmentation model loading completed recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 20:00:53,422 - root - DEBUG - Handwriting line segmentation model loading recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 20:00:54,278 - root - DEBUG - Handwriting line segmentation model loading completed recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 20:00:54,278 - root - DEBUG - Word segmentation model loading recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 20:00:55,102 - root - DEBUG - Word segmentation model loading completed recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 20:00:55,102 - root - DEBUG - Denoiser model loading recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 20:00:55,175 - root - DEBUG - Denoiser model loading completed recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:16:02,489 - root - DEBUG - Word segmentation model loading recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:16:03,114 - root - DEBUG - Word segmentation model loading completed recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:16:03,114 - root - DEBUG - Paragraph segmentation model loading recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:16:03,448 - root - DEBUG - Paragraph segmentation model loading completed recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:16:03,448 - root - DEBUG - Handwriting line segmentation model loading recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:16:04,147 - root - DEBUG - Handwriting line segmentation model loading completed recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:16:04,147 - root - DEBUG - Denoiser model loading recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:16:04,260 - root - DEBUG - Denoiser model loading completed recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:16:15,715 - root - DEBUG - Beam sampler created recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:16:15,715 - root - DEBUG - Sequence generator created recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:18:29,068 - root - DEBUG - Word segmentation model loading recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:18:29,835 - root - DEBUG - Word segmentation model loading completed recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:18:29,835 - root - DEBUG - Paragraph segmentation model loading recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:18:30,231 - root - DEBUG - Paragraph segmentation model loading completed recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:18:30,232 - root - DEBUG - Handwriting line segmentation model loading recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:18:31,077 - root - DEBUG - Handwriting line segmentation model loading completed recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:18:31,077 - root - DEBUG - Denoiser model loading recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:18:31,160 - root - DEBUG - Denoiser model loading completed recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:18:47,702 - root - DEBUG - Beam sampler created recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:18:47,703 - root - DEBUG - Sequence generator created recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:56:43,869 - root - DEBUG - Denoiser model loading recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:56:43,920 - root - DEBUG - Denoiser model loading completed recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:56:43,921 - root - DEBUG - Handwriting line segmentation model loading recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:56:44,616 - root - DEBUG - Handwriting line segmentation model loading completed recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:56:44,616 - root - DEBUG - Paragraph segmentation model loading recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:56:45,016 - root - DEBUG - Paragraph segmentation model loading completed recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:56:45,017 - root - DEBUG - Word segmentation model loading recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:56:45,649 - root - DEBUG - Word segmentation model loading completed recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:56:58,431 - root - DEBUG - Beam sampler created recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:56:58,432 - root - DEBUG - Sequence generator created recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:12,379 - root - DEBUG - [AM] maihit,# recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:13,740 - root - DEBUG - [D] m a i n recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:13,743 - root - DEBUG - [AM] evee recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:14,694 - root - DEBUG - [D] N e v recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:14,695 - root - DEBUG - [AM] Wuattl. Enoime. recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:18,333 - root - DEBUG - [D] b a t t l e .   E recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:18,334 - root - DEBUG - [AM] zealiis sliieri si's Beititiyt "otit" aineislisies recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:22,456 - root - DEBUG - [D] z e a l i t i s   s l i i t e r i   s i x ' s   B e recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:22,457 - root - DEBUG - [AM] Beyewelt ielieziith the "disister that itt is recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:25,919 - root - DEBUG - [D] e y e s   f e l t   b e l i e s   w i t h   t h recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:25,921 - root - DEBUG - [AM] Be'fallefa recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:26,980 - root - DEBUG - [D] B e f a l l recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:26,981 - root - DEBUG - [AM] Eeniingigiagei " ai "" igiogiaigi recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:29,552 - root - DEBUG - [D] E e n i i n g   g i g g i a g e i recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:29,553 - root - DEBUG - [AM] wes anuettly recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:31,812 - root - DEBUG - [D] w a s   g r e recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:31,813 - root - DEBUG - [AM] aft tlece" is sne dyeltfeaisregeh recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:35,125 - root - DEBUG - [D] a f t   t h e n c e   " i s   o n e recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:35,126 - root - DEBUG - [AM] has bas pet os Dnstet recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:36,883 - root - DEBUG - [D] h a s   b e e n   p u t recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:36,884 - root - DEBUG - [AM] Gegnonerel recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:37,724 - root - DEBUG - [D] G i g n o n recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:37,725 - root - DEBUG - [AM] Eingiiriigliihii recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:39,627 - root - DEBUG - [D] i n q u i r i n g recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:39,628 - root - DEBUG - [AM] "Fnelling recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:42,064 - root - DEBUG - [D] " d w e l l recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:42,065 - root - DEBUG - [AM] theevits recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:44,637 - root - DEBUG - [D] t h e   e recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:44,639 - root - DEBUG - [AM] sees recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:46,012 - root - DEBUG - [D] sees recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:46,013 - root - DEBUG - [AM] Suzely. recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:46,840 - root - DEBUG - [D] S u z e l y . recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:46,841 - root - DEBUG - [AM] Vaitieny recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:49,572 - root - DEBUG - [D] V a n i t recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:49,573 - root - DEBUG - [AM] #5 recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:50,517 - root - DEBUG - [D] #5 recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:50,518 - root - DEBUG - [AM] ketiel Fetiner untese aise recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:52,399 - root - DEBUG - [D] b e t w e e n   F a t h e r recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:52,400 - root - DEBUG - [AM] adca recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:53,608 - root - DEBUG - [D] a n d recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:53,609 - root - DEBUG - [AM] in e#e recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:56,939 - root - DEBUG - [D] in e#e recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:56,940 - root - DEBUG - [AM] with recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:58,172 - root - DEBUG - [D] with recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:58,174 - root - DEBUG - [AM] eike recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:59,430 - root - DEBUG - [D] l i k recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:57:59,433 - root - DEBUG - [AM] Marises recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:00,393 - root - DEBUG - [D] M a r i u s e s recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:00,395 - root - DEBUG - [AM] wcite recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:02,410 - root - DEBUG - [D] w r i t recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:02,413 - root - DEBUG - [AM] ca recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:02,978 - root - DEBUG - [D] ca recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:02,980 - root - DEBUG - [AM] f recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:07,319 - root - DEBUG - [D] f recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:07,320 - root - DEBUG - [AM] bas recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:09,887 - root - DEBUG - [D] bas recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:09,888 - root - DEBUG - [AM] Tik onesting recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:11,140 - root - DEBUG - [D] T i c k   o n recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:11,141 - root - DEBUG - [AM] ael Ec citional pceb recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:13,012 - root - DEBUG - [D] a n d   t h e   c r e recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:13,013 - root - DEBUG - [AM] leais iafieg ier aliiigbeisi i ilae recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:15,386 - root - DEBUG - [D] l e a i s   r i a g i n g   h i e r recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:15,387 - root - DEBUG - [AM] bes recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:16,633 - root - DEBUG - [D] bes recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:16,635 - root - DEBUG - [AM] TOE were recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:17,625 - root - DEBUG - [D] T H E Y   w e r e recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:17,626 - root - DEBUG - [AM] "Egagalla Fio ai iia "F nask lefy recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:20,323 - root - DEBUG - [D] " E n g a g a l l a   i s   a t   h recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:20,326 - root - DEBUG - [AM] assaid too hes recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:21,608 - root - DEBUG - [D] a s   s a i d recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:21,609 - root - DEBUG - [AM] I os recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:22,724 - root - DEBUG - [D] I os recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:22,725 - root - DEBUG - [AM] saleteigint cogie a a inagiese goe recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:26,534 - root - DEBUG - [D] s o l e   r e l i g i o u s   c o p recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:26,535 - root - DEBUG - [AM] dayst, Ix has wevea ben recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:28,361 - root - DEBUG - [D] d a y s ,   I t   h a s recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:28,363 - root - DEBUG - [AM] cased# recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:31,931 - root - DEBUG - [D] cased# recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:31,932 - root - DEBUG - [AM] this raeffll to recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:33,288 - root - DEBUG - [D] t h i s   g r a c recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:33,290 - root - DEBUG - [AM] a wessev Socter recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:35,691 - root - DEBUG - [D] a   v e s s e l recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:35,693 - root - DEBUG - [AM] To geea. recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:37,558 - root - DEBUG - [D] T w o   y recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:37,560 - root - DEBUG - [AM] GFyulthaue tepet tew ansls for any Tonruslate  recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:41,564 - root - DEBUG - [D] C o u l d   h a v e   k e e p e d   t h e m   a recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:41,567 - root - DEBUG - [AM] fleg leadeey recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:44,452 - root - DEBUG - [D] t h e y   l e recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:44,453 - root - DEBUG - [AM] Saughiliniedrs recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:45,824 - root - DEBUG - [D] S a u g h   P h recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:45,825 - root - DEBUG - [AM] what gen clese recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:47,031 - root - DEBUG - [D] w h a t   g e n recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:47,032 - root - DEBUG - [AM] bac- recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:47,982 - root - DEBUG - [D] b a c k - recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:47,983 - root - DEBUG - [AM] Eacerly Denalsashar recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 21:58:49,865 - root - DEBUG - [D] E a g e r l y   D e n recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:50:58,413 - root - DEBUG - Handwriting line segmentation model loading recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:50:59,188 - root - DEBUG - Handwriting line segmentation model loading completed recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:50:59,188 - root - DEBUG - Denoiser model loading recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:50:59,343 - root - DEBUG - Denoiser model loading completed recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:50:59,343 - root - DEBUG - Word segmentation model loading recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:51:00,198 - root - DEBUG - Word segmentation model loading completed recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:51:00,198 - root - DEBUG - Paragraph segmentation model loading recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:51:00,635 - root - DEBUG - Paragraph segmentation model loading completed recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:51:18,906 - root - DEBUG - Beam sampler created recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:51:18,907 - root - DEBUG - Sequence generator created recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:51:50,577 - root - DEBUG - [AM] maihit,# recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:51:53,059 - root - DEBUG - [D] m a i n recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:51:53,060 - root - DEBUG - [AM] evee recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:51:54,293 - root - DEBUG - [D] N e v recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:51:54,294 - root - DEBUG - [AM] Wuattl. Enoime. recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:51:58,270 - root - DEBUG - [D] b a t t l e .   E recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:51:58,272 - root - DEBUG - [AM] zealiis sliieri si's Beititiyt "otit" aineislisies recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:02,892 - root - DEBUG - [D] z e a l i t i s   s l i i t e r i   s i x ' s   B e recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:02,894 - root - DEBUG - [AM] Beyewelt ielieziith the "disister that itt is recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:06,614 - root - DEBUG - [D] e y e s   f e l t   b e l i e s   w i t h   t h recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:06,618 - root - DEBUG - [AM] Be'fallefa recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:08,008 - root - DEBUG - [D] B e f a l l recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:08,010 - root - DEBUG - [AM] Eeniingigiagei " ai "" igiogiaigi recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:10,993 - root - DEBUG - [D] E e n i i n g   g i g g i a g e i recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:10,995 - root - DEBUG - [AM] wes anuettly recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:13,704 - root - DEBUG - [D] w a s   g r e recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:13,707 - root - DEBUG - [AM] aft tlece" is sne dyeltfeaisregeh recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:17,325 - root - DEBUG - [D] a f t   t h e n c e   " i s   o n e recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:17,327 - root - DEBUG - [AM] has bas pet os Dnstet recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:19,467 - root - DEBUG - [D] h a s   b e e n   p u t recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:19,469 - root - DEBUG - [AM] Gegnonerel recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:20,627 - root - DEBUG - [D] G i g n o n recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:20,628 - root - DEBUG - [AM] Eingiiriigliihii recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:22,797 - root - DEBUG - [D] i n q u i r i n g recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:22,801 - root - DEBUG - [AM] "Fnelling recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:25,809 - root - DEBUG - [D] " d w e l l recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:25,810 - root - DEBUG - [AM] theevits recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:28,691 - root - DEBUG - [D] t h e   e recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:28,693 - root - DEBUG - [AM] sees recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:30,282 - root - DEBUG - [D] sees recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:30,284 - root - DEBUG - [AM] Suzely. recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:31,698 - root - DEBUG - [D] S u z e l y . recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:31,699 - root - DEBUG - [AM] Vaitieny recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:34,864 - root - DEBUG - [D] V a n i t recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:34,865 - root - DEBUG - [AM] #5 recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:35,950 - root - DEBUG - [D] #5 recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:35,951 - root - DEBUG - [AM] ketiel Fetiner untese aise recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:38,198 - root - DEBUG - [D] b e t w e e n   F a t h e r recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:38,199 - root - DEBUG - [AM] adca recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:39,947 - root - DEBUG - [D] a n d recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:39,951 - root - DEBUG - [AM] in e#e recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:43,903 - root - DEBUG - [D] in e#e recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:43,905 - root - DEBUG - [AM] with recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:45,506 - root - DEBUG - [D] with recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:45,508 - root - DEBUG - [AM] eike recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:47,392 - root - DEBUG - [D] l i k recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:47,393 - root - DEBUG - [AM] Marises recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:48,732 - root - DEBUG - [D] M a r i u s e s recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:48,736 - root - DEBUG - [AM] wcite recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:51,130 - root - DEBUG - [D] w r i t recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:51,133 - root - DEBUG - [AM] ca recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:52,114 - root - DEBUG - [D] ca recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:52,116 - root - DEBUG - [AM] f recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:57,203 - root - DEBUG - [D] f recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:52:57,205 - root - DEBUG - [AM] bas recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:53:00,188 - root - DEBUG - [D] bas recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:53:00,190 - root - DEBUG - [AM] Tik onesting recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:53:01,891 - root - DEBUG - [D] T i c k   o n recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:53:01,894 - root - DEBUG - [AM] ael Ec citional pceb recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:53:04,225 - root - DEBUG - [D] a n d   t h e   c r e recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:53:04,226 - root - DEBUG - [AM] leais iafieg ier aliiigbeisi i ilae recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:53:07,072 - root - DEBUG - [D] l e a i s   r i a g i n g   h i e r recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:53:07,074 - root - DEBUG - [AM] bes recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:53:08,624 - root - DEBUG - [D] bes recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:53:08,626 - root - DEBUG - [AM] TOE were recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:53:09,938 - root - DEBUG - [D] T H E Y   w e r e recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:53:09,940 - root - DEBUG - [AM] "Egagalla Fio ai iia "F nask lefy recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:53:13,058 - root - DEBUG - [D] " E n g a g a l l a   i s   a t   h recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:53:13,059 - root - DEBUG - [AM] assaid too hes recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:53:14,634 - root - DEBUG - [D] a s   s a i d recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:53:14,635 - root - DEBUG - [AM] I os recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:53:16,026 - root - DEBUG - [D] I os recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:53:16,028 - root - DEBUG - [AM] saleteigint cogie a a inagiese goe recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:53:19,931 - root - DEBUG - [D] s o l e   r e l i g i o u s   c o p recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:53:19,933 - root - DEBUG - [AM] dayst, Ix has wevea ben recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:53:22,061 - root - DEBUG - [D] d a y s ,   I t   h a s recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:53:22,063 - root - DEBUG - [AM] cased# recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:53:25,985 - root - DEBUG - [D] cased# recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:53:25,986 - root - DEBUG - [AM] this raeffll to recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:53:27,610 - root - DEBUG - [D] t h i s   g r a c recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:53:27,612 - root - DEBUG - [AM] a wessev Socter recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:53:30,077 - root - DEBUG - [D] a   v e s s e l recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:53:30,079 - root - DEBUG - [AM] To geea. recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:53:32,504 - root - DEBUG - [D] T w o   y recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:53:32,506 - root - DEBUG - [AM] GFyulthaue tepet tew ansls for any Tonruslate  recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:53:36,935 - root - DEBUG - [D] C o u l d   h a v e   k e e p e d   t h e m   a recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:53:36,936 - root - DEBUG - [AM] fleg leadeey recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:53:40,046 - root - DEBUG - [D] t h e y   l e recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:53:40,048 - root - DEBUG - [AM] Saughiliniedrs recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:53:41,899 - root - DEBUG - [D] S a u g h   P h recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:53:41,901 - root - DEBUG - [AM] what gen clese recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:53:43,447 - root - DEBUG - [D] w h a t   g e n recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:53:43,449 - root - DEBUG - [AM] bac- recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:53:44,667 - root - DEBUG - [D] b a c k - recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:53:44,669 - root - DEBUG - [AM] Eacerly Denalsashar recognition.handwritten_text_recognition.recognition.recognizer
+2020-06-02 22:53:46,774 - root - DEBUG - [D] E a g e r l y   D e n recognition.handwritten_text_recognition.recognition.recognizer

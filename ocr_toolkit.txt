@@ -1,0 +1,3 @@
+ocr_toolkit
+I am trying to collect and combine resources and methods
+ocr, ocr-recognition, ocr-python, ocr-text-reader, pytorch, mxnet. tensorflow
