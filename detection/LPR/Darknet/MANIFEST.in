@@ -1,0 +1,2 @@
+include darknet/gpu/libdarknet.so
+include darknet/cpu/libdarknet.so
