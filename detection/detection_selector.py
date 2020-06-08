@@ -140,10 +140,12 @@ class detection_selector:
 if __name__ == "__main__":
     # image_name = "a1.png"
     # image_path = r"C:\Users\selcu\PycharmProjects\ocr_toolkit\detection\craft_text_detector\figures\IAM8" + "/" + image_name
-    image_name = "htr_level_5.jpg"
-    image_path = r"C:\Users\selcu\PycharmProjects\ocr_toolkit\detection\craft_text_detector\figures\test_images2" + "/" + image_name
+    # image_name = "htr_level_5.jpg"
+    # image_path = r"C:\Users\selcu\PycharmProjects\ocr_toolkit\detection\craft_text_detector\figures\test_images2" + "/" + image_name
     # image_name = "plate1.jpg"
     # image_path = r"C:\Users\selcu\PycharmProjects\ocr_toolkit\license_plate_images/" + image_name
+    image_name = "htr_level_5.jpg"
+    image_path = r"C:\Users\selcu\PycharmProjects\ocr_toolkit\detection\craft_text_detector\figures\test_images2" + "/" + image_name
     selector = "craft"
     detection_model_paths = []
     detection_model_paths.append("craft_mlt_25k.pth")
@@ -174,3 +176,5 @@ if __name__ == "__main__":
                                                  export_extra=True,
                                                  text_threshold=0.7, link_threshold=0.4, low_text=0.4, square_size=720,
                                                  show_time=show_time, crop_type=crop_type)
+
+    pprint(prediction_result)
