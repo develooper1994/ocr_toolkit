@@ -20,7 +20,7 @@ except:
 model = load_model('cnn_classifier.h5')
 
 # Detect chars
-digits = plate_segmentation('demo/plates/01DJP58.JPG')
+digits = plate_segmentation('demo/plates/alaska.jpg')
 
 # Predict
 for d in digits:
