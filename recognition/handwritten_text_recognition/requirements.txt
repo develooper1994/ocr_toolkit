@@ -9,7 +9,6 @@ leven
 mxnet_cu102mkl
 mxboard
 gluonnlp
-mxboard
 Pillow
 pyenchant
 scikit-image

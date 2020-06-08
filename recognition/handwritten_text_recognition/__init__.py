@@ -2,6 +2,6 @@ try:
     import recognition
 except:
     try:
-        from handwritten_text_recognition import recognition
+        import handwritten_text_recognition.recognition
     except:
-        from recognition.handwritten_text_recognition import recognition
+        import recognition.handwritten_text_recognition.recognition

@@ -6,14 +6,14 @@ try:
     import recognition.utils
 except:
     try:
-        import handwritten_text_recognition.recognition.recognizer
-        import handwritten_text_recognition.recognition.get_models
-        import handwritten_text_recognition.recognition.ocr
-        import handwritten_text_recognition.recognition.tests
-        import handwritten_text_recognition.recognition.utils
+        from handwritten_text_recognition.recognition import recognizer
+        from handwritten_text_recognition.recognition import get_models
+        from handwritten_text_recognition.recognition import ocr
+        from handwritten_text_recognition.recognition import tests
+        from handwritten_text_recognition.recognition import utils
     except:
-        import recognition.handwritten_text_recognition.recognition.recognizer
-        import recognition.handwritten_text_recognition.recognition.get_models
-        import recognition.handwritten_text_recognition.recognition.ocr
-        import recognition.handwritten_text_recognition.recognition.tests
-        import recognition.handwritten_text_recognition.recognition.utils
+        from recognition.handwritten_text_recognition.recognition import recognizer
+        from recognition.handwritten_text_recognition.recognition import get_models
+        from recognition.handwritten_text_recognition.recognition import ocr
+        from recognition.handwritten_text_recognition.recognition import tests
+        from recognition.handwritten_text_recognition.recognition import utils

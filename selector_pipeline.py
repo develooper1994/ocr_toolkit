@@ -210,6 +210,7 @@ if __name__ == "__main__":
     detection_model_paths.append("craft_mlt_25k.pth")
     detection_model_paths.append("craft_refiner_CTW1500.pth")
 
+    # recognition_model_paths = r"C:\Users\selcu\PycharmProjects\ocr_toolkit\recognition\handwritten_text_recognition\recognition\models/"  # windows
     recognition_model_paths = r"C:\Users\selcu\PycharmProjects\ocr_toolkit\recognition\handwritten_text_recognition\recognition\models/"  # windows
     recognition_switch = "handwritten"  # "handwritten"
 

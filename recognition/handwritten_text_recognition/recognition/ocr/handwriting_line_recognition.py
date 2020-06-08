@@ -5,13 +5,15 @@ import argparse
 import os
 import random
 
-import mxnet as mx
 import numpy as np
+from skimage import exposure
+from skimage import transform as skimage_tf
+
+# mxnet
+import mxnet as mx
 from mxboard import SummaryWriter
 from mxnet import nd, autograd, gluon
 from mxnet.gluon.model_zoo.vision import resnet34_v1
-from skimage import exposure
-from skimage import transform as skimage_tf
 
 np.seterr(all='raise')
 
@@ -19,6 +21,28 @@ mx.random.seed(1)
 
 from .utils.iam_dataset import IAMDataset, resize_image
 from .utils.draw_text_on_image import draw_text_on_image
+
+# try:
+#     from utils.iam_dataset import IAMDataset, resize_image
+#     from utils.draw_text_on_image import draw_text_on_image
+# except:
+#     try:
+#         from ocr.utils.iam_dataset import IAMDataset, resize_image
+#         from ocr.utils.draw_text_on_image import draw_text_on_image
+#     except:
+#         try:
+#             from recognition.ocr.utils.iam_dataset import IAMDataset, resize_image
+#             from recognition.ocr.utils.draw_text_on_image import draw_text_on_image
+#         except:
+#             try:
+#                 from handwritten_text_recognition.recognition.ocr.utils.iam_dataset import IAMDataset, resize_image
+#                 from handwritten_text_recognition.recognition.ocr.utils.draw_text_on_image import draw_text_on_image
+#             except:
+#                 from recognition.handwritten_text_recognition.recognition.ocr.utils.iam_dataset import IAMDataset, \
+#                     resize_image
+#                 from recognition.handwritten_text_recognition.recognition.ocr.utils.draw_text_on_image import \
+#                     draw_text_on_image
+
 
 print_every_n = 1
 send_image_every_n = 20
@@ -31,11 +55,11 @@ alphabet_dict = {alphabet_encoding[i]: i for i in range(len(alphabet_encoding))}
 
 
 class EncoderLayer(gluon.HybridBlock):
-    '''
-    The encoder layer takes the image features from a CNN. The image features are transposed so that the LSTM 
+    """
+    The encoder layer takes the image features from a CNN. The image features are transposed so that the LSTM
     slices of the image features can be sequentially fed into the LSTM from left to right (and back via the
-    bidirectional LSTM). 
-    '''
+    bidirectional LSTM).
+    """
 
     def __init__(self, hidden_states=200, rnn_layers=1, max_seq_len=100, **kwargs):
         self.max_seq_len = max_seq_len
@@ -54,20 +78,20 @@ class EncoderLayer(gluon.HybridBlock):
 
 
 class Network(gluon.HybridBlock):
-    '''
+    """
     The CNN-biLSTM to recognise handwriting text given an image of handwriten text.
     Parameters
     ----------
     num_downsamples: int, default 2
         The number of times to downsample the image features. Each time the features are downsampled, a new LSTM
-        is created. 
+        is created.
     resnet_layer_id: int, default 4
         The layer ID to obtain features from the resnet34
     lstm_hidden_states: int, default 200
         The number of hidden states used in the LSTMs
     lstm_layers: int, default 1
         The number of layers of LSTMs to use
-    '''
+    """
     FEATURE_EXTRACTOR_FILTER = 64
 
     def __init__(self, num_downsamples=2, resnet_layer_id=4, rnn_hidden_states=200, rnn_layers=1, max_seq_len=100,
@@ -90,10 +114,10 @@ class Network(gluon.HybridBlock):
             self.downsampler = self.get_down_sampler(self.FEATURE_EXTRACTOR_FILTER)
 
     def get_down_sampler(self, num_filters):
-        '''
+        """
         Creates a two-stacked Conv-BatchNorm-Relu and then a pooling layer to
         downsample the image features by half.
-        
+
         Parameters
         ----------
         num_filters: int
@@ -102,8 +126,8 @@ class Network(gluon.HybridBlock):
         -------
         network: gluon.nn.HybridSequential
             The downsampler network that decreases the width and height of the image features by half.
-        
-        '''
+
+        """
         out = gluon.nn.HybridSequential()
         with out.name_scope():
             for _ in range(2):
@@ -116,21 +140,21 @@ class Network(gluon.HybridBlock):
         return out
 
     def get_body(self, resnet_layer_id):
-        '''
+        """
         Create the feature extraction network based on resnet34.
         The first layer of the res-net is converted into grayscale by averaging the weights of the 3 channels
         of the original resnet.
-        
+
         Parameters
         ----------
         resnet_layer_id: int
-            The resnet_layer_id specifies which layer to take from 
+            The resnet_layer_id specifies which layer to take from
             the bottom of the network.
         Returns
         -------
         network: gluon.nn.HybridSequential
             The body network for feature extraction based on resnet
-        '''
+        """
 
         pretrained = resnet34_v1(pretrained=True, ctx=self.ctx)
         pretrained_2 = resnet34_v1(pretrained=True, ctx=mx.cpu(0))
@@ -148,23 +172,23 @@ class Network(gluon.HybridBlock):
         return body
 
     def get_encoder(self, rnn_hidden_states, rnn_layers, max_seq_len):
-        '''
+        """
         Creates an LSTM to learn the sequential component of the image features.
-        
+
         Parameters
         ----------
-        
+
         rnn_hidden_states: int
             The number of hidden states in the RNN
-        
+
         rnn_layers: int
             The number of layers to stack the RNN
         Returns
         -------
-        
+
         network: gluon.nn.Sequential
             The encoder network to learn the sequential information of the image features
-        '''
+        """
 
         encoder = gluon.nn.HybridSequential()
         with encoder.name_scope():
@@ -174,9 +198,9 @@ class Network(gluon.HybridBlock):
         return encoder
 
     def get_decoder(self):
-        '''
+        """
         Creates a network to convert the output of the encoder into characters.
-        '''
+        """
 
         alphabet_size = len(alphabet_encoding) + 1
         decoder = mx.gluon.nn.Dense(units=alphabet_size, flatten=False)

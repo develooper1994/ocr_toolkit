@@ -8,6 +8,7 @@ import mxnet as mx
 import numpy as np
 from tqdm import tqdm
 
+
 from .handwriting_line_recognition import Network as HandwritingRecognitionNet, handwriting_recognition_transform
 from .handwriting_line_recognition import decode as decoder_handwriting
 from .paragraph_segmentation_dcnn import paragraph_segmentation_transform
@@ -15,6 +16,69 @@ from .utils.iam_dataset import IAMDataset, crop_handwriting_page
 from .utils.sclite_helper import ScliteHelper
 from .utils.word_to_line import sort_bbs_line_by_line, crop_line_images
 from .word_and_line_segmentation import SSD as WordSegmentationNet, predict_bounding_boxes
+# try:
+#     from handwriting_line_recognition import Network as HandwritingRecognitionNet, handwriting_recognition_transform
+#     from handwriting_line_recognition import decode as decoder_handwriting
+#     from paragraph_segmentation_dcnn import paragraph_segmentation_transform
+#     from utils.iam_dataset import IAMDataset, crop_handwriting_page
+#     from utils.sclite_helper import ScliteHelper
+#     from utils.word_to_line import sort_bbs_line_by_line, crop_line_images
+#     from word_and_line_segmentation import SSD as WordSegmentationNet, predict_bounding_boxes
+# except:
+#     try:
+#         from ocr.handwriting_line_recognition import Network as HandwritingRecognitionNet, \
+#             handwriting_recognition_transform
+#         from ocr.handwriting_line_recognition import decode as decoder_handwriting
+#         from ocr.paragraph_segmentation_dcnn import paragraph_segmentation_transform
+#         from ocr.utils.iam_dataset import IAMDataset, crop_handwriting_page
+#         from ocr.utils.sclite_helper import ScliteHelper
+#         from ocr.utils.word_to_line import sort_bbs_line_by_line, crop_line_images
+#         from ocr.word_and_line_segmentation import SSD as WordSegmentationNet, predict_bounding_boxes
+#     except:
+#         try:
+#             from recognition.ocr.handwriting_line_recognition import Network as HandwritingRecognitionNet, \
+#                 handwriting_recognition_transform
+#             from recognition.ocr.handwriting_line_recognition import decode as decoder_handwriting
+#             from recognition.ocr.paragraph_segmentation_dcnn import paragraph_segmentation_transform
+#             from recognition.ocr.utils.iam_dataset import IAMDataset, crop_handwriting_page
+#             from recognition.ocr.utils.sclite_helper import ScliteHelper
+#             from recognition.ocr.utils.word_to_line import sort_bbs_line_by_line, crop_line_images
+#             from recognition.ocr.word_and_line_segmentation import SSD as WordSegmentationNet, \
+#                 predict_bounding_boxes
+#         except:
+#             try:
+#                 from handwritten_text_recognition.recognition.ocr.handwriting_line_recognition import \
+#                     Network as HandwritingRecognitionNet, \
+#                     handwriting_recognition_transform
+#                 from handwritten_text_recognition.recognition.ocr.handwriting_line_recognition import \
+#                     decode as decoder_handwriting
+#                 from handwritten_text_recognition.recognition.ocr.paragraph_segmentation_dcnn import \
+#                     paragraph_segmentation_transform
+#                 from handwritten_text_recognition.recognition.ocr.utils.iam_dataset import IAMDataset, \
+#                     crop_handwriting_page
+#                 from handwritten_text_recognition.recognition.ocr.utils.sclite_helper import ScliteHelper
+#                 from handwritten_text_recognition.recognition.ocr.utils.word_to_line import sort_bbs_line_by_line, \
+#                     crop_line_images
+#                 from handwritten_text_recognition.recognition.ocr.word_and_line_segmentation import \
+#                     SSD as WordSegmentationNet, \
+#                     predict_bounding_boxes
+#             except:
+#                 from recognition.handwritten_text_recognition.recognition.ocr.handwriting_line_recognition import \
+#                     Network as HandwritingRecognitionNet, \
+#                     handwriting_recognition_transform
+#                 from recognition.handwritten_text_recognition.recognition.ocr.handwriting_line_recognition import \
+#                     decode as decoder_handwriting
+#                 from recognition.handwritten_text_recognition.recognition.ocr.paragraph_segmentation_dcnn import \
+#                     paragraph_segmentation_transform
+#                 from recognition.handwritten_text_recognition.recognition.ocr.utils.iam_dataset import IAMDataset, \
+#                     crop_handwriting_page
+#                 from recognition.handwritten_text_recognition.recognition.ocr.utils.sclite_helper import ScliteHelper
+#                 from recognition.handwritten_text_recognition.recognition.ocr.utils.word_to_line import sort_bbs_line_by_line, \
+#                     crop_line_images
+#                 from recognition.handwritten_text_recognition.recognition.ocr.word_and_line_segmentation import \
+#                     SSD as WordSegmentationNet, \
+#                     predict_bounding_boxes
+
 
 # Setup
 logging.basicConfig(level=logging.DEBUG)
@@ -40,10 +104,10 @@ paragraph_segmentation_model = "models/paragraph_segmentation2.params"
 word_segmentation_model = "models/word_segmentation2.params"
 
 def get_arg_max(prob):
-    '''
+    """
     The greedy algorithm convert the output of the handwriting recognition network
     into strings.
-    '''
+    """
     arg_max = prob.topk(axis=2).asnumpy()
     return decoder_handwriting(arg_max)[0]
 
