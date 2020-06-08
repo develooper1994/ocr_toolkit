@@ -143,9 +143,9 @@ if __name__ == "__main__":
     # image_name = "htr_level_5.jpg"
     # image_path = r"C:\Users\selcu\PycharmProjects\ocr_toolkit\detection\craft_text_detector\figures\test_images2" + "/" + image_name
     # image_name = "plate1.jpg"
-    # image_path = r"C:\Users\selcu\PycharmProjects\ocr_toolkit\license_plate_images/" + image_name
-    image_name = "htr_level_5.jpg"
-    image_path = r"C:\Users\selcu\PycharmProjects\ocr_toolkit\detection\craft_text_detector\figures\test_images2" + "/" + image_name
+    # image_path = r"C:\Users\selcu\PycharmProjects\ocr_toolkit\license_plate_images" + "/" + image_name
+    image_name = "negative1.png"
+    image_path = r"C:\Users\selcu\PycharmProjects\ocr_toolkit\license_plate_images\plates" + "/" + image_name
     selector = "craft"
     detection_model_paths = []
     detection_model_paths.append("craft_mlt_25k.pth")

@@ -10,6 +10,7 @@ def read_image(img_file):
     :return: input ready image for numpy network (model)
     """
     img = cv2.imread(img_file)
+    assert not img is None, "image is empty. Cannot find it. Please try again!"
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     # following two cases are not explained in the original repo
     if img.shape[0] == 2:
