@@ -269,11 +269,7 @@ class craft_detector:
         )
 
         # coordinate adjustment
-        boxes = craft_utils.adjust_result_coordinates(boxes, ratio_w, ratio_h)
-        polys = craft_utils.adjust_result_coordinates(polys, ratio_w, ratio_h)
-        for k in range(len(polys)):
-            if polys[k] is None:
-                polys[k] = boxes[k]
+        boxes, polys = self.coordinate_adjustment(boxes, polys, ratio_h, ratio_w)
 
         # get image size
         img_height = image.shape[0]
@@ -322,6 +318,14 @@ class craft_detector:
 
         self.detection_result = detection_result
         return detection_result
+
+    def coordinate_adjustment(self, boxes, polys, ratio_h, ratio_w):
+        boxes = craft_utils.adjust_result_coordinates(boxes, ratio_w, ratio_h)
+        polys = craft_utils.adjust_result_coordinates(polys, ratio_w, ratio_h)
+        for k in range(len(polys)):
+            if polys[k] is None:
+                polys[k] = boxes[k]
+        return boxes, polys
 
     def as_ratio(self, boxes=None, img_width=None, img_height=None, crop_type=None):
         """
@@ -637,14 +641,17 @@ class craft_detector:
 
 if __name__ == "__main__":
     # set image path and export folder directory
-    image_name = "a8.png"
-    image_path = r"C:\Users\selcu\PycharmProjects\ocr_toolkit\detection\craft_text_detector\figures\IAM8" + "/" + image_name
+    # image_name = "a8.png"
+    # image_path = r"C:\Users\selcu\PycharmProjects\ocr_toolkit\detection\craft_text_detector\figures\IAM8" + "/" + image_name
     # image_name = "htr_level_5.jpg"
     # image_path = r"C:\Users\selcu\PycharmProjects\ocr_toolkit\detection\craft_text_detector\figures\test_images2" + "/" + image_name
     # image_name = 'idcard.png'
     # image_path = '../figures/' + image_name
     # image_name = 'plate1.jpg'
     # image_path = r'C:/Users/selcu/PycharmProjects/ocr_toolkit/license_plate_images/' + image_name
+    image_name = "negative1.png"
+    image_path = r"C:\Users\selcu\PycharmProjects\ocr_toolkit\license_plate_images\plates" + "/" + image_name
+
     output_dir = image_name + '/'
 
 
@@ -669,8 +676,8 @@ if __name__ == "__main__":
         print(int(prediction_result["boxes"][0][0][0]))  # 115
         # perform prediction
         prediction_result = pred(image=image,
-                                 text_threshold=0.7,
-                                 link_threshold=0.4,
+                                 text_threshold=0.7,  # 0.7
+                                 link_threshold=0.4,  # 0.4
                                  low_text=0.4,
                                  square_size=1280,
                                  show_time=True)

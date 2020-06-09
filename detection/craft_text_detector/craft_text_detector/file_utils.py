@@ -59,11 +59,11 @@ def list_files(in_path):
             filename, ext = os.path.splitext(file)
             ext = str.lower(ext)
             if (
-                ext == ".jpg"
-                or ext == ".jpeg"
-                or ext == ".gif"
-                or ext == ".png"
-                or ext == ".pgm"
+                    ext == ".jpg"
+                    or ext == ".jpeg"
+                    or ext == ".gif"
+                    or ext == ".png"
+                    or ext == ".pgm"
             ):
                 img_files.append(os.path.join(dirpath, file))
             elif ext == ".bmp":
@@ -164,7 +164,7 @@ def crop_poly(image, poly):
     # crop around poly
     res = cv2.bitwise_and(image, image, mask=mask)
     rect = cv2.boundingRect(poly)  # returns (x,y,w,h) of the rect
-    cropped = res[rect[1] : rect[1] + rect[3], rect[0] : rect[0] + rect[2]]
+    cropped = res[rect[1]: rect[1] + rect[3], rect[0]: rect[0] + rect[2]]
 
     return cropped
 
@@ -294,20 +294,32 @@ def recognized_text_into_image(i, image, region, texts):
         )
 
 
-def write_bb_strResult(f, region):
-    region = np.array(region).astype(np.int32).reshape((-1))
-    strResult = ",".join([str(r) for r in region]) + "\r\n"
-    f.write(strResult)
-    return region
+def write_bb_str_result(filename, output_dir, regions):
+    result_file = os.path.join(output_dir, filename + "_text_detection.txt")
+    with open(result_file, "w") as f:
+        for region in regions:
+            region = np.array(region).astype(np.int32).reshape((-1))
+            str_result = ",".join([str(r) for r in region]) + "\r\n"
+            f.write(str_result)
+
+
+def save_results(heatmaps, image, link_heatmap_file, result_image_file, text_heatmap_file):
+    # Save result image with bb
+    cv2.imwrite(result_image_file, cv2.cvtColor(image, cv2.COLOR_RGB2BGR))
+    # export heatmaps and save
+    text_score_heatmap = heatmaps["text_score_heatmap"]
+    link_score_heatmap = heatmaps["link_score_heatmap"]
+    cv2.imwrite(text_heatmap_file, text_score_heatmap)
+    cv2.imwrite(link_heatmap_file, link_score_heatmap)
 
 
 def export_extra_results(
-    image_path,
-    image,
-    regions,
-    heatmaps,
-    output_dir="output/",
-    texts=None,
+        image_path,
+        image,
+        regions,
+        heatmaps,
+        output_dir="output/",
+        texts=None,
 ):
     """ save text detection result one by one
     Args:
@@ -324,8 +336,10 @@ def export_extra_results(
     # make result file list
     filename, file_ext = os.path.splitext(os.path.basename(image_path))
 
+    # ..._text_detection
+    write_bb_str_result(filename, output_dir, regions)
+
     # result directory
-    result_file = os.path.join(output_dir, filename + "_text_detection.txt")
     result_image_file = os.path.join(output_dir, filename + "_text_detection.png")
     text_heatmap_file = os.path.join(output_dir, filename + "_text_score_heatmap.png")
     link_heatmap_file = os.path.join(output_dir, filename + "_link_score_heatmap.png")
@@ -333,26 +347,19 @@ def export_extra_results(
     # create output dir
     create_dir(output_dir)
 
-    # export heatmaps
-    text_score_heatmap = heatmaps["text_score_heatmap"]
-    link_score_heatmap = heatmaps["link_score_heatmap"]
-    cv2.imwrite(text_heatmap_file, text_score_heatmap)
-    cv2.imwrite(link_heatmap_file, link_score_heatmap)
+    for i, region in enumerate(regions):
+        region = np.array(region).astype(np.int32).reshape((-1))
 
-    with open(result_file, "w") as f:
-        for i, region in enumerate(regions):
-            region = write_bb_strResult(f, region)
+        region = [region.reshape(-1, 1, 2)]
+        cv2.polylines(
+            image,
+            region,
+            True,
+            color=(0, 0, 255),
+            thickness=2,
+        )
 
-            region = region.reshape(-1, 2)
-            cv2.polylines(
-                image,
-                [region.reshape((-1, 1, 2))],
-                True,
-                color=(0, 0, 255),
-                thickness=2,
-            )
+        recognized_text_into_image(i, image, region, texts)
 
-            recognized_text_into_image(i, image, region, texts)
-
-    # Save result image
-    cv2.imwrite(result_image_file, cv2.cvtColor(image, cv2.COLOR_RGB2BGR))
+    # Save results
+    save_results(heatmaps, image, link_heatmap_file, result_image_file, text_heatmap_file)

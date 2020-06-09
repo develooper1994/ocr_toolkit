@@ -20,7 +20,7 @@ def warp_coord(Minv, pt):
 """ end of auxilary functions """
 
 
-def get_detection_boxes_core(textmap, linkmap, text_threshold, link_threshold, low_text):
+def get_detection_boxes_core(textmap, linkmap, text_threshold: float = 0.7, link_threshold: float = 0.4, low_text: float = 0.4):
     # prepare data
     linkmap = linkmap.copy()
     textmap = textmap.copy()
@@ -48,51 +48,80 @@ def get_detection_boxes_core(textmap, linkmap, text_threshold, link_threshold, l
             continue
 
         # make segmentation map
-        segmap = np.zeros(textmap.shape, dtype=np.uint8)
-        segmap[labels == k] = 255
+        segmap = make_segmentation_map(k, labels, textmap)
 
         # remove link area
-        segmap[np.logical_and(link_score == 1, text_score == 0)] = 0
+        ex, ey, niter, sx, sy = remove_link_area(k, link_score, segmap, size, stats, text_score)
 
-        x, y = stats[k, cv2.CC_STAT_LEFT], stats[k, cv2.CC_STAT_TOP]
-        w, h = stats[k, cv2.CC_STAT_WIDTH], stats[k, cv2.CC_STAT_HEIGHT]
-        niter = int(math.sqrt(size * min(w, h) / (w * h)) * 2)
-        sx, ex, sy, ey = (x - niter, x + w + niter + 1, y - niter, y + h + niter + 1)
         # boundary check
-        if sx < 0:
-            sx = 0
-        if sy < 0:
-            sy = 0
-        if ex >= img_w:
-            ex = img_w
-        if ey >= img_h:
-            ey = img_h
-        kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (1 + niter, 1 + niter))
-        segmap[sy:ey, sx:ex] = cv2.dilate(segmap[sy:ey, sx:ex], kernel)
+        segmap = boundary_check(ex, ey, img_h, img_w, niter, segmap, sx, sy)
 
         # make box
-        np_temp = np.roll(np.array(np.where(segmap != 0)), 1, axis=0)
-        np_contours = np_temp.transpose().reshape(-1, 2)
-        rectangle = cv2.minAreaRect(np_contours)
-        box = cv2.boxPoints(rectangle)
+        box, np_contours = make_box(segmap)
 
         # align diamond-shape
-        w, h = np.linalg.norm(box[0] - box[1]), np.linalg.norm(box[1] - box[2])
-        box_ratio = max(w, h) / (min(w, h) + 1e-5)
-        if abs(1 - box_ratio) <= 0.1:
-            l, r = min(np_contours[:, 0]), max(np_contours[:, 0])
-            t, b = min(np_contours[:, 1]), max(np_contours[:, 1])
-            box = np.array([[l, t], [r, t], [r, b], [l, b]], dtype=np.float32)
+        box = align_diamond_shape(box, np_contours)
 
         # make clock-wise order
-        startidx = box.sum(axis=1).argmin()
-        box = np.roll(box, 4 - startidx, 0)
-        box = np.array(box)
-
+        box = make_clock_wise_order(box)
         det.append(box)
         mapper.append(k)
 
     return det, labels, mapper
+
+
+def make_clock_wise_order(box):
+    startidx = box.sum(axis=1).argmin()
+    box = np.roll(box, 4 - startidx, 0)
+    box = np.array(box)
+    return box
+
+
+def make_segmentation_map(k, labels, textmap):
+    segmap = np.zeros(textmap.shape, dtype=np.uint8)
+    segmap[labels == k] = 255
+    return segmap
+
+
+def align_diamond_shape(box, np_contours):
+    w, h = np.linalg.norm(box[0] - box[1]), np.linalg.norm(box[1] - box[2])
+    box_ratio = max(w, h) / (min(w, h) + 1e-5)
+    if abs(1 - box_ratio) <= 0.1:
+        l, r = min(np_contours[:, 0]), max(np_contours[:, 0])
+        t, b = min(np_contours[:, 1]), max(np_contours[:, 1])
+        box = np.array([[l, t], [r, t], [r, b], [l, b]], dtype=np.float32)
+    return box
+
+
+def make_box(segmap):
+    np_temp = np.roll(np.array(np.where(segmap != 0)), 1, axis=0)
+    np_contours = np_temp.transpose().reshape(-1, 2)
+    rectangle = cv2.minAreaRect(np_contours)
+    box = cv2.boxPoints(rectangle)
+    return box, np_contours
+
+
+def remove_link_area(k, link_score, segmap, size, stats, text_score):
+    segmap[np.logical_and(link_score == 1, text_score == 0)] = 0
+    x, y = stats[k, cv2.CC_STAT_LEFT], stats[k, cv2.CC_STAT_TOP]
+    w, h = stats[k, cv2.CC_STAT_WIDTH], stats[k, cv2.CC_STAT_HEIGHT]
+    niter = int(math.sqrt(size * min(w, h) / (w * h)) * 2)
+    sx, ex, sy, ey = (x - niter, x + w + niter + 1, y - niter, y + h + niter + 1)
+    return ex, ey, niter, sx, sy
+
+
+def boundary_check(ex, ey, img_h, img_w, niter, segmap, sx, sy):
+    if sx < 0:
+        sx = 0
+    if sy < 0:
+        sy = 0
+    if ex >= img_w:
+        ex = img_w
+    if ey >= img_h:
+        ey = img_h
+    kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (1 + niter, 1 + niter))
+    segmap[sy:ey, sx:ex] = cv2.dilate(segmap[sy:ey, sx:ex], kernel)
+    return segmap
 
 
 def get_poly_core(boxes, labels, mapper):
@@ -282,7 +311,7 @@ def get_poly_core(boxes, labels, mapper):
     return polys
 
 
-def get_detection_boxes(textmap, linkmap, text_threshold, link_threshold, low_text, poly=False):
+def get_detection_boxes(textmap, linkmap, text_threshold: float = 0.7, link_threshold: float = 0.4, low_text: float = 0.4, poly=False):
     boxes, labels, mapper = get_detection_boxes_core(
         textmap, linkmap, text_threshold, link_threshold, low_text
     )
