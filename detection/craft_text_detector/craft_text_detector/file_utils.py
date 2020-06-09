@@ -270,6 +270,37 @@ def export_detected_regions(image_path, image, regions, output_dir: str = "outpu
     return exported_file_paths
 
 
+def recognized_text_into_image(i, image, region, texts):
+    if texts is not None:
+        font = cv2.FONT_HERSHEY_SIMPLEX
+        font_scale = 0.5
+        cv2.putText(
+            image,
+            "{}".format(texts[i]),
+            (region[0][0] + 1, region[0][1] + 1),
+            font,
+            font_scale,
+            (0, 0, 0),
+            thickness=1,
+        )
+        cv2.putText(
+            image,
+            "{}".format(texts[i]),
+            tuple(region[0]),
+            font,
+            font_scale,
+            (0, 255, 255),
+            thickness=1,
+        )
+
+
+def write_bb_strResult(f, region):
+    region = np.array(region).astype(np.int32).reshape((-1))
+    strResult = ",".join([str(r) for r in region]) + "\r\n"
+    f.write(strResult)
+    return region
+
+
 def export_extra_results(
     image_path,
     image,
@@ -294,8 +325,8 @@ def export_extra_results(
     filename, file_ext = os.path.splitext(os.path.basename(image_path))
 
     # result directory
-    res_file = os.path.join(output_dir, filename + "_text_detection.txt")
-    res_img_file = os.path.join(output_dir, filename + "_text_detection.png")
+    result_file = os.path.join(output_dir, filename + "_text_detection.txt")
+    result_image_file = os.path.join(output_dir, filename + "_text_detection.png")
     text_heatmap_file = os.path.join(output_dir, filename + "_text_score_heatmap.png")
     link_heatmap_file = os.path.join(output_dir, filename + "_link_score_heatmap.png")
 
@@ -303,14 +334,14 @@ def export_extra_results(
     create_dir(output_dir)
 
     # export heatmaps
-    cv2.imwrite(text_heatmap_file, heatmaps["text_score_heatmap"])
-    cv2.imwrite(link_heatmap_file, heatmaps["link_score_heatmap"])
+    text_score_heatmap = heatmaps["text_score_heatmap"]
+    link_score_heatmap = heatmaps["link_score_heatmap"]
+    cv2.imwrite(text_heatmap_file, text_score_heatmap)
+    cv2.imwrite(link_heatmap_file, link_score_heatmap)
 
-    with open(res_file, "w") as f:
+    with open(result_file, "w") as f:
         for i, region in enumerate(regions):
-            region = np.array(region).astype(np.int32).reshape((-1))
-            strResult = ",".join([str(r) for r in region]) + "\r\n"
-            f.write(strResult)
+            region = write_bb_strResult(f, region)
 
             region = region.reshape(-1, 2)
             cv2.polylines(
@@ -321,27 +352,7 @@ def export_extra_results(
                 thickness=2,
             )
 
-            if texts is not None:
-                font = cv2.FONT_HERSHEY_SIMPLEX
-                font_scale = 0.5
-                cv2.putText(
-                    image,
-                    "{}".format(texts[i]),
-                    (region[0][0] + 1, region[0][1] + 1),
-                    font,
-                    font_scale,
-                    (0, 0, 0),
-                    thickness=1,
-                )
-                cv2.putText(
-                    image,
-                    "{}".format(texts[i]),
-                    tuple(region[0]),
-                    font,
-                    font_scale,
-                    (0, 255, 255),
-                    thickness=1,
-                )
+            recognized_text_into_image(i, image, region, texts)
 
     # Save result image
-    cv2.imwrite(res_img_file, cv2.cvtColor(image, cv2.COLOR_RGB2BGR))
+    cv2.imwrite(result_image_file, cv2.cvtColor(image, cv2.COLOR_RGB2BGR))
