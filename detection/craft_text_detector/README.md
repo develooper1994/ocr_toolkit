@@ -55,7 +55,7 @@ image_path = 'figures/idcard.png'
 output_dir = 'outputs/'
 
 # apply craft text detection and export detected regions to output directory
-prediction_result = craft.detect_text(image_path,output_dir, device="cpu", crop_type="poly")
+prediction_result = craft.detect_text(image_path,output_dir, device="cpu", crop_type="is_poly")
 ```
 
 ### Advanced Usage

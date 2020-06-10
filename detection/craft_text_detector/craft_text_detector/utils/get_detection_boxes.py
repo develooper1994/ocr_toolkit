@@ -11,18 +11,30 @@ from detection.craft_text_detector.craft_text_detector.utils.get_detection_boxes
 
 def get_detection_boxes(textmap, linkmap, text_threshold: float = 0.7, link_threshold: float = 0.4,
                         low_text: float = 0.4,
-                        poly=False,
+                        is_poly=False,
                         only_characters=False):
     boxes, labels, mapper = get_detection_boxes_core(
         textmap, linkmap, text_threshold, link_threshold, low_text, only_characters
     )
 
-    if poly:
+    shp = len(boxes[0].shape)
+    if shp > 2:
+        polys = []
+        for box in boxes:
+            poly_one = get_poly_core_one(box, is_poly, labels, mapper)
+            polys.append(poly_one)
+    else:
+        polys = get_poly_core_one(boxes, is_poly, labels, mapper)
+
+    return boxes, polys
+
+
+def get_poly_core_one(boxes, is_poly, labels, mapper):
+    if is_poly:
         polys = get_poly_core(boxes, labels, mapper)
     else:
         polys = [None] * len(boxes)
-
-    return boxes, polys
+    return polys
 
 
 def get_poly_core(boxes, labels, mapper):
@@ -46,8 +58,12 @@ def get_poly_core(boxes, labels, mapper):
             continue
 
         # warp image
+       #  box = array([[ 5.,  2.],
+       # [73.,  2.],
+       # [73., 17.],
+       # [ 5., 17.]], dtype=float32)
         tar = np.float32([[0, 0], [w, 0], [w, h], [0, h]])
-        M = cv2.getPerspectiveTransform(box, tar)  # M = map(cv2.getPerspectiveTransform, box, tar)
+        M = cv2.getPerspectiveTransform(box, tar)
         word_label = cv2.warpPerspective(labels, M, (w, h), flags=cv2.INTER_NEAREST)
         try:
             Minv = np.linalg.inv(M)
@@ -56,7 +72,7 @@ def get_poly_core(boxes, labels, mapper):
             continue
 
         # binarization for selected label
-        cur_label = mapper[k]
+        cur_label = mapper[k]  # TODO! "mapper" is only "[1]" but multiple boxes k>1 so that index out of range.
         word_label[word_label != cur_label] = 0
         word_label[word_label > 0] = 1
 

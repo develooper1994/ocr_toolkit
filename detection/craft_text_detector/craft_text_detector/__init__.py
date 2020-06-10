@@ -43,7 +43,7 @@ def detect_text(image, output_dir=None, rectify=True, export_extra=True,
                 text_threshold=0.7, link_threshold=0.4,
                 low_text=0.4, long_size=1280,
                 device="cpu", show_time=False,
-                crop_type="poly"):
+                crop_type="is_poly"):
     """
     Detects text but has some extra functionalities.
     :param image: path to the image to be processed
@@ -56,7 +56,7 @@ def detect_text(image, output_dir=None, rectify=True, export_extra=True,
     :param long_size: desired longest image size for inference
     :param show_time: show processing time
     :param cuda: cuda switch
-    :param crop_type: crop regions by detected boxes or polys ("poly" or "box")
+    :param crop_type: crop regions by detected boxes or polys ("is_poly" or "box")
     :return:
         {
         "masks": lists of predicted masks 2d as bool array,

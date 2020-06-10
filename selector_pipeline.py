@@ -16,7 +16,7 @@ from recognition.recognition_selector import recognition_selector
 class selector_pipeline:
     def __init__(self, image, rectify: bool = True, text_threshold: float = 0.7, link_threshold: float = 0.4,
                  low_text: float = 0.4,
-                 square_size: int = 1280, show_time: bool = False, crop_type: str = "poly", detection_model_paths=None,
+                 square_size: int = 1280, show_time: bool = False, crop_type: str = "is_poly", detection_model_paths=None,
                  recognition_model_paths=None, detection_switch: str = "craft", recognition_switch: str = "handwritten",
                  mag_ratio: int = 1, num_device: int = 1, device: str = "gpu", language="eng"):
         self.detection_result = []  # PYTORCH ;)
@@ -56,7 +56,7 @@ class selector_pipeline:
 
     def reload_hyperparameters(self, rectify: bool = True, text_threshold: float = 0.7,
                                link_threshold: float = 0.4, low_text: float = 0.4,
-                               square_size: int = 1280, show_time: bool = False, crop_type: str = "poly",
+                               square_size: int = 1280, show_time: bool = False, crop_type: str = "is_poly",
                                detection_model_paths=None,
                                recognition_model_paths=None, detection_switch: str = "craft",
                                recognition_switch: str = "handwritten",
@@ -208,7 +208,7 @@ if __name__ == "__main__":
     recognition_model_paths = r"C:\Users\selcu\PycharmProjects\ocr_toolkit\recognition\handwritten_text_recognition\recognition\models/"  # windows
     recognition_switch = "handwritten"  # "handwritten"
 
-    crop_type = "box"  # poly
+    crop_type = "box"  # is_poly
     output_dir = image_name + '/'
     show_time = False
     language = "tur"

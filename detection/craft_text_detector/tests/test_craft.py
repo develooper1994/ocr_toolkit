@@ -95,7 +95,7 @@ class TestCraftTextDetector(unittest.TestCase):
                                              device=device)
         prediction_result = pred.detect_text(image=image_path, output_dir=output_dir, rectify=True, export_extra=False,
                                              text_threshold=0.7, link_threshold=0.4, low_text=0.4, square_size=720,
-                                             show_time=show_time, crop_type="poly")
+                                             show_time=show_time, crop_type="is_poly")
 
         # !!! get_prediction.py -> get_prediction(...)
         #     img_resized, target_ratio, size_heatmap = imgproc.resize_aspect_ratio(
@@ -118,7 +118,7 @@ class TestCraftTextDetector(unittest.TestCase):
                     device=device)
         prediction_result = pred.detect_text(image=image_path, output_dir=output_dir, rectify=True, export_extra=False,
                                              text_threshold=0.7, link_threshold=0.4, low_text=0.4, square_size=720,
-                                             show_time=show_time, crop_type="poly")
+                                             show_time=show_time, crop_type="is_poly")
         self.prediction_result_compare(prediction_result)
 
         # refiner = False

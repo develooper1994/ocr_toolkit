@@ -10,7 +10,7 @@ except:
     try:
         import file_utils
     except:
-        from detection.craft_text_detector.craft_text_detector import file_utils
+        from detection.craft_text_detector.craft_text_detector.utils import file_utils
 
 
 def copyStateDict(state_dict):

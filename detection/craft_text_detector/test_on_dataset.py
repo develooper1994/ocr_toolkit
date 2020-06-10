@@ -23,7 +23,7 @@ parser.add_argument('--link_threshold', default=0.4, type=float, help='link conf
 parser.add_argument('--cuda', default=True, type=str2bool, help='Use cuda for inference')
 parser.add_argument('--canvas_size', default=1280, type=int, help='image size for inference')
 parser.add_argument('--mag_ratio', default=1.5, type=float, help='image magnification ratio')
-parser.add_argument('--poly', default=False, action='store_true', help='enable polygon type')
+parser.add_argument('--is_poly', default=False, action='store_true', help='enable polygon type')
 parser.add_argument('--show_time', default=False, action='store_true', help='show processing time')
 
 args = parser.parse_args()
@@ -74,7 +74,7 @@ if __name__ == '__main__':
         image = imgproc.read_image(image_path)
 
         # bboxes, polys, score_text = test_net(craft_net, image, args.text_threshold, args.link_threshold, args.low_text,
-        #                                      args.cuda, args.poly, refine_net)
+        #                                      args.cuda, args.is_poly, refine_net)
 
         # return {
         #     "boxes": boxes,

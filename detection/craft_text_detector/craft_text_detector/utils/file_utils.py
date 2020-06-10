@@ -161,7 +161,7 @@ def crop_poly(image, poly):
     # method 2 not so smooth region
     # cv2.fillPoly(mask, points, (255))
 
-    # crop around poly
+    # crop around is_poly
     res = cv2.bitwise_and(image, image, mask=mask)
     rect = cv2.boundingRect(poly)  # returns (x,y,w,h) of the rect
     cropped = res[rect[1]: rect[1] + rect[3], rect[0]: rect[0] + rect[2]]
@@ -172,7 +172,7 @@ def crop_poly(image, poly):
 def export_poly(image, poly, rectify, gray_scale=False):
     """
     :param image: full image
-    :param points: bbox or poly points
+    :param points: bbox or is_poly points
     :param file_path: path to be exported
     :param rectify: rectify detected polygon by affine transform
     :param gray_scale: If you want in grayscale set it True
@@ -180,7 +180,7 @@ def export_poly(image, poly, rectify, gray_scale=False):
     :return: region result
     """
     if rectify:
-        # rectify poly region
+        # rectify is_poly region
         detection_result = rectify_poly(image, poly)
     else:
         detection_result = crop_poly(image, poly)
@@ -193,7 +193,7 @@ def export_poly(image, poly, rectify, gray_scale=False):
 def export_detected_region(image, poly, file_path, rectify=True, is_save=False, gray_scale=False):
     """
     :param image: full image
-    :param points: bbox or poly points
+    :param points: bbox or is_poly points
     :param file_path: path to be exported
     :param rectify: rectify detected polygon by affine transform
     :param is_save: Saving if it is "True"

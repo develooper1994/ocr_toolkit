@@ -111,7 +111,7 @@ def make_box(segmap, only_characters=False):
             box.append(prop.bbox)
         # make it compatible
         box = np.array(box)
-        compatible_box = np.zeros((box.shape[0], 4, 2))
+        compatible_box = np.zeros((box.shape[0], 4, 2), dtype=np.float32)
 
         box_coord_left_bottom = np.array([box[:, 1], box[:, 2]]).transpose()
         compatible_box[:, 0, :] = box_coord_left_bottom

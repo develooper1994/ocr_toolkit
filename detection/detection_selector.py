@@ -8,7 +8,7 @@ from recognition.handwritten_text_recognition.recognition.utils import device_se
 
 class detection_selector:
     def __init__(self, image, rectify=True, text_threshold=0.7, link_threshold=0.4, low_text=0.4,
-                 square_size=1280, show_time=False, crop_type="poly", detection_model_paths=None,
+                 square_size=1280, show_time=False, crop_type="is_poly", detection_model_paths=None,
                  detection_switch: str = "craft",
                  mag_ratio=1, device: str = "gpu"):
         # PYTORCH ;)
@@ -28,7 +28,7 @@ class detection_selector:
         self.predicted_bb = 0
 
     def reload_hyperparameters(self, rectify=True, text_threshold=0.7, link_threshold=0.4, low_text=0.4,
-                               square_size=1280, show_time=False, crop_type="poly", detection_model_paths=None,
+                               square_size=1280, show_time=False, crop_type="is_poly", detection_model_paths=None,
                                detection_switch: str = "craft", mag_ratio=1, device: str = "gpu"):
         self.rectify = rectify
         self.text_threshold = text_threshold
@@ -161,7 +161,7 @@ if __name__ == "__main__":
     # "polys": polys,
     # "polys_as_ratios": polys_as_ratio,
 
-    crop_type = "box"  # poly
+    crop_type = "box"  # is_poly
     detection_result = dev_selector.make_it()
     # pprint(detection_result)
     predicted_bb = dev_selector.get_detected_bb(crop_type=crop_type)

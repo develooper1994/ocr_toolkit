@@ -106,7 +106,7 @@ def mep(convex_polygon):
 
 
 def sort_rectangle(poly):
-    # sort the four coordinates of the polygon, points in poly should be sorted clockwise
+    # sort the four coordinates of the polygon, points in is_poly should be sorted clockwise
     # First find the lowest point
     p_lowest = np.argmax(poly[:, 1])
     if np.count_nonzero(poly[:, 1] == poly[p_lowest, 1]) == 2:
@@ -124,7 +124,7 @@ def sort_rectangle(poly):
             -(poly[p_lowest][1] - poly[p_lowest_right][1]) / (poly[p_lowest][0] - poly[p_lowest_right][0]))
         # assert angle > 0
         # if angle <= 0:
-        #     print(angle, poly[p_lowest], poly[p_lowest_right])
+        #     print(angle, is_poly[p_lowest], is_poly[p_lowest_right])
         if angle / np.pi * 180 > 45:
             #p2 - this point is p2
             p2_index = p_lowest
