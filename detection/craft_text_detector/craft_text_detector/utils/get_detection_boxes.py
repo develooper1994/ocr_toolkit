@@ -6,7 +6,8 @@ import numpy as np
 from detection.craft_text_detector.craft_text_detector.utils.craft_utils import warp_coord
 from detection.craft_text_detector.craft_text_detector.utils.get_detection_boxes_core import get_detection_boxes_core
 
-#%% get_detection_boxes
+
+# %% get_detection_boxes
 
 
 def get_detection_boxes(textmap, linkmap, text_threshold: float = 0.7, link_threshold: float = 0.4,
@@ -58,10 +59,10 @@ def get_poly_core(boxes, labels, mapper):
             continue
 
         # warp image
-       #  box = array([[ 5.,  2.],
-       # [73.,  2.],
-       # [73., 17.],
-       # [ 5., 17.]], dtype=float32)
+        #  box = array([[ 5.,  2.],
+        # [73.,  2.],
+        # [73., 17.],
+        # [ 5., 17.]], dtype=float32)
         tar = np.float32([[0, 0], [w, 0], [w, h], [0, h]])
         M = cv2.getPerspectiveTransform(box, tar)
         word_label = cv2.warpPerspective(labels, M, (w, h), flags=cv2.INTER_NEAREST)
