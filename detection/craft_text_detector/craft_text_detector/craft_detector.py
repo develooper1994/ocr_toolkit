@@ -1,8 +1,10 @@
 import time
+from logging import warning
 from pprint import pprint
 
 import cv2
 import numpy as np
+from matplotlib import pyplot as plt
 import torch
 
 # from recognition.handwritten_text_recognition.recognition.utils import device_selection_helper_pytorch
@@ -187,6 +189,7 @@ class craft_detector:
                        square_size: int = 1280,
                        mag_ratio=1,
                        poly: bool = True,
+                       only_characters=False,
                        show_time: bool = False):
         """
         Predicts bounding boxes where the text. The main function that gives bounding boxes.
@@ -265,7 +268,7 @@ class craft_detector:
 
         # Post-processing
         boxes, polys = craft_utils.get_detection_boxes(
-            score_text, score_link, text_threshold, link_threshold, low_text, poly
+            score_text, score_link, text_threshold, link_threshold, low_text, poly, only_characters
         )
 
         # coordinate adjustment
@@ -305,7 +308,7 @@ class craft_detector:
             boxes = np.stack(boxes[:])  # multiple nested boxes arrays in to one array. TO BE ENSURE!
             boxes_as_ratio = np.stack(boxes_as_ratio[:])  # multiple nested boxes arrays in to one array. TO BE ENSURE!
         except:
-            print("boxes empty so that there is nothing to detect.")
+            warning("boxes empty so that there is nothing to detect.")
 
         detection_result = {
             "boxes": boxes,  # len() -> wrong: 14, correct: 15
@@ -434,6 +437,7 @@ class craft_detector:
                     text_threshold=0.7,
                     link_threshold=0.4,
                     low_text=0.4,
+                    only_characters=False,
                     square_size=1280,
                     mag_ratio=1,
                     show_time=False,
@@ -470,7 +474,7 @@ class craft_detector:
             crop_type = self.crop_type
 
         # load image
-        image_path="output.jpg"
+        image_path = "output.jpg"
         if isinstance(image, str):
             image_path = image
         image = self.set_image(image)
@@ -479,13 +483,15 @@ class craft_detector:
         prediction_result = self.get_prediction(image=image, text_threshold=text_threshold,
                                                 link_threshold=link_threshold, low_text=low_text,
                                                 square_size=square_size,
-                                                mag_ratio=mag_ratio, show_time=show_time)
+                                                mag_ratio=mag_ratio, only_characters=only_characters,
+                                                show_time=show_time)
 
         # arange regions
         regions = self.arange_regions(crop_type, prediction_result)
 
         # export if output_dir is given
-        self.export_and_save_all(export_extra=export_extra, image_path=image_path, image=self.image, output_dir=output_dir,
+        self.export_and_save_all(export_extra=export_extra, image_path=image_path, image=self.image,
+                                 output_dir=output_dir,
                                  prediction_result=prediction_result, rectify=rectify, regions=regions)
 
         # return prediction results
@@ -550,7 +556,8 @@ class craft_detector:
         )
         return self.predicted_polygon_image
 
-    def export_and_save_all(self, export_extra=True, image_path="output.jpg", image=None, output_dir='outputs/', prediction_result=None, rectify=True, regions=None):
+    def export_and_save_all(self, export_extra=True, image_path="output.jpg", image=None, output_dir='outputs/',
+                            prediction_result=None, rectify=True, regions=None):
         prediction_result["text_crop_paths"] = []
         if output_dir is not None:
             # export detected text regions
@@ -652,10 +659,60 @@ if __name__ == "__main__":
     # image_path = '../figures/' + image_name
     # image_name = 'plate1.jpg'
     # image_path = r'C:/Users/selcu/PycharmProjects/ocr_toolkit/license_plate_images/' + image_name
-    image_name = "negative1.png"
+    image_name = "positive2.png"
     image_path = r"C:\Users\selcu\PycharmProjects\ocr_toolkit\license_plate_images\plates" + "/" + image_name
 
     output_dir = image_name + '/'
+
+
+    def image_preprocess(image):
+        gray = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
+        # plt.imshow(gray, cmap="gray")
+        # plt.show()
+
+        ## not working
+        # makes worse
+        # blur = cv2.medianBlur(gray, 1)
+        # plt.imshow(blur, cmap="gray")
+        # plt.show()
+
+        adaptive = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV, blockSize=11,
+                                         C=1)  # C=2
+        # plt.imshow(adaptive, cmap="gray")
+        # plt.show()
+        adaptive_res = cv2.bitwise_and(image, image, mask=adaptive)
+
+        # second thresholding option
+        hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+        lower_blue = np.array([0, 0, 0])
+        upper_blue = np.array([180, 180, 180])
+        mask = cv2.inRange(hsv, lower_blue, upper_blue)
+        residual = cv2.bitwise_and(image, image, mask=mask)
+        # plt.imshow(mask, cmap="gray")
+        # plt.show()
+
+        ## Not working
+        # morphological transformation
+        # kernel = np.ones((5, 5), np.uint8)
+        # erosion = cv2.erode(adaptive, kernel, iterations=2)
+        # plt.imshow(erosion, cmap="gray")
+        # plt.show()
+        #
+        # opening = cv2.morphologyEx(adaptive, cv2.MORPH_ELLIPSE, kernel)
+        # plt.imshow(opening, cmap="gray")
+        # plt.show()
+
+        ## not working
+        # kernel_sharpening = np.array([[-1, -1, -1],
+        #                               [-1, 9, -1],
+        #                               [-1, -1, -1]])
+        # sharpened = cv2.filter2D(mask, -1, kernel_sharpening)
+        # plt.imshow(sharpened, cmap="gray")
+        # plt.show()
+
+        # adaptive_res_expd = np.dstack([adaptive_res] * 3)
+        # res_expd = np.dstack([res] * 3)
+        return adaptive_res, residual
 
 
     def test_oops(image_path, output_dir):
@@ -664,14 +721,19 @@ if __name__ == "__main__":
         show_time = False
         # read image
         image = read_image(image_path)
+        # not working well with preprocess
+        # adaptive_res, residual = image_preprocess(image)
+        # image = residual
         # create craft_detector class
         pred = craft_detector(image=image,
                               craft_model_path=craft_model_path,
                               refinenet_model_path=refinenet_model_path,
                               device="gpu")
+        only_characters = True
         prediction_result = pred.detect_text(image=image_path, output_dir=output_dir, rectify=True, export_extra=False,
-                                             text_threshold=0.7, link_threshold=0.4, low_text=0.4, square_size=720,
-                                             show_time=show_time, crop_type="poly")
+                                             text_threshold=0.7, link_threshold=0.4, low_text=0.4,
+                                             only_characters=only_characters, square_size=720, show_time=show_time,
+                                             crop_type="poly")
         print(len(prediction_result[
                       "boxes"]))  # refinenet_model_path=None -> 51, refinenet_model_path=refinenet_model_path -> 19
         print(len(prediction_result["boxes"][0]))  # 4
@@ -684,7 +746,8 @@ if __name__ == "__main__":
                                  link_threshold=0.4,  # 0.4
                                  low_text=0.4,  # 0.6, 0.4
                                  square_size=1280,
-                                 show_time=True)
+                                 show_time=True,
+                                 only_characters=only_characters)
         # export detected text regions
         exported_file_paths = export_detected_regions(
             image_path=image_path,

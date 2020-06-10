@@ -21,21 +21,24 @@ def warp_coord(Minv, pt):
 
 
 def get_detection_boxes_core(textmap, linkmap, text_threshold: float = 0.7, link_threshold: float = 0.4,
-                             low_text: float = 0.4):
+                             low_text: float = 0.4, only_characters=False):
     # prepare data
     linkmap = linkmap.copy()
     textmap = textmap.copy()
     img_h, img_w = textmap.shape
 
     """ labeling method """
-    ret, text_score = cv2.threshold(textmap, low_text, 1, 0)
-    ret, link_score = cv2.threshold(linkmap, link_threshold, 1, 0)
+    ret, text_score = cv2.threshold(textmap, low_text, 1, cv2.THRESH_BINARY)
+    ret, link_score = cv2.threshold(linkmap, link_threshold, 1, cv2.THRESH_BINARY)
 
     text_score_comb = np.clip(text_score + link_score, 0, 1)
     # text_score_comb = np.clip(text_score, 0, 1)
+    # text_score_comb = np.clip(link_score, 0, 1)
     nLabels, labels, stats, centroids = cv2.connectedComponentsWithStats(
         text_score_comb.astype(np.uint8), connectivity=4
     )
+    if only_characters:
+        labels = text_score
 
     det = []
     mapper = []
@@ -52,13 +55,15 @@ def get_detection_boxes_core(textmap, linkmap, text_threshold: float = 0.7, link
         # make segmentation map
         segmap = make_segmentation_map(k, labels, textmap)
 
-        # remove link area
-        ex, ey, niter, sx, sy = remove_link_area(k, link_score, segmap, size, stats, text_score)
+        if not only_characters:
+            # remove link area
+            ex, ey, niter, sx, sy = remove_link_area(k, link_score, segmap, size, stats, text_score)
 
-        # boundary check
-        segmap = boundary_check(ex, ey, img_h, img_w, niter, segmap, sx, sy)
+            # boundary check
+            segmap = boundary_check(ex, ey, img_h, img_w, niter, segmap, sx, sy)
 
         # make box
+        # TODO! extracts only one bb
         box, np_contours = make_box(segmap)
 
         # align diamond-shape
@@ -315,9 +320,10 @@ def get_poly_core(boxes, labels, mapper):
 
 def get_detection_boxes(textmap, linkmap, text_threshold: float = 0.7, link_threshold: float = 0.4,
                         low_text: float = 0.4,
-                        poly=False):
+                        poly=False,
+                        only_characters=False):
     boxes, labels, mapper = get_detection_boxes_core(
-        textmap, linkmap, text_threshold, link_threshold, low_text
+        textmap, linkmap, text_threshold, link_threshold, low_text, only_characters
     )
 
     if poly:
