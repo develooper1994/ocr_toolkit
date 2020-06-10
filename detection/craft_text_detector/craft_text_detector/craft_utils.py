@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 import math
 
-import cv2
 import numpy as np
+from skimage.measure import label, regionprops
+import cv2
+
 import torch
 from torch.backends import cudnn
 
@@ -40,7 +42,7 @@ def get_detection_boxes_core(textmap, linkmap, text_threshold: float = 0.7, link
     if only_characters:
         labels = text_score
 
-    det = []
+    detecteds = []
     mapper = []
     for k in range(1, nLabels):
         # size filtering
@@ -64,17 +66,18 @@ def get_detection_boxes_core(textmap, linkmap, text_threshold: float = 0.7, link
 
         # make box
         # TODO! extracts only one bb
-        box, np_contours = make_box(segmap)
+        box, np_contours = make_box(segmap, only_characters)
 
-        # align diamond-shape
-        box = align_diamond_shape(box, np_contours)
+        if not only_characters:
+            # align diamond-shape
+            box = align_diamond_shape(box, np_contours)
 
         # make clock-wise order
         box = make_clock_wise_order(box)
-        det.append(box)
+        detecteds.append(box)
         mapper.append(k)
 
-    return det, labels, mapper
+    return detecteds, labels, mapper  # detected for each "nLabels"
 
 
 def make_clock_wise_order(box):
@@ -100,11 +103,44 @@ def align_diamond_shape(box, np_contours):
     return box
 
 
-def make_box(segmap):
-    np_temp = np.roll(np.array(np.where(segmap != 0)), 1, axis=0)
+def make_box(segmap, only_characters=False):
+    mask = segmap != 0
+    notzero_tuple = np.where(mask)
+    notzero = np.array(notzero_tuple)
+    np_temp = np.roll(notzero, 1, axis=0)
     np_contours = np_temp.transpose().reshape(-1, 2)
-    rectangle = cv2.minAreaRect(np_contours)
-    box = cv2.boxPoints(rectangle)
+    # TODO! extracts only one bb
+    if not only_characters:
+        rectangle = cv2.minAreaRect(np_contours)
+        box = cv2.boxPoints(rectangle)
+        # array([[7., 14.],  # left, bottom
+        #        [7., 4.],   # left, upper
+        #        [70., 4.],  # right, upper
+        #        [70., 14.]],# right, bottom
+        #        dtype=float32)
+    else:
+        box = []
+        lbl_0 = label(mask)
+        props = regionprops(lbl_0)
+        for prop in props:
+            box.append(prop.bbox)
+        # make it compatible
+        box = np.array(box)
+        compatible_box = np.zeros((box.shape[0], 4, 2))
+
+        box_coord_left_bottom = np.array([box[:, 1], box[:, 2]]).transpose()
+        compatible_box[:, 0, :] = box_coord_left_bottom
+
+        box_coord_left_upper = np.flip(box[:, 0:2], axis=1)
+        compatible_box[:, 1, :] = box_coord_left_upper
+
+        box_coord_right_upper = np.array([box[:, 3], box[:, 0]]).transpose()
+        compatible_box[:, 2, :] = box_coord_right_upper
+
+        box_coord_right_bottom = np.flip(box[:, 2:], axis=1)
+        compatible_box[:, 3, :] = box_coord_right_bottom
+
+        box = compatible_box
     return box, np_contours
 
 
@@ -141,6 +177,7 @@ def get_poly_core(boxes, labels, mapper):
 
     polys = []
     for k, box in enumerate(boxes):
+        # TODO! multiple boxes inde of "box" object.
         # size filter for small instance
         w, h = (
             int(np.linalg.norm(box[0] - box[1]) + 1),
@@ -152,7 +189,7 @@ def get_poly_core(boxes, labels, mapper):
 
         # warp image
         tar = np.float32([[0, 0], [w, 0], [w, h], [0, h]])
-        M = cv2.getPerspectiveTransform(box, tar)
+        M = cv2.getPerspectiveTransform(box, tar)  # M = map(cv2.getPerspectiveTransform, box, tar)
         word_label = cv2.warpPerspective(labels, M, (w, h), flags=cv2.INTER_NEAREST)
         try:
             Minv = np.linalg.inv(M)
