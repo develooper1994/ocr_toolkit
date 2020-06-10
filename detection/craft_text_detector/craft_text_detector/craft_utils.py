@@ -20,7 +20,8 @@ def warp_coord(Minv, pt):
 """ end of auxilary functions """
 
 
-def get_detection_boxes_core(textmap, linkmap, text_threshold: float = 0.7, link_threshold: float = 0.4, low_text: float = 0.4):
+def get_detection_boxes_core(textmap, linkmap, text_threshold: float = 0.7, link_threshold: float = 0.4,
+                             low_text: float = 0.4):
     # prepare data
     linkmap = linkmap.copy()
     textmap = textmap.copy()
@@ -31,6 +32,7 @@ def get_detection_boxes_core(textmap, linkmap, text_threshold: float = 0.7, link
     ret, link_score = cv2.threshold(linkmap, link_threshold, 1, 0)
 
     text_score_comb = np.clip(text_score + link_score, 0, 1)
+    # text_score_comb = np.clip(text_score, 0, 1)
     nLabels, labels, stats, centroids = cv2.connectedComponentsWithStats(
         text_score_comb.astype(np.uint8), connectivity=4
     )
@@ -311,7 +313,9 @@ def get_poly_core(boxes, labels, mapper):
     return polys
 
 
-def get_detection_boxes(textmap, linkmap, text_threshold: float = 0.7, link_threshold: float = 0.4, low_text: float = 0.4, poly=False):
+def get_detection_boxes(textmap, linkmap, text_threshold: float = 0.7, link_threshold: float = 0.4,
+                        low_text: float = 0.4,
+                        poly=False):
     boxes, labels, mapper = get_detection_boxes_core(
         textmap, linkmap, text_threshold, link_threshold, low_text
     )

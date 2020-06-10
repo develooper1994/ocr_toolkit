@@ -301,8 +301,11 @@ class craft_detector:
                 )
             )
 
-        boxes = np.stack(boxes[:])  # multiple nested boxes arrays in to one array. TO BE ENSURE!
-        boxes_as_ratio = np.stack(boxes_as_ratio[:])  # multiple nested boxes arrays in to one array. TO BE ENSURE!
+        try:
+            boxes = np.stack(boxes[:])  # multiple nested boxes arrays in to one array. TO BE ENSURE!
+            boxes_as_ratio = np.stack(boxes_as_ratio[:])  # multiple nested boxes arrays in to one array. TO BE ENSURE!
+        except:
+            print("boxes empty so that there is nothing to detect.")
 
         detection_result = {
             "boxes": boxes,  # len() -> wrong: 14, correct: 15
@@ -675,10 +678,11 @@ if __name__ == "__main__":
         print(len(prediction_result["boxes"][0][0]))  # 2
         print(int(prediction_result["boxes"][0][0][0]))  # 115
         # perform prediction
+        # TODO! tune parameters
         prediction_result = pred(image=image,
                                  text_threshold=0.7,  # 0.7
                                  link_threshold=0.4,  # 0.4
-                                 low_text=0.4,
+                                 low_text=0.4,  # 0.6, 0.4
                                  square_size=1280,
                                  show_time=True)
         # export detected text regions
