@@ -5,15 +5,9 @@
 # Detection - craft modules
 from pprint import pprint
 
-from detection.craft_text_detector.craft_text_detector import craft_detector
-
 # Recognition modules
 # Recognition - handwritten_text_recognition modules
-from detection.craft_text_detector.craft_text_detector.file_utils import export_detected_polygons
-from detection.craft_text_detector.craft_text_detector.imgproc import read_image
 from detection.detection_selector import detection_selector
-from recognition.handwritten_text_recognition.recognition.utils import device_selection_helper
-from recognition.handwritten_text_recognition.recognition.recognizer import recognize
 
 # Recognition - minimal_text_recognition modules
 from recognition.recognition_selector import recognition_selector

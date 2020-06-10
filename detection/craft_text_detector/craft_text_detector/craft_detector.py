@@ -1,14 +1,13 @@
 import time
 from logging import warning
-from pprint import pprint
 
 import cv2
 import numpy as np
-from matplotlib import pyplot as plt
 import torch
 
 # from recognition.handwritten_text_recognition.recognition.utils import device_selection_helper_pytorch
-from detection.craft_text_detector.craft_text_detector.craft_utils import device_selection_helper_pytorch
+import detection.craft_text_detector.craft_text_detector.utils.get_detection_boxes
+from detection.craft_text_detector.craft_text_detector.utils.craft_utils import device_selection_helper_pytorch
 
 try:
     # direct call
@@ -38,11 +37,11 @@ except:
         from models.craftnet import CRAFT
         from models.refinenet import RefineNet
     except:
-        from . import craft_utils
+        from detection.craft_text_detector.craft_text_detector.utils import craft_utils
         from . import imgproc
         # my google drive
-        from .craft_detector_util import copyStateDict, get_weight_path
-        from .file_utils import (
+        from detection.craft_text_detector.craft_text_detector.utils.craft_detector_utils import copyStateDict, get_weight_path
+        from detection.craft_text_detector.craft_text_detector.utils.file_utils import (
             export_detected_regions,
             export_extra_results, export_detected_polygons
         )
@@ -267,7 +266,7 @@ class craft_detector:
         t0 = time.time()
 
         # Post-processing
-        boxes, polys = craft_utils.get_detection_boxes(
+        boxes, polys = detection.craft_text_detector.craft_text_detector.utils.get_detection_boxes.get_detection_boxes(
             score_text, score_link, text_threshold, link_threshold, low_text, poly, only_characters
         )
 

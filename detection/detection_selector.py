@@ -1,7 +1,6 @@
 from pprint import pprint
 
 from detection.craft_text_detector.craft_text_detector import craft_detector
-from detection.craft_text_detector.craft_text_detector.file_utils import export_detected_polygons
 
 # helps to select detection algorithm
 from recognition.handwritten_text_recognition.recognition.utils import device_selection_helper

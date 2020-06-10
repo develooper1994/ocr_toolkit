@@ -25,7 +25,7 @@ except:
         from craft_text_detector.craft_text_detector.train.mep import mep
         from craft_text_detector.craft_text_detector.train.watershed import watershed
     except:
-        from detection.craft_text_detector.craft_text_detector.file_utils import *
+        from detection.craft_text_detector.craft_text_detector.utils.file_utils import *
         from detection.craft_text_detector.craft_text_detector.train.gaussian import GaussianTransformer
         from detection.craft_text_detector.craft_text_detector.train.mep import mep
         from detection.craft_text_detector.craft_text_detector.train.watershed import watershed

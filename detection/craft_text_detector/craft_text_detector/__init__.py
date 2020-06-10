@@ -1,7 +1,7 @@
 # TODO! rewrite documentation.
 from __future__ import absolute_import
 
-__version__ = "0.2.5"
+__version__ = "0.2.6"
 __author__ = "Mustafa Selçuk Çağlar"
 
 try:
@@ -11,6 +11,7 @@ try:
     import file_utils
     import imgproc
     import word_to_line
+    import utils
 except:
     try:
         from craft_text_detector import craft_detector
@@ -19,6 +20,7 @@ except:
         from craft_text_detector import file_utils
         from craft_text_detector import imgproc
         from craft_text_detector import word_to_line
+        from craft_text_detector import utils
     except:
         try:
             from craft_text_detector.craft_text_detector import craft_detector
@@ -27,13 +29,14 @@ except:
             from craft_text_detector.craft_text_detector import file_utils
             from craft_text_detector.craft_text_detector import imgproc
             from craft_text_detector.craft_text_detector import word_to_line
+            from craft_text_detector.craft_text_detector import utils
         except:
             from detection.craft_text_detector.craft_text_detector import craft_detector
-            from detection.craft_text_detector.craft_text_detector import craft_utils
+            from detection.craft_text_detector.craft_text_detector.utils import craft_utils, file_utils
             from detection.craft_text_detector.craft_text_detector import expand_bounding_box
-            from detection.craft_text_detector.craft_text_detector import file_utils
             from detection.craft_text_detector.craft_text_detector import imgproc
             from detection.craft_text_detector.craft_text_detector import word_to_line
+            from detection.craft_text_detector.craft_text_detector import utils
 
 
 def detect_text(image, output_dir=None, rectify=True, export_extra=True,

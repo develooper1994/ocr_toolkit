@@ -11,7 +11,7 @@ try:
     from craft_text_detector import imgproc
 except:
     # indirect call
-    from .. import file_utils
+    from ..utils import file_utils
     from .. import imgproc
 
 # from craft_text_detector.eval.icdar2015.script import eval_2015

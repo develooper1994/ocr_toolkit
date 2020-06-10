@@ -1,6 +1,6 @@
 import mxnet as mx
 
-from detection.craft_text_detector.craft_text_detector.craft_utils import device_selection_helper_pytorch
+from detection.craft_text_detector.craft_text_detector.utils.craft_utils import device_selection_helper_pytorch
 
 try:
     from recognition.ocr.handwriting_line_recognition import decode as decoder_handwriting, alphabet_encoding
