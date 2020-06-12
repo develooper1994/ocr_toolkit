@@ -87,12 +87,7 @@ low_text = 0.2
 device="gpu"  # False
 show_time = False
 # perform prediction
-prediction_result = pred.get_prediction(image=image,
-                                        text_threshold=0.7,
-                                        link_threshold=0.4,
-                                        low_text=0.4,
-                                        square_size=1280,
-                                        show_time=True)
+prediction_result = pred.get_prediction(image=image,text_threshold=0.7,link_threshold=0.4,low_text=0.4,square_size=1280,show_time=True)
 # export detected text regions
 exported_file_paths = craft.file_utils.export_detected_regions(
     image_path=image_path,

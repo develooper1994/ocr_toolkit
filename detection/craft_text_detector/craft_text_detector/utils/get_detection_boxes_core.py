@@ -4,7 +4,8 @@ import cv2
 import numpy as np
 from skimage.measure import label, regionprops
 
-#%% get_detection_boxes_core
+
+# %% get_detection_boxes_core
 
 
 def get_detection_boxes_core(textmap, linkmap, text_threshold: float = 0.7, link_threshold: float = 0.4,
@@ -13,7 +14,7 @@ def get_detection_boxes_core(textmap, linkmap, text_threshold: float = 0.7, link
     linkmap = linkmap.copy()
     textmap = textmap.copy()
     img_h, img_w = textmap.shape
-
+    # what is that shit? please take a look; https://en.wikipedia.org/wiki/Gaussian_function
     """ labeling method """
     ret, text_score = cv2.threshold(textmap, low_text, 1, cv2.THRESH_BINARY)
     ret, link_score = cv2.threshold(linkmap, link_threshold, 1, cv2.THRESH_BINARY)
@@ -57,18 +58,25 @@ def get_detection_boxes_core(textmap, linkmap, text_threshold: float = 0.7, link
             # align diamond-shape
             box = align_diamond_shape(box, np_contours)
 
-        # make clock-wise order
-        box = make_clock_wise_order(box)
+            # make clock-wise order
+            box = make_clock_wise_order(box, only_characters)
         detecteds.append(box)
         mapper.append(k)
 
-    return detecteds, labels, mapper  # detected for each "nLabels"
+    # return detecteds, labels, mapper  # detected for each "nLabels"
+    # assert not detecteds == [], "nothing to detect. image is too bad to make labeling"
+    # assert not np.sum(labels) == 0, "image is too bad to make labeling"
+    # assert not mapper == [], "image is too bad to make labeling"
+    return detecteds, labels, mapper * detecteds[0].shape[0]  # detected for each "nLabels"
 
 
-def make_clock_wise_order(box):
-    startidx = box.sum(axis=1).argmin()
-    box = np.roll(box, 4 - startidx, 0)
-    box = np.array(box)
+def make_clock_wise_order(box, only_characters=False):
+    if only_characters:
+        raise NotImplementedError
+    else:
+        startidx = box.sum(axis=1).argmin()
+        box = np.roll(box, 4 - startidx, 0)
+        box = np.array(box)
     return box
 
 
@@ -113,20 +121,78 @@ def make_box(segmap, only_characters=False):
         box = np.array(box)
         compatible_box = np.zeros((box.shape[0], 4, 2), dtype=np.float32)
 
-        box_coord_left_bottom = np.array([box[:, 1], box[:, 2]]).transpose()
+        # Bounding boxes expanded not to loss segmented area.
+        #                                   y       ,   x
+        box_coord_left_bottom = np.array([box[:, 1] - 1, box[:, 2]]).transpose()
         compatible_box[:, 0, :] = box_coord_left_bottom
 
-        box_coord_left_upper = np.flip(box[:, 0:2], axis=1)
+        box_coord_left_upper = np.flip(box[:, 0:2], axis=1) - 1
         compatible_box[:, 1, :] = box_coord_left_upper
-
-        box_coord_right_upper = np.array([box[:, 3], box[:, 0]]).transpose()
+        #                                   y       ,   x
+        box_coord_right_upper = np.array([box[:, 3], box[:, 0] - 1]).transpose()
         compatible_box[:, 2, :] = box_coord_right_upper
 
         box_coord_right_bottom = np.flip(box[:, 2:], axis=1)
         compatible_box[:, 3, :] = box_coord_right_bottom
 
+        # TODO! sort the bounding boxes
+        compatible_box = sort_bounindg_boxes(compatible_box, segmap, margin_y=3)
         box = compatible_box
     return box, np_contours
+
+
+def sort_bounindg_boxes(box, segmap, margin_y=3):
+    # %% only to detect multiple characters in once. each bounding box has 4 coordinate points.
+    # more numpy, vectoring way.
+    # left_upper = box[:, 1, :]
+
+    left_upper_y = box[:, 1, 1]
+    shorted_ids_y = np.argsort(left_upper_y)
+    box = box[shorted_ids_y, :, :]
+
+    # %% find how much margin between bounding boxes along x axis.
+    # if it not bigger than margin_y they are in the same line.
+    # box_margin_y = box[:, 1, 1][1:] - box[:, 1, 1][:-1]
+    # box_margin_y = np.concatenate(([1], box_margin_y))
+    #
+    # mask_y = box_margin_y <= margin_y  # mask not bigger than margin_y
+    # box = [box[mask_y, :, :]]  # select not bigger than margin_y
+    # while not np.all(mask_y) or mask_y != None:  # Python don't have do-while loop
+    #     box_margin_y = box[:, 1, 1][1:] - box[:, 1, 1][:-1]
+    #     box_margin_y = np.concatenate(([1], box_margin_y))
+    #
+    #     mask_y = box_margin_y > margin_y  # mask bigger than margin_y
+    #     box_same_line.append(box[mask_y, :, :])  # select not bigger than margin_y
+
+    # TODO! !!!POSSIBLE BUG!!! assumed all in the same line.
+    left_upper_x = box[:, 1, 0]
+    shorted_ids_x = np.argsort(left_upper_x)
+    box = box[shorted_ids_x, :, :]
+    return box
+
+
+    # another idea. conventional way.
+    # lines = []
+    # for p, bb_pivot in enumerate(box):
+    #     pivot_point = bb_pivot[1]  # left_upper
+    #
+    #     # determinte [y, x] points and margin.
+    #     pivot_point_y = pivot_point[0]
+    #     pivot_point_x = pivot_point[1]
+    #     # I am giving some margin to collect bb in the same line.
+    #     # check for smaller than zero
+    #     max_idx = segmap.shape[1]
+    #     margin_top = np.clip(pivot_point_x - margin, 0, max_idx)
+    #     margin_bottom = pivot_point_x + margin
+    #
+    #     same_line = [bb_pivot]
+    #     box_reduced = box[np.arange(len(box)) != 3]
+    #     for bb in box_reduced:
+    #         pivot_point = bb_pivot[1]  # left_upper
+    #
+    #         # determinte [y, x] points and margin.
+    #         pivot_point_y = pivot_point[0]
+    #         pivot_point_x = pivot_point[1]
 
 
 def remove_link_area(k, link_score, segmap, size, stats, text_score):

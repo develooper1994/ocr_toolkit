@@ -169,7 +169,7 @@ def crop_poly(image, poly):
     return cropped
 
 
-def export_poly(image, poly, rectify, gray_scale=False):
+def export_poly(image, poly, rectify, gray_scale=False, only_characters=False):
     """
     :param image: full image
     :param points: bbox or is_poly points
@@ -187,10 +187,13 @@ def export_poly(image, poly, rectify, gray_scale=False):
 
     if gray_scale:
         detection_result = cv2.cvtColor(detection_result, cv2.COLOR_BGR2GRAY)
+
+    if only_characters:
+        detection_result = cv2.rotate(detection_result, cv2.ROTATE_90_COUNTERCLOCKWISE)  # images
     return detection_result
 
 
-def export_detected_region(image, poly, file_path, rectify=True, is_save=False, gray_scale=False):
+def export_detected_region(image, poly, file_path, rectify=True, is_save=False, gray_scale=False, only_characters=False):
     """
     :param image: full image
     :param points: bbox or is_poly points
@@ -201,7 +204,7 @@ def export_detected_region(image, poly, file_path, rectify=True, is_save=False, 
         Default; False
     :return: region result
     """
-    result = export_poly(image, poly, rectify, gray_scale=gray_scale)
+    result = export_poly(image, poly, rectify, gray_scale=gray_scale, only_characters=only_characters)
 
     # export corpped region
     if is_save:
@@ -210,7 +213,7 @@ def export_detected_region(image, poly, file_path, rectify=True, is_save=False, 
     return result
 
 
-def export_detected_polygons(image, regions, rectify: bool = False, gray_scale=False):
+def export_detected_polygons(image, regions, rectify: bool = False, gray_scale=False, only_characters=False):
     """
     Export regions.
     :param image: full/original image
@@ -228,14 +231,14 @@ def export_detected_polygons(image, regions, rectify: bool = False, gray_scale=F
 
     for ind, region in enumerate(regions):
         # export region
-        detection_result = export_poly(image, poly=region, rectify=rectify, gray_scale=gray_scale)
+        detection_result = export_poly(image, poly=region, rectify=rectify, gray_scale=gray_scale, only_characters=only_characters)
         # note exported results
         detection_results.append(detection_result)
 
     return detection_results
 
 
-def export_detected_regions(image_path, image, regions, output_dir: str = "output/", rectify: bool = False):
+def export_detected_regions(image_path, image, regions, output_dir: str = "output/", rectify: bool = False, only_characters=False):
     """
     Export and save regions as image files.
     :param image_path: path to original image
@@ -263,7 +266,7 @@ def export_detected_regions(image_path, image, regions, output_dir: str = "outpu
         # get export path
         file_path = os.path.join(crops_dir, "crop_" + str(ind) + ".png")
         # export region
-        export_detected_region(image, poly=region, file_path=file_path, rectify=rectify, is_save=True)
+        export_detected_region(image, poly=region, file_path=file_path, rectify=rectify, is_save=True, only_characters=only_characters)
         # note exported file path
         exported_file_paths.append(file_path)
 
@@ -303,9 +306,9 @@ def write_bb_str_result(filename, output_dir, regions):
             f.write(str_result)
 
 
-def save_results(heatmaps, image, link_heatmap_file, result_image_file, text_heatmap_file):
+def save_results(heatmaps, image, link_heatmap_file, detected_result_image_file, text_heatmap_file):
     # Save result image with bb
-    cv2.imwrite(result_image_file, cv2.cvtColor(image, cv2.COLOR_RGB2BGR))
+    cv2.imwrite(detected_result_image_file, cv2.cvtColor(image, cv2.COLOR_RGB2BGR))
     # export heatmaps and save
     text_score_heatmap = heatmaps["text_score_heatmap"]
     link_score_heatmap = heatmaps["link_score_heatmap"]
@@ -340,7 +343,7 @@ def export_extra_results(
     write_bb_str_result(filename, output_dir, regions)
 
     # result directory
-    result_image_file = os.path.join(output_dir, filename + "_text_detection.png")
+    detected_result_image_file = os.path.join(output_dir, filename + "_text_detection.png")
     text_heatmap_file = os.path.join(output_dir, filename + "_text_score_heatmap.png")
     link_heatmap_file = os.path.join(output_dir, filename + "_link_score_heatmap.png")
 
@@ -362,4 +365,4 @@ def export_extra_results(
         recognized_text_into_image(i, image, region, texts)
 
     # Save results
-    save_results(heatmaps, image, link_heatmap_file, result_image_file, text_heatmap_file)
+    save_results(heatmaps, image, link_heatmap_file, detected_result_image_file, text_heatmap_file)

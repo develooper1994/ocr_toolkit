@@ -18,13 +18,38 @@ def warp_coord(Minv, pt):
 
 """ end of auxilary functions """
 
+
 def adjust_result_coordinates(polys, ratio_w, ratio_h, ratio_net=2):
     if len(polys) > 0:
         polys = np.array(polys)
-        for k in range(len(polys)):
-            if polys[k] is not None:
-                polys[k] *= (ratio_w * ratio_net, ratio_h * ratio_net)
+        is_none = np.any(np.equal(polys, None))
+        # very unnecessary but works???
+        if is_none:
+            if len(polys.shape) > 1:
+                return polys[0]  # multiple bb
+            else:
+                return polys  # single bb
+
+        # TODO! I don't it is working!!! look at later.
+        if is_none or len(polys[0].shape) > 2:
+            for k in range(polys.shape[1]):
+                if not is_none:  # is not working
+                    polys[0, k] *= (ratio_w * ratio_net, ratio_h * ratio_net)
+            else:
+                return polys[0]  # [None] * polys.shape[1]
+        else:
+            for k in range(len(polys)):
+                if polys[k] is not None:
+                    polys[k] *= (ratio_w * ratio_net, ratio_h * ratio_net)
     return polys
+    # None -> [None]
+
+    # original!
+    # if len(polys) > 0:
+    #     for k in range(len(polys)):
+    #         if polys[k] is not None:
+    #             polys[k] *= (ratio_w * ratio_net, ratio_h * ratio_net)
+    # return polys
 
 
 def device_selection_helper_pytorch(device):

@@ -181,15 +181,9 @@ class craft_detector:
         else:
             self.refine_net = None
 
-    def get_prediction(self, image=None,
-                       text_threshold: float = 0.7,
-                       link_threshold: float = 0.4,
-                       low_text: float = 0.4,
-                       square_size: int = 1280,
-                       mag_ratio=1,
-                       poly: bool = True,
-                       only_characters=False,
-                       show_time: bool = False):
+    def get_prediction(self, image=None, text_threshold: float = 0.7, link_threshold: float = 0.4,
+                       low_text: float = 0.4, only_characters=False, square_size: int = 1280, mag_ratio=1,
+                       poly: bool = True, show_time: bool = False):
         """
         Predicts bounding boxes where the text. The main function that gives bounding boxes.
         :param image: image to be processed
@@ -269,6 +263,8 @@ class craft_detector:
         boxes, polys = detection.craft_text_detector.craft_text_detector.utils.get_detection_boxes.get_detection_boxes(
             score_text, score_link, text_threshold, link_threshold, low_text, poly, only_characters
         )
+        if boxes is None or polys is None:
+            return None
 
         # coordinate adjustment
         boxes, polys = self.coordinate_adjustment(boxes, polys, ratio_h, ratio_w)
@@ -481,22 +477,21 @@ class craft_detector:
         # perform prediction
         prediction_result = self.get_prediction(image=image, text_threshold=text_threshold,
                                                 link_threshold=link_threshold, low_text=low_text,
-                                                square_size=square_size,
-                                                mag_ratio=mag_ratio, only_characters=only_characters,
-                                                show_time=show_time)
+                                                only_characters=only_characters, square_size=square_size,
+                                                mag_ratio=mag_ratio, show_time=show_time)
 
         # arange regions
         regions = self.arange_regions(crop_type, prediction_result)
 
         # export if output_dir is given
         self.export_and_save_all(export_extra=export_extra, image_path=image_path, image=self.image,
-                                 output_dir=output_dir,
-                                 prediction_result=prediction_result, rectify=rectify, regions=regions)
+                                 output_dir=output_dir, prediction_result=prediction_result,
+                                 rectify=rectify, regions=regions, only_characters=only_characters)
 
         # return prediction results
         return prediction_result
 
-    def get_detected_polygons(self, rectify: bool = True, crop_type: str = "is_poly", gray_scale=False):
+    def get_detected_polygons(self, rectify: bool = True, crop_type: str = "is_poly", gray_scale=False, only_characters=False):
         """
         Get detection region image array as numpy array
         :param rectify: do you want to rectify?
@@ -551,12 +546,13 @@ class craft_detector:
             image=self.image,  # image should come from same class
             regions=regions,
             rectify=rectify,
-            gray_scale=gray_scale
+            gray_scale=gray_scale,
+            only_characters=only_characters
         )
         return self.predicted_polygon_image
 
     def export_and_save_all(self, export_extra=True, image_path="output.jpg", image=None, output_dir='outputs/',
-                            prediction_result=None, rectify=True, regions=None):
+                            prediction_result=None, rectify=True, regions=None, only_characters=False):
         prediction_result["text_crop_paths"] = []
         if output_dir is not None:
             # export detected text regions
@@ -566,6 +562,7 @@ class craft_detector:
                 regions=regions,
                 output_dir=output_dir,
                 rectify=rectify,
+                only_characters=only_characters
             )
             prediction_result["text_crop_paths"] = exported_file_paths
 
@@ -658,10 +655,13 @@ if __name__ == "__main__":
     # image_path = '../figures/' + image_name
     # image_name = 'plate1.jpg'
     # image_path = r'C:/Users/selcu/PycharmProjects/ocr_toolkit/license_plate_images/' + image_name
-    image_name = "positive2.png"
-    image_path = r"C:\Users\selcu\PycharmProjects\ocr_toolkit\license_plate_images\plates" + "/" + image_name
 
-    output_dir = image_name + '/'
+    # image_name = "01DJP58.JPG"
+    # image_path = r"C:\Users\selcu\PycharmProjects\ocr_toolkit\license_plate_images\plates" + "/" + image_name
+    image_name = "01DJP58.JPG"
+    image_path = r"C:\Users\selcu\PycharmProjects\ocr_toolkit\recognition\licence_plate\turkish-license-plate" \
+                 r"-detector-master\positive_images" + "/" + image_name
+    output_dir = "plate_output" + '/' + image_name + '/'
 
 
     def image_preprocess(image):
@@ -728,7 +728,7 @@ if __name__ == "__main__":
                               craft_model_path=craft_model_path,
                               refinenet_model_path=refinenet_model_path,
                               device="gpu")
-        only_characters = True
+        only_characters = True  # False; default
         prediction_result = pred.detect_text(image=image_path, output_dir=output_dir, rectify=True, export_extra=False,
                                              text_threshold=0.7, link_threshold=0.4, low_text=0.4,
                                              only_characters=only_characters, square_size=720, show_time=show_time,
@@ -743,25 +743,29 @@ if __name__ == "__main__":
         prediction_result = pred(image=image,
                                  text_threshold=0.7,  # 0.7
                                  link_threshold=0.4,  # 0.4
-                                 low_text=0.4,  # 0.6, 0.4
+                                 low_text=0.435,  # 0.6, 0.5, 0.495, 0.4  # best value 0.4. Make it higher for only_characters
                                  square_size=1280,
                                  show_time=True,
                                  only_characters=only_characters)
+        if prediction_result is None:
+            warning("There is nothing to detect.")
         # export detected text regions
         exported_file_paths = export_detected_regions(
             image_path=image_path,
             image=image,
             regions=prediction_result["boxes"],
             output_dir=output_dir,
-            rectify=True
+            rectify=True,
+            only_characters=only_characters
         )
         # export heatmap, detection points, box visualization
+        heatmaps = prediction_result["heatmaps"]
         export_extra_results(
             image_path=image_path,
             image=image,
             regions=prediction_result["boxes"],
-            heatmaps=prediction_result["heatmaps"],
-            output_dir=output_dir
+            heatmaps=heatmaps,
+            output_dir=output_dir,
         )
 
         crop_type = "box"  # is_poly

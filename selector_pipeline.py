@@ -101,7 +101,8 @@ class selector_pipeline:
         detection_result = self.detection_selector.make_switch(detection_switch=detection_switch, **kwargs)
         line_images_array = self.only_detected_polygons(rectify=self.detection_selector.rectify,
                                                         crop_type=self.detection_selector.crop_type,
-                                                        gray_scale=self.recognition_selector.net.gray_scale)
+                                                        gray_scale=self.recognition_selector.net.gray_scale,
+                                                        only_characters=self.detection_selector.only_characters)
 
         recognition_result = self.recognition_selector.make_switch(recognition_switch=recognition_switch,
                                                                    line_images_array=line_images_array,
@@ -151,9 +152,9 @@ class selector_pipeline:
         self.predicted_bb = regions
         return regions
 
-    def only_detected_polygons(self, rectify=True, crop_type=None, gray_scale=False):
+    def only_detected_polygons(self, rectify=True, crop_type=None, gray_scale=False, only_characters=False):
         predicted_polygon_image = self.detection_selector.get_detected_polygons(rectify=rectify, crop_type=crop_type,
-                                                                                gray_scale=gray_scale)
+                                                                                gray_scale=gray_scale, only_characters=only_characters)
         return predicted_polygon_image
 
     def only_recognize(self, line_images_array=None, language="eng"):

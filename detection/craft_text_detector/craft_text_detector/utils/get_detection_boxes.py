@@ -14,10 +14,12 @@ def get_detection_boxes(textmap, linkmap, text_threshold: float = 0.7, link_thre
                         low_text: float = 0.4,
                         is_poly=False,
                         only_characters=False):
-    boxes, labels, mapper = get_detection_boxes_core(
-        textmap, linkmap, text_threshold, link_threshold, low_text, only_characters
-    )
-
+    try:
+        boxes, labels, mapper = get_detection_boxes_core(
+            textmap, linkmap, text_threshold, link_threshold, low_text, only_characters
+        )
+    except:
+        return None, None  # that mean there isn't  anything to detect.
     shp = len(boxes[0].shape)
     if shp > 2:
         polys = []

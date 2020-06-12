@@ -88,14 +88,9 @@ if __name__ == '__main__':
         #     "times": times,
         # }
 
-        prediction = craft_net.get_prediction(image=image,
-                                              text_threshold=text_threshold,
-                                              link_threshold=link_threshold,
-                                              low_text=low_text,
-                                              square_size=square_size,
-                                              mag_ratio=mag_ratio,
-                                              poly=poly,
-                                              show_time=show_time)
+        prediction = craft_net.get_prediction(image=image, text_threshold=text_threshold, link_threshold=link_threshold,
+                                              low_text=low_text, square_size=square_size, mag_ratio=mag_ratio,
+                                              poly=poly, show_time=show_time)
         bboxes, polys, score_text = prediction["boxes"], prediction["polys"], prediction["text_score_heatmap"]
 
         # save score text

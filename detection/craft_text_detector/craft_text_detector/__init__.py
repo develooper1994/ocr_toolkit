@@ -41,7 +41,7 @@ except:
 
 def detect_text(image, output_dir=None, rectify=True, export_extra=True,
                 text_threshold=0.7, link_threshold=0.4,
-                low_text=0.4, long_size=1280,
+                low_text=0.4, only_characters=False, long_size=1280,
                 device="cpu", show_time=False,
                 crop_type="is_poly"):
     """
@@ -75,8 +75,8 @@ def detect_text(image, output_dir=None, rectify=True, export_extra=True,
 
     prediction_result = craft_net.detect_text(image=image, output_dir=output_dir, rectify=rectify,
                                               export_extra=export_extra, text_threshold=text_threshold,
-                                              link_threshold=link_threshold, low_text=low_text, square_size=long_size,
-                                              show_time=show_time, crop_type=crop_type)
+                                              link_threshold=link_threshold, low_text=low_text, only_characters=only_characters,
+                                              square_size=long_size, show_time=show_time, crop_type=crop_type)
 
     # return prediction results
     return prediction_result

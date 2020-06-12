@@ -9,16 +9,17 @@ from recognition.handwritten_text_recognition.recognition.utils import device_se
 class detection_selector:
     def __init__(self, image, rectify=True, text_threshold=0.7, link_threshold=0.4, low_text=0.4,
                  square_size=1280, show_time=False, crop_type="is_poly", detection_model_paths=None,
-                 detection_switch: str = "craft",
+                 detection_switch: str = "craft", only_characters: bool = False,
                  mag_ratio=1, device: str = "gpu"):
         # PYTORCH ;)
+        self.only_characters = only_characters
         self.detection_result = []
 
         # hyperparameters
         self.reload_hyperparameters(rectify=rectify, text_threshold=text_threshold, link_threshold=link_threshold,
                                     low_text=low_text, square_size=square_size, show_time=show_time,
                                     detection_model_paths=detection_model_paths, crop_type=crop_type,
-                                    detection_switch=detection_switch,
+                                    detection_switch=detection_switch, only_characters=only_characters,
                                     mag_ratio=mag_ratio, device=device)
 
         self.net = self.creatation_switch(image=image, detection_switch=self.detection_switch,
@@ -29,7 +30,8 @@ class detection_selector:
 
     def reload_hyperparameters(self, rectify=True, text_threshold=0.7, link_threshold=0.4, low_text=0.4,
                                square_size=1280, show_time=False, crop_type="is_poly", detection_model_paths=None,
-                               detection_switch: str = "craft", mag_ratio=1, device: str = "gpu"):
+                               detection_switch: str = "craft", only_characters=False,
+                               mag_ratio=1, device: str = "gpu"):
         self.rectify = rectify
         self.text_threshold = text_threshold
         self.link_threshold = link_threshold
@@ -39,6 +41,7 @@ class detection_selector:
         self.crop_type = crop_type
 
         self.detection_switch = detection_switch.lower()
+        self.only_characters = only_characters
         self.mag_ratio = mag_ratio
         self.device = device_selection_helper(device=device.lower(), framework="pytorch")
 
@@ -97,8 +100,8 @@ class detection_selector:
     def as_ratio(self, boxes=None, img_width=None, img_height=None, crop_type=None):
         return self.net.as_ratio(boxes=boxes, img_width=img_width, img_height=img_height, crop_type=crop_type)
 
-    def get_detected_polygons(self, rectify=True, crop_type=None, gray_scale=False):
-        return self.net.get_detected_polygons(rectify=rectify, crop_type=crop_type, gray_scale=gray_scale)
+    def get_detected_polygons(self, rectify=True, crop_type=None, gray_scale=False, only_characters=False):
+        return self.net.get_detected_polygons(rectify=rectify, crop_type=crop_type, gray_scale=gray_scale, only_characters=only_characters)
 
     def get_detected_bb(self, crop_type=None):
         if crop_type is None:
@@ -119,6 +122,7 @@ class detection_selector:
                     text_threshold=0.7,
                     link_threshold=0.4,
                     low_text=0.4,
+                    only_characters=False,
                     square_size=1280,
                     mag_ratio=1,
                     show_time=False,
@@ -130,6 +134,7 @@ class detection_selector:
                                     text_threshold=text_threshold,
                                     link_threshold=link_threshold,
                                     low_text=low_text,
+                                    only_characters=only_characters,
                                     square_size=square_size,
                                     mag_ratio=mag_ratio,
                                     show_time=show_time,

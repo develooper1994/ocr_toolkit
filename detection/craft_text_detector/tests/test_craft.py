@@ -51,11 +51,8 @@ class TestCraftTextDetector(unittest.TestCase):
         text_threshold = 0.9
         link_threshold = 0.2
         low_text = 0.2
-        prediction_result = pred.get_prediction(image=image,
-                                                text_threshold=text_threshold,
-                                                link_threshold=link_threshold,
-                                                low_text=low_text,
-                                                square_size=720,
+        prediction_result = pred.get_prediction(image=image, text_threshold=text_threshold,
+                                                link_threshold=link_threshold, low_text=low_text, square_size=720,
                                                 show_time=show_time)
 
         # !!! get_prediction.py -> get_prediction(...)
