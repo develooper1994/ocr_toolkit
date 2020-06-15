@@ -26,10 +26,7 @@ alphabets_dic = {0: 'A', 1: 'B', 2: 'C', 3: 'D', 4: 'E', 5: 'F', 6: 'G', 7: 'H',
 
 alphabets = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K',
              'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-dataset_classes = []
-
-for cls in alphabets:
-    dataset_classes.append([cls])
+dataset_classes = [cls for cls in alphabets]
 
 # Load old dataset
 d = open("data.pickle", "rb")
