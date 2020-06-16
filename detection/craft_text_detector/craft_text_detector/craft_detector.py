@@ -40,7 +40,8 @@ except:
         from detection.craft_text_detector.craft_text_detector.utils import craft_utils
         from detection.craft_text_detector.craft_text_detector import imgproc
         # my google drive
-        from detection.craft_text_detector.craft_text_detector.utils.craft_detector_utils import copyStateDict, get_weight_path
+        from detection.craft_text_detector.craft_text_detector.utils.craft_detector_utils import copyStateDict, \
+            get_weight_path
         from detection.craft_text_detector.craft_text_detector.utils.file_utils import (
             export_detected_regions,
             export_extra_results, export_detected_polygons
@@ -89,7 +90,7 @@ class craft_detector:
         :param benchmark: cudnn benchmark mode switch
         :return: None
         """
-        self.predicted_polygon_image = 0
+        self.predicted_polygon_images = 0
         self.detection_result = 0
         self.reload(image=image, craft_model_path=craft_model_path, refinenet_model_path=refinenet_model_path,
                     crop_type=crop_type, device=device, benchmark=benchmark)
@@ -334,7 +335,7 @@ class craft_detector:
         :param boxes: bounding boxes. if don't set default will apply.
         Note: Please set bounding box as boxes or is_poly.
         Also you can get from self.detection_result[crop_type] or arange_regions method
-            Default; boxes = self.predicted_polygon_image
+            Default; boxes = self.predicted_polygon_images
         :param img_width: image width
         :param img_height: image height
         :param crop_type: select one. boxes, boxes_as_ratios, polys, polys_as_ratios
@@ -387,7 +388,7 @@ class craft_detector:
         :param boxes: bounding boxes. if don't set default will apply.
         Note: Please set bounding box as boxes or is_poly.
         Also you can get from self.detection_result[crop_type] or arange_regions method
-            Default; boxes = self.predicted_polygon_image
+            Default; boxes = self.predicted_polygon_images
         :param crop_type: select one. boxes, boxes_as_ratios, polys, polys_as_ratios
             Default; is_poly
         :param is_ratio: box / [img_width, img_height]
@@ -491,7 +492,8 @@ class craft_detector:
         # return prediction results
         return prediction_result
 
-    def get_detected_polygons(self, rectify: bool = True, crop_type: str = "is_poly", gray_scale=False, only_characters=False):
+    def get_detected_polygons(self, rectify: bool = True, crop_type: str = "is_poly", gray_scale=False,
+                              only_characters=False):
         """
         Get detection region image array as numpy array
         :param rectify: do you want to rectify?
@@ -542,14 +544,14 @@ class craft_detector:
             # rectify = False
             assert False, "use as_ratio method after the get_detected_polygons method. " \
                           "Gives wrong answer because ration numbers are so small"
-        self.predicted_polygon_image = export_detected_polygons(
+        self.predicted_polygon_images = export_detected_polygons(
             image=self.image,  # image should come from same class
             regions=regions,
             rectify=rectify,
             gray_scale=gray_scale,
             only_characters=only_characters
         )
-        return self.predicted_polygon_image
+        return self.predicted_polygon_images
 
     def export_and_save_all(self, export_extra=True, image_path="output.jpg", image=None, output_dir='outputs/',
                             prediction_result=None, rectify=True, regions=None, only_characters=False):
@@ -743,7 +745,8 @@ if __name__ == "__main__":
         prediction_result = pred(image=image,
                                  text_threshold=0.7,  # 0.7
                                  link_threshold=0.4,  # 0.4
-                                 low_text=0.435,  # 0.6, 0.5, 0.495, 0.4  # best value 0.4. Make it higher for only_characters
+                                 low_text=0.435,
+                                 # 0.6, 0.5, 0.495, 0.4  # best value 0.4. Make it higher for only_characters
                                  square_size=1280,
                                  show_time=True,
                                  only_characters=only_characters)

@@ -100,8 +100,10 @@ class detection_selector:
     def as_ratio(self, boxes=None, img_width=None, img_height=None, crop_type=None):
         return self.net.as_ratio(boxes=boxes, img_width=img_width, img_height=img_height, crop_type=crop_type)
 
-    def get_detected_polygons(self, rectify=True, crop_type=None, gray_scale=False, only_characters=False):
-        return self.net.get_detected_polygons(rectify=rectify, crop_type=crop_type, gray_scale=gray_scale, only_characters=only_characters)
+    def get_detected_polygons(self, rectify: bool = True, crop_type: str = "is_poly", gray_scale=False,
+                              only_characters=False):
+        return self.net.get_detected_polygons(rectify=rectify, crop_type=crop_type, gray_scale=gray_scale,
+                                              only_characters=only_characters)
 
     def get_detected_bb(self, crop_type=None):
         if crop_type is None:
@@ -148,15 +150,17 @@ if __name__ == "__main__":
     # image_path = r"C:\Users\selcu\PycharmProjects\ocr_toolkit\detection\craft_text_detector\figures\test_images2" + "/" + image_name
     # image_name = "plate1.jpg"
     # image_path = r"C:\Users\selcu\PycharmProjects\ocr_toolkit\license_plate_images" + "/" + image_name
-    image_name = "negative1.png"
-    image_path = r"C:\Users\selcu\PycharmProjects\ocr_toolkit\license_plate_images\plates" + "/" + image_name
+    # image_name = "negative1.png"
+    # image_path = r"C:\Users\selcu\PycharmProjects\ocr_toolkit\license_plate_images\plates" + "/" + image_name
+    image_name = "01DJP58.JPG"
+    image_path = r"C:\Users\selcu\PycharmProjects\ocr_toolkit\recognition\licence_plate\turkish-license-plate" \
+                 r"-detector-master\positive_images" + "/" + image_name
     selector = "craft"
-    detection_model_paths = []
-    detection_model_paths.append("craft_mlt_25k.pth")
-    detection_model_paths.append("craft_refiner_CTW1500.pth")
+    detection_model_paths = ["craft_mlt_25k.pth", "craft_refiner_CTW1500.pth"]
 
     # recognition_model_paths = "recognition/handwritten_text_recognition/recognition/models/"  # linux
-    recognition_model_paths = r"C:\Users\selcu\PycharmProjects\ocr_toolkit\recognition\handwritten_text_recognition\recognition\models/"  # windows
+    recognition_model_paths = r"C:\Users\selcu\PycharmProjects\ocr_toolkit\recognition\handwritten_text_recognition" \
+                              r"\recognition\models/"  # windows
 
     dev_selector = detection_selector(image_path, detection_switch=selector,
                                       detection_model_paths=detection_model_paths, device="gpu")
