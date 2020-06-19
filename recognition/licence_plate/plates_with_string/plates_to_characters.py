@@ -5,6 +5,8 @@ import json
 from pprint import pprint
 
 ## find plates with paths, names and characters
+import cv2
+
 from detection.detection_selector import detection_selector
 
 
@@ -59,19 +61,22 @@ def plate_to_character_images(dev_selector, image_path, only_characters=True, sh
     return character_images
 
 
-def save_character_images(character_images):
-    raise NotImplementedError
+def save_character_images(plate_name, character_images):
+    os.mkdir()
+    for i, character_image in enumerate(character_images):
+        cv2.imwrite(plate_name + "_" + str(i), character_images)
 
 
 def plates_image_to_characters(dev_selector, plates_with_characters_object, show_time=False, crop_type="box"):
     plate_names, root_names, characterss = loads_dataset(plates_with_characters_object)
     for plate_name, root_name, characters in zip(plate_names, root_names, characterss):
         character_images = plate_to_character_images(dev_selector, root_name)
-        save_character_images(character_images)
+        save_character_images(plate_name, character_images)
 
 
 if __name__ == "__main__":
-    plates_with_characters = dumps_dataset()
+    dataset_name = "dataset"
+    plates_with_characters = dumps_dataset(dataset_name)
     ## open a text file and save plates with paths, names and characters.
     log_name = "dataset_log.txt"
 
