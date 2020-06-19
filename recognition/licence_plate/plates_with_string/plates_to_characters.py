@@ -62,7 +62,8 @@ def plate_to_character_images(dev_selector, image_path, only_characters=True, sh
 
 
 def save_character_images(plate_name, character_images):
-    os.mkdir()
+    # os.mkdir()
+    raise NotImplementedError
     for i, character_image in enumerate(character_images):
         cv2.imwrite(plate_name + "_" + str(i), character_images)
 
