@@ -21,7 +21,7 @@ output_dir = 'outputs/'
 
 # %%
 
-image = craft.imgproc.read_image(image_path)
+image = craft.imgproc.read_image(,
 
 # %% md
 

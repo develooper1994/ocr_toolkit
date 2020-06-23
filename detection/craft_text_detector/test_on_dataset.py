@@ -71,7 +71,7 @@ if __name__ == '__main__':
     for k, image_path in enumerate(image_list):
         print("Test image {:d}/{:d}: {:s}".format(k + 1, len(image_list), image_path), end='\r')
         # image = imgproc.loadImage(image_path)
-        image = imgproc.read_image(image_path)
+        image = imgproc.read_image(,
 
         # bboxes, polys, score_text = test_net(craft_net, image, args.text_threshold, args.link_threshold, args.low_text,
         #                                      args.cuda, args.is_poly, refine_net)

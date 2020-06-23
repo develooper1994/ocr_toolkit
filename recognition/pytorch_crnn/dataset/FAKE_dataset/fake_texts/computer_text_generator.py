@@ -20,7 +20,7 @@ class ComputerTextGenerator(object):
         space_width = image_font.getsize(' ')[0] * space_width
 
         words_width = [image_font.getsize(w)[0] for w in words]
-        text_width =  sum(words_width) + int(space_width) * (len(words) - 1)
+        text_width = sum(words_width) + int(space_width) * (len(words) - 1)
         text_height = max([image_font.getsize(w)[1] for w in words])
 
         txt_img = Image.new('RGBA', (text_width, text_height), (0, 0, 0, 0))

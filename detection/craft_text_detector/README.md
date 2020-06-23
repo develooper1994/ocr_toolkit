@@ -70,7 +70,7 @@ image_path = 'figures/' + image_name
 output_dir = 'outputs/'
 
 # read image
-image = craft.imgproc.read_image(image_path)
+image = craft.imgproc.read_image(,
 
 # load models
 craft_model_path = "craft_mlt_25k.pth"
