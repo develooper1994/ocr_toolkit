@@ -10,7 +10,11 @@ from PIL import Image
 from skimage.transform import resize
 from torch.utils.data import Dataset
 
-from fake_texts.imgaug_transformations import augmentations
+# from fake_texts.imgaug_transformations import augmentations
+try:
+    from recognition.pytorch_crnn.dataset.FAKE_dataset import augmentations
+except:
+    from ..FAKE_dataset import augmentations
 
 
 class hwrDataset(Dataset):

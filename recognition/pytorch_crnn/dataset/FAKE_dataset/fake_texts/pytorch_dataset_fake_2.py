@@ -6,13 +6,22 @@ import os
 import random
 from random import randint
 
-from string_generator import (
-    create_strings_randomly
-)
+try:
+    from .string_generator import (
+        create_strings_randomly
+    )
 
-from data_generator import FakeTextDataGenerator
+    from .data_generator import FakeTextDataGenerator
 
-from imgaug_transformations import augmentations
+    from .imgaug_transformations import augmentations
+except:
+    from string_generator import (
+        create_strings_randomly
+    )
+
+    from data_generator import FakeTextDataGenerator
+
+    from imgaug_transformations import augmentations
 
 
 # Basically we want to add the

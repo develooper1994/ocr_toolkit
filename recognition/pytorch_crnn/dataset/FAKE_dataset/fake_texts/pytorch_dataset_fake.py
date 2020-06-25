@@ -4,15 +4,24 @@ sys.path.append("fake_texts/")
 import os
 import random
 
-from string_generator import (
-    create_strings_from_wikipedia,
-    create_strings_randomly
-)
+try:
+    from .string_generator import (
+        create_strings_from_wikipedia,
+        create_strings_randomly
+    )
 
-from data_generator import FakeTextDataGenerator
+    from .data_generator import FakeTextDataGenerator
 
-from imgaug_transformations import augmentations
+    from .imgaug_transformations import augmentations
+except:
+    from string_generator import (
+        create_strings_from_wikipedia,
+        create_strings_randomly
+    )
 
+    from data_generator import FakeTextDataGenerator
+
+    from imgaug_transformations import augmentations
 
 #Basically we want to add the
 
